@@ -15,7 +15,7 @@ import { Loader2 } from "lucide-react"
 // import { format } from "date-fns"
 // import { Calendar } from "@/components/ui/calendar"
 // import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover"
-import { cn } from "@/lib/utils"
+// import { cn } from "@/lib/utils"
 
 interface CourseRegistrationFormProps {
   courseName: string
@@ -24,7 +24,7 @@ interface CourseRegistrationFormProps {
 export default function CourseRegistrationForm({ courseName }: CourseRegistrationFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  const [date, setDate] = useState<Date>()
+  // const [date, setDate] = useState<Date>()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
