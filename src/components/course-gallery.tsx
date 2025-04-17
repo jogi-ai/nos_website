@@ -5,8 +5,6 @@ import Image from "next/image"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
-
-// Sample gallery items - in a real application, this would come from a database or CMS
 const galleryItems = [
   {
     id: 1,
