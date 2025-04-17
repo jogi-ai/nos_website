@@ -6,12 +6,12 @@ import CourseGallery from "@/components/course-gallery"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-import { Badge } from "@/components/ui/badge"
+// import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Clock, Calendar, MapPin, Users, Award, AlertTriangle, Check, X } from "lucide-react"
 
 export default function WhiteWaterKayakingCourse() {
    // Number of slots remaining
-   const slotsRemaining = 3
+  //  const slotsRemaining = 3
   return (
     <main className="min-h-screen bg-stone-50">
       <Navigation />
