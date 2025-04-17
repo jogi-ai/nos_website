@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  /* --color-primary: #d16727; */
+  --color-primary: #2A9D8F;
+  --color-charcoal: #264653;
+  /* --color-mindaro: #E9C46A; */
+  --color-mindaro: #E1FF68
+  /* --color-persian-green: #2A9D8F; */
+  --color-sandy-brown: #F4A261;
+  --color-burnt-sienna: #E76F51;
+  /* ... */
+}
+
+.btnPrimary{
+  color: #ffffff;
+  background-color: var(--color-primary);
+  cursor: pointer;
+}
+
+.btnPrimary:hover{
+  border: var(--color-primary) solid 4px;
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
+a{
+  cursor: pointer;
+}
