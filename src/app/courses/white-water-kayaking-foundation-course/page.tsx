@@ -8,7 +8,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 // import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Clock, Calendar, MapPin, Users, Award, AlertTriangle, Check, X } from "lucide-react"
-
+import RegisterButton from "@/components/register-button"
 export default function WhiteWaterKayakingCourse() {
    // Number of slots remaining
   //  const slotsRemaining = 3
@@ -50,7 +50,27 @@ export default function WhiteWaterKayakingCourse() {
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Main Content */}
             <div className="lg:w-2/3">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              
+              <div className="course-description">
+                <h2 className="font-serif text-3xl font-bold mb-6">Course Description</h2>
+
+                <p className="text-lg text-gray-700 mb-6">
+                  Whitewater kayaking is a water sport where individuals navigate rivers using specialized kayaks to
+                  paddle through rapids, waves, and obstacles while maintaining control and balance.
+                </p>
+
+                <p className="text-lg text-gray-700 mb-6">
+                  The course provides all the foundational knowledge for the student to pursue the highly exciting and
+                  rewarding journey of learning white water kayaking.
+                </p>
+
+                <p className="text-lg text-gray-700 mb-6">
+                  The course aims to not just cover practical skills required for kayaking but also impart theoretical
+                  knowledge through off-the-river sessions to understand river features and currents which we
+                  believe aids in faster learning.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 <Card>
                   <CardContent className="p-6">
                     <div className="flex items-center gap-3 mb-4">
@@ -92,24 +112,6 @@ export default function WhiteWaterKayakingCourse() {
                   </CardContent>
                 </Card>
               </div>
-              <h2 className="font-serif text-3xl font-bold mb-6">Course Description</h2>
-
-              <p className="text-lg text-gray-700 mb-6">
-                Whitewater kayaking is a water sport where individuals navigate rivers using specialized kayaks to
-                paddle through rapids, waves, and obstacles while maintaining control and balance.
-              </p>
-
-              <p className="text-lg text-gray-700 mb-6">
-                The course provides all the foundational knowledge for the student to pursue the highly exciting and
-                rewarding journey of learning white water kayaking.
-              </p>
-
-              <p className="text-lg text-gray-700 mb-6">
-                The course aims to not just cover practical skills required for kayaking but also impart theoretical
-                knowledge through off-the-river sessions to understand river features and currents which we
-                believe aids in faster learning.
-              </p>
-
               {/* Eligibility */}
               <h4 className="font-serif text-lg font-bold mb-6">At the end of the course you will be able to:</h4>
               <ul className="space-y-4 mb-12">
@@ -501,7 +503,7 @@ export default function WhiteWaterKayakingCourse() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-green-800 mb-4">Essential Items</h3>
+                    <h3 className="font-serif text-xl font-bold mb-4">Essential Items</h3>
                     <ul className="space-y-2">
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
@@ -539,7 +541,7 @@ export default function WhiteWaterKayakingCourse() {
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-xl font-bold text-green-800 mb-4">Additional Recommended Items</h3>
+                    <h3 className="font-serif text-xl font-bold mb-4">Additional Recommended Items</h3>
                     <ul className="space-y-2">
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
@@ -607,7 +609,7 @@ export default function WhiteWaterKayakingCourse() {
             </div>
 
             {/* Sidebar */}
-            <div className="lg:w-1/3">
+            <div className="lg:w-1/3 course-registration-form">
               <div className="sticky top-24 bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="bg-primary text-white p-6">
                   <h3 className="font-serif text-2xl font-bold mb-2">Enquiry form</h3>
@@ -621,7 +623,7 @@ export default function WhiteWaterKayakingCourse() {
           </div>
         </div>
       </section>
-
+      <RegisterButton />
       <Footer />
     </main>
   )
