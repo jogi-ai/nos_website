@@ -138,7 +138,7 @@ export default function WhiteWaterKayakingCourse() {
               <ul className="space-y-4 mb-12">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">Above age 12</span>
+                  <span className="text-lg">Above age 15</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -355,7 +355,7 @@ export default function WhiteWaterKayakingCourse() {
                     </li>
                     <li className="flex items-start">
                       <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Transportation</span>
+                      <span>Transportation to and from within Dandeli</span>
                     </li>
                     <li className="flex items-start">
                       <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -492,7 +492,7 @@ export default function WhiteWaterKayakingCourse() {
                 </div>
               </div>
               {/* Things to Carry - NEW SECTION */}
-              <h2 className="font-serif text-3xl font-bold text-green-900 mb-6">Things to Carry</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6">Things to Carry</h2>
               <div className="bg-white rounded-lg border p-6 mb-12">
                 <p className="text-lg text-gray-700 mb-6">
                   To ensure you have a comfortable and safe experience during the White Water Kayaking Foundation
