@@ -22,7 +22,7 @@ export default function AboutSection() {
               refine your expertise, our diverse range of programs offers something for everyone.
             </p>
           </div>
-          <div className="md:w-1/2 relative h-[400px] w-full rounded-lg overflow-hidden shadow-xl">
+          <div className="md:w-1/2 relative w-full rounded-lg overflow-hidden shadow-xl">
             <video controls autoPlay loop muted playsInline>
               <source src="/banner-video-1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
