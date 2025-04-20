@@ -107,7 +107,7 @@ export default function CourseGallery() {
   const swipeHandlers = useSwipeable({
     onSwipedLeft: () => handleNext(),
     onSwipedRight: () => handlePrevious(),
-    preventDefaultTouchmoveEvent: true,
+    preventScrollOnSwipe: true,
     trackMouse: true,
   })
 
