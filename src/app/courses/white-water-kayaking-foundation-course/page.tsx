@@ -57,7 +57,8 @@ export default function WhiteWaterKayakingCourse() {
                       <Calendar className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Upcoming course date</h3>
                     </div>
-                    <p>May 22 - 25, 2025 (4 days)</p>
+                    <p className="mb-2">May 22 - 25, 2025 (4 days)</p>
+                    <p className="text-sm text-gray-600">*Mention in enquiry form if other dates are preferred</p>
                   </CardContent>
                 </Card>
 
@@ -488,6 +489,101 @@ export default function WhiteWaterKayakingCourse() {
                     To avail this discount, mention &quot;National Outdoor School Kayaking Course&quot; when booking directly with
                     Riverside Retreat.
                   </p> */}
+                </div>
+              </div>
+              {/* Things to Carry - NEW SECTION */}
+              <h2 className="font-serif text-3xl font-bold text-green-900 mb-6">Things to Carry</h2>
+              <div className="bg-white rounded-lg border p-6 mb-12">
+                <p className="text-lg text-gray-700 mb-6">
+                  To ensure you have a comfortable and safe experience during the White Water Kayaking Foundation
+                  Course, please bring the following items with you:
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <h3 className="font-serif text-xl font-bold text-green-800 mb-4">Essential Items</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Quick-dry clothing (synthetic or wool, avoid cotton)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Swimming shorts/trunks</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Water shoes or old sneakers (that can get wet)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Sunscreen (water-resistant, SPF 30+)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Sunglasses with strap</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Hat or cap with brim</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Towel</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Water bottle (1 liter minimum)</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div>
+                    <h3 className="font-serif text-xl font-bold text-green-800 mb-4">Additional Recommended Items</h3>
+                    <ul className="space-y-2">
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Rash guard or thermal top (depending on weather)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Lightweight rain jacket</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Dry bag for personal items</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Insect repellent</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Personal medications</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Camera (waterproof or with waterproof case)</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Snacks for energy between meals</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Small first aid kit</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-lg">
+                  <h3 className="font-serif text-lg font-bold text-amber-800 mb-2">Important Note</h3>
+                  <p>
+                    All specialized kayaking equipment (kayak, paddle, spray skirt, helmet, life jacket) will be
+                    provided by National Outdoor School. Please do not bring valuables that cannot be secured, as we
+                    cannot be responsible for lost or damaged items during river activities.
+                  </p>
                 </div>
               </div>
               {/* Instructor Profile */}

@@ -1,10 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
+import { useSwipeable } from "react-swipeable"
+
+// Sample gallery items - in a real application, this would come from a database or CMS
 const galleryItems = [
   {
     id: 1,
@@ -14,42 +17,42 @@ const galleryItems = [
     alt: "Eskimo roll practice",
   },
   {
-    id: 3,
+    id: 2,
     type: "image",
     thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
     fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
     alt: "Navigating the Kali River in a kayak",
   },
   {
-    id: 2,
+    id: 3,
     type: "image",
     thumbnail: "/eskimo-roll-in-a-rapid.jpg",
     fullSize: "/eskimo-roll-in-a-rapid.jpg",
     alt: "Eskimo roll in a rapid",
   },
   {
-    id: 7,
+    id: 4,
     type: "video",
     thumbnail: "/rapid-run.png",
     videoSrc: "/kali-rapid-run.mp4", 
     alt: "Rapid run",
   },
   {
-    id: 4,
+    id: 5,
     type: "image",
     thumbnail: "/rapid-run-2.jpg",
     fullSize: "/rapid-run-2.jpg",
     alt: "Running the first rapid",
   },
   {
-    id: 5,
+    id: 6,
     type: "image",
     thumbnail: "/kali-river-ariel-view.jpg",
     fullSize: "/kali-river-ariel-view.jpg",
     alt: "Aerial view of the Kali River",
   },
   {
-    id: 8,
+    id: 7,
     type: "image",
     thumbnail: "/first-rapid.jpg",
     fullSize: "/first-rapid.jpg",
@@ -67,6 +70,7 @@ const galleryItems = [
 export default function CourseGallery() {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   const openGallery = (index: number) => {
     setCurrentIndex(index)
@@ -80,6 +84,32 @@ export default function CourseGallery() {
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex === galleryItems.length - 1 ? 0 : prevIndex + 1))
   }
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!open) return
+
+      if (e.key === "ArrowLeft") {
+        handlePrevious()
+      } else if (e.key === "ArrowRight") {
+        handleNext()
+      } else if (e.key === "Escape") {
+        setOpen(false)
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown)
+    return () => window.removeEventListener("keydown", handleKeyDown)
+  }, [open])
+
+  // Swipe handlers for mobile
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => handleNext(),
+    onSwipedRight: () => handlePrevious(),
+    preventDefaultTouchmoveEvent: true,
+    trackMouse: true,
+  })
 
   const currentItem = galleryItems[currentIndex]
 
@@ -106,7 +136,7 @@ export default function CourseGallery() {
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-5xl p-0 bg-black/90 border-none">
-          <div className="relative h-[80vh] w-full flex items-center justify-center">
+          <div className="relative h-[80vh] w-full flex items-center justify-center" {...swipeHandlers}>
             {/* Close button */}
             <Button
               variant="ghost"
@@ -152,9 +182,16 @@ export default function CourseGallery() {
                 </div>
               ) : (
                 <div className="relative w-full h-full flex items-center justify-center">
-                  <div className="bg-gray-800 p-4 rounded">
-                    <p className="text-white">Video player would be here in a real application</p>
-                  </div>
+                  <video
+                    ref={videoRef}
+                    src={currentItem.videoSrc}
+                    controls
+                    autoPlay
+                    className="max-h-full max-w-full"
+                    poster={currentItem.thumbnail}
+                  >
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               )}
             </div>

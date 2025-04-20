@@ -7,15 +7,56 @@ import Link from "next/link"
 import { Instagram, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-
+import { toast } from "@/components/ui/use-toast"
 export default function Footer() {
   const [email, setEmail] = useState("")
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [subscribed, setSubscribed] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Here you would typically handle the newsletter subscription
-    setSubscribed(true)
+
+    // Validate email
+    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
+    if (!emailRegex.test(email)) {
+      toast({
+        title: "Invalid Email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      })
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      const response = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email }),
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to subscribe to newsletter")
+      }
+
+      setSubscribed(true)
+      toast({
+        title: "Subscription Successful!",
+        description: "Thank you for subscribing to our newsletter.",
+      })
+    } catch (error) {
+      console.error("Newsletter subscription error:", error)
+      toast({
+        title: "Subscription Failed",
+        description: "There was a problem with your subscription. Please try again.",
+        variant: "destructive",
+      })
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -81,9 +122,10 @@ export default function Footer() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
+                  disabled={isSubmitting}
                 />
-                <Button type="submit" className="w-full btnPrimary">
-                  Subscribe
+                <Button type="submit" className="w-full btnPrimary" disabled={isSubmitting}>
+                  {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </Button>
               </form>
             ) : (

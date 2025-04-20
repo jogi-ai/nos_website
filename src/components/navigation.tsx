@@ -40,7 +40,7 @@ export default function Navigation() {
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="font-serif text-2xl font-bold tracking-wide">
-          <Image src="/logo.svg" alt="National Outdoor School Logo" width="100" height="71" />
+          <Image src="/logo_new.svg" alt="National Outdoor School Logo" width="100" height="71" />
         </Link>
 
         {/* Desktop Navigation */}
