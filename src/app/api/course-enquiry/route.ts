@@ -82,6 +82,7 @@ export async function POST(request: Request) {
 
     // 1. Add to SendGrid list
     try {
+      console.log("sending to sendgrid1")
       addToSendGridList(data)
     } catch (error) {
       console.error("SendGrid list error:", error)
@@ -151,6 +152,7 @@ async function addToSendGridList(data: {
   if(lastName) {
     dataToSend.last_name = lastName
   }
+  console.log("sending to sendgrid2")
   const response = await fetch("https://api.sendgrid.com/v3/marketing/contacts", {
     method: "PUT",
     headers: {
