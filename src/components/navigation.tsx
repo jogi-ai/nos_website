@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { Menu } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,18 +11,33 @@ export default function Navigation() {
   const [prevScrollPos, setPrevScrollPos] = useState(0)
   const [visible, setVisible] = useState(true)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
-
+  const ticking = useRef(false)
   useEffect(() => {
+    // Initial scroll position
+    setPrevScrollPos(window.scrollY)
+
     const handleScroll = () => {
-      const currentScrollPos = window.scrollY
+      // Use requestAnimationFrame to throttle scroll events
+      if (!ticking.current) {
+        window.requestAnimationFrame(() => {
+          const currentScrollPos = window.scrollY
 
-      // Make navbar visible when scrolling up or at the top
-      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
+          // Only update state if there's a significant change (10px threshold)
+          // This reduces the number of renders during scrolling
+          if (Math.abs(prevScrollPos - currentScrollPos) > 10) {
+            // Make navbar visible when scrolling up or at the top
+            setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10)
+            setPrevScrollPos(currentScrollPos)
+          }
 
-      setPrevScrollPos(currentScrollPos)
+          ticking.current = false
+        })
+
+        ticking.current = true
+      }
     }
 
-    window.addEventListener("scroll", handleScroll)
+    window.addEventListener("scroll", handleScroll, { passive: true })
     return () => window.removeEventListener("scroll", handleScroll)
   }, [prevScrollPos])
 
@@ -34,9 +49,10 @@ export default function Navigation() {
 
   return (
     <header
-      className={`fixed w-full bg-black text-white z-50 transition-transform duration-300 ${
+      className={`fixed w-full bg-black text-white z-50 transition-transform duration-300 will-change-transform ${
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
+      style={{ transform: visible ? "translateY(0)" : "translateY(-100%)" }}
     >
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <Link href="/" className="font-serif text-2xl font-bold tracking-wide">
@@ -60,7 +76,7 @@ export default function Navigation() {
               <span className="sr-only">Open menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-green-800 text-white">
+          <SheetContent side="right" className="bg-black text-white px-5">
             <nav className="flex flex-col space-y-6 mt-12">
               {navItems.map((item) => (
                 <Link

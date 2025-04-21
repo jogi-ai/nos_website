@@ -32,6 +32,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
   },
+
   alternates: {
     canonical: "https://nationaloutdoorschool.com/courses/white-water-kayaking-foundation-course",
   },
