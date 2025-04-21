@@ -2,7 +2,42 @@ import Navigation from "@/components/navigation"
 import Footer from "@/components/footer"
 import ContactForm from "@/components/contact-form"
 import { Mail, MessageCircle, Instagram } from "lucide-react"
-
+import { Metadata } from "next"
+export const metadata: Metadata = {
+  title: "Contact Us | National Outdoor School",
+  description:
+    "Get in touch with National Outdoor School. Have questions about our outdoor education courses? Contact us via email, whatsApp, or our online form.",
+  keywords:
+    "contact National Outdoor School, outdoor education contact, adventure course inquiry, kayaking course contact",
+  openGraph: {
+    title: "Contact Us | National Outdoor School",
+    description:
+      "Get in touch with National Outdoor School. Have questions about our outdoor education courses? Contact us via email, phone, whatsApp, or our online form.",
+    url: "https://nationaloutdoorschool.com/contact",
+    siteName: "National Outdoor School",
+    images: [
+      {
+        url: "https://nationaloutdoorschool.com/og-image-home.jpg", // Replace with actual image path
+        width: 1200,
+        height: 630,
+        alt: "Contact National Outdoor School",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | National Outdoor School",
+    description:
+      "Get in touch with National Outdoor School. Have questions about our outdoor education courses? Contact us via email, phone, WhatsApp, or our online form.",
+    images: ["https://nationaloutdoorschool.com/og-image-home.jpg"], // Replace with actual image path
+    creator: "@nationaloutdoorschool",
+  },
+  alternates: {
+    canonical: "https://nationaloutdoorschool.com/contact",
+  },
+}
 export default function ContactPage() {
   // WhatsApp number - replace with the actual number
   const whatsappNumber = "917019052454"

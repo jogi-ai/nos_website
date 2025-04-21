@@ -6,9 +6,36 @@ import CourseGallery from "@/components/course-gallery"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
-// import { Badge } from "@/components/ui/badge"
 import { CheckCircle, Clock, Calendar, MapPin, Users, Award, AlertTriangle, Check, X } from "lucide-react"
 import RegisterButton from "@/components/register-button"
+import { Metadata } from "next"
+export const metadata: Metadata = {
+  title: "White Water Kayaking Foundation Course | National Outdoor School",
+  description:
+    "Master the fundamentals of white water kayaking in our 4-day foundation course. Learn paddling techniques, river features, safety skills, and eskimo roll.",
+  keywords:
+    "white water kayaking, kayaking course, kayaking foundation, river kayaking, water sports, outdoor adventure",
+  openGraph: {
+    title: "White Water Kayaking Foundation Course | National Outdoor School",
+    description:
+      "Master the fundamentals of white water kayaking in our 4-day foundation course. Learn paddling techniques, river features, safety skills, and eskimo roll.",
+    url: "https://nationaloutdoorschool.com/courses/white-water-kayaking-foundation-course",
+    siteName: "National Outdoor School",
+    images: [
+      {
+        url: "https://nationaloutdoorschool.com/og-image-kayaking.jpg", // Replace with actual image path
+        width: 1200,
+        height: 630,
+        alt: "White Water Kayaking Course - National Outdoor School",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://nationaloutdoorschool.com/courses/white-water-kayaking-foundation-course",
+  },
+}
 export default function WhiteWaterKayakingCourse() {
    // Number of slots remaining
   //  const slotsRemaining = 3
