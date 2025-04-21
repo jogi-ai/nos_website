@@ -173,6 +173,11 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
 
       // Show success state
       setIsSubmitted(true)
+      //Smooth scroll to .course-registration-form
+      const formElement = document.querySelector(".course-registration-form")
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: "smooth" })
+      }
       // toast({
       //   title: "Registration Successful!",
       //   description: "Thank you for registering. We'll be in touch soon.",
