@@ -23,7 +23,7 @@ export default function AboutSection() {
             </p>
           </div>
           <div className="md:w-1/2 relative w-full rounded-lg overflow-hidden shadow-xl">
-            <video controls autoPlay loop muted playsInline>
+            <video controls autoPlay loop muted playsInline width="100%" height="100%">
               <source src="/banner-video-1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
