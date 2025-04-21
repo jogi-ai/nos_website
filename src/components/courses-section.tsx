@@ -12,7 +12,7 @@ export default function CoursesSection() {
         "A perfect course for beginners to learn the essential skills required to navigate white water with balance and control.",
       image: "/intro-to-white-water-kayaking.jpg",
       date: "May 22-25, 2025",
-      location: "Kali River, Dandeli Karnataka",
+      location: "Kali River, Dandeli, Karnataka, India",
       link: "/courses/white-water-kayaking-foundation-course"
     }
   ]
@@ -22,7 +22,7 @@ export default function CoursesSection() {
       <div className="container mx-auto px-4">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">Upcoming Courses</h2>
         <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto mb-16">
-          Discover our range of immersive outdoor education experiences led by expert instructors
+          Discover our range of immersive outdoor education courses led by expert instructors
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

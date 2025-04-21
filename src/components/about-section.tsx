@@ -8,7 +8,7 @@ export default function AboutSection() {
               National Outdoor School
             </h2>
             <p className="text-lg text-gray-700 mb-6">
-              Founded in April 2025, National Outdoor School is dedicated to connecting people with nature through immersive,
+              National Outdoor School is dedicated to connecting people with nature through immersive,
               educational experiences. Our expert instructors bring decades of wilderness experience and a passion for
               teaching outdoor skills.
             </p>

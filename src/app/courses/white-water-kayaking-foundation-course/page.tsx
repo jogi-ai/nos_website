@@ -43,7 +43,7 @@ export default function WhiteWaterKayakingCourse() {
             <AlertDescription className="flex items-center justify-between">
               <span className="text-amber-800 font-medium">Limited availability for this course!</span>
               {/* <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-300">
-                Only {slotsRemaining} slots remaining
+                {slotsRemaining} slots remaining
               </Badge> */}
             </AlertDescription>
           </Alert>
@@ -66,7 +66,7 @@ export default function WhiteWaterKayakingCourse() {
 
                 <p className="text-lg text-gray-700 mb-6">
                   The course aims to not just cover practical skills required for kayaking but also impart theoretical
-                  knowledge through off-the-river sessions to understand river features and currents which we
+                  knowledge through off-the-river sessions to understand river features and currents, which we
                   believe aids in faster learning.
                 </p>
               </div>
@@ -98,7 +98,7 @@ export default function WhiteWaterKayakingCourse() {
                       <Users className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Group Size</h3>
                     </div>
-                    <p>Maximum 5 participants</p>
+                    <p>Maximum 5 participants per batch</p>
                   </CardContent>
                 </Card>
 
@@ -117,7 +117,7 @@ export default function WhiteWaterKayakingCourse() {
               <ul className="space-y-4 mb-12">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">Navigate a white water kayak in moving water</span>
+                  <span className="text-lg">Navigate a white water kayak in grade 2 rapids</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -223,17 +223,17 @@ export default function WhiteWaterKayakingCourse() {
               <h2 className="font-serif text-3xl font-bold mb-6">Daily Schedule</h2>
               <Tabs defaultValue="weekday" className="mb-12">
                 <TabsList className="grid w-full grid-cols-2 mb-6">
-                  <TabsTrigger value="weekday">Thursday & Friday</TabsTrigger>
-                  <TabsTrigger value="weekend">Saturday & Sunday</TabsTrigger>
+                  <TabsTrigger value="weekday">Thursday - Saturday</TabsTrigger>
+                  <TabsTrigger value="weekend">Sunday</TabsTrigger>
                 </TabsList>
                 <TabsContent value="weekday" className="border rounded-lg p-6">
-                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-4">Thursday & Friday Schedule</h3>
+                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-4">Thursday - Saturday Schedule</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <span className="font-medium">6:00am - 7:00am</span>
-                        <p>Exercise / Yoga</p>
+                        <span className="font-medium">6:30am - 7:00am</span>
+                        <p>Exercise / Warm up / Yoga</p>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -246,69 +246,69 @@ export default function WhiteWaterKayakingCourse() {
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <span className="font-medium">8:30am - 12:30pm</span>
-                        <p>Theory & Practical Sessions on the river</p>
+                        <span className="font-medium">7:45am - 8:15am</span>
+                        <p>Travel to training location</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <span className="font-medium">12:30pm - 1:00pm</span>
-                        <p>Reflections</p>
+                        <span className="font-medium">8:30am - 1:00pm</span>
+                        <p>Theory & Practical Sessions on the river (with 30 minutes break)</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <span className="font-medium">2:30pm</span>
-                        <p>Return to accommodation</p>
-                      </div>
-                    </li>
-                  </ul>
-                </TabsContent>
-                <TabsContent value="weekend" className="border rounded-lg p-6">
-                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-4">Saturday & Sunday Schedule</h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">6:00am - 7:00am</span>
-                        <p>Exercise / Yoga</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">7:00am - 7:30am</span>
-                        <p>Breakfast</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">8:30am - 12:30pm</span>
-                        <p>Theory & Practical Sessions on the river</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">12:30pm - 1:00pm</span>
-                        <p>Reflections</p>
-                      </div>
-                    </li>
-                    <li className="flex items-start">
-                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <span className="font-medium">12:30pm - 2:00pm</span>
+                        <span className="font-medium">1:30pm - 2:30pm</span>
                         <p>Lunch</p>
                       </div>
                     </li>
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                       <div>
-                        <span className="font-medium">2:00pm - 3:00pm</span>
-                        <p>Practical sessions on the river</p>
+                        <span className="font-medium">2:30pm onwards</span>
+                        <p>Practice / Pool Sessions (optional)</p>
+                      </div>
+                    </li>
+                  </ul>
+                </TabsContent>
+                <TabsContent value="weekend" className="border rounded-lg p-6">
+                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-4">Sunday Schedule</h3>
+                  <ul className="space-y-4">
+                  <li className="flex items-start">
+                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <span className="font-medium">6:30am - 7:00am</span>
+                        <p>Exercise / Warm up / Yoga</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <span className="font-medium">7:00am - 7:30am</span>
+                        <p>Breakfast</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <span className="font-medium">7:45am - 8:15am</span>
+                        <p>Travel to training location</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <span className="font-medium">8:30am - 1:00pm</span>
+                        <p>Theory & Practical Sessions on the river (with 30 minutes break)</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start">
+                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                      <div>
+                        <span className="font-medium">1:30pm - 2:30pm</span>
+                        <p>Lunch</p>
                       </div>
                     </li>
                     <li className="flex items-start">
@@ -324,7 +324,8 @@ export default function WhiteWaterKayakingCourse() {
               {/* Course Fees - NEW SECTION */}
               <h2 className="font-serif text-3xl font-bold mb-6">Course Fees</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
-                <div className="text-2xl font-bold mb-6">₹20,000</div>
+                <h3 className="font-serif text-xl font-bold mb-4">Introductory Offer</h3>
+                <div className="text-xl font-bold mb-6"><span className="line-through">₹25,000</span> ₹22,000</div>
 
                 <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
@@ -343,6 +344,10 @@ export default function WhiteWaterKayakingCourse() {
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                      <span>Transportation from recommended accommodation to training spots</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
                       <span>Course completion certificate</span>
                     </li>
                   </ul>
@@ -357,7 +362,7 @@ export default function WhiteWaterKayakingCourse() {
                     </li>
                     <li className="flex items-start">
                       <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Transportation to and from within Dandeli</span>
+                      <span>Transportation to and from Dandeli</span>
                     </li>
                     <li className="flex items-start">
                       <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -418,7 +423,7 @@ export default function WhiteWaterKayakingCourse() {
                   <div className="md:w-2/3">
                     <h3 className="font-serif text-xl font-bold mb-2">Jungli, The Nomad Village</h3>
                     <p className="text-lg text-gray-700 mb-4">
-                      Our recommended accommodation partner is the Jungli, The Nomad Village located in Moulangi, Dandeli.
+                      Our recommended accommodation partner is the Jungli, The Nomad Village located in Moulangi, Dandeli. For more details about the accommodation visit <a className="underline" href="https://www.junglithenomad.com/the-big-bungalow" target="_blank">Jungli&apos;s website.</a>
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
@@ -427,6 +432,10 @@ export default function WhiteWaterKayakingCourse() {
                           <li className="flex items-center">
                             <Check className="h-4 w-4 text-green-700 mr-2 flex-shrink-0" />
                             <span>Digital nomad friendly</span>
+                          </li>
+                          <li className="flex items-center">
+                            <Check className="h-4 w-4 text-green-700 mr-2 flex-shrink-0" />
+                            <span>Stay with group and coach</span>
                           </li>
                           <li className="flex items-center">
                             <Check className="h-4 w-4 text-green-700 mr-2 flex-shrink-0" />
@@ -466,12 +475,11 @@ export default function WhiteWaterKayakingCourse() {
                     </div>
                   </div>
                 </div>
-
                 <div className="bg-green-50 p-4 rounded-lg border border-green-200">
                   <h3 className="font-serif text-lg font-bold mb-2">Special Kayaker Discount</h3>
                   <p className="mb-2">
-                    As a participant in our White Water Kayaking Foundation Course, you&apos;re eligible for special
-                    discounted rates at Jungli.
+                    As a participant National Outdoor School&apos;s White Water Kayaking Foundation Course, you&apos;re eligible for a special
+                    discounted rate of Rs. 2500 / head / night for twin sharing rooms(includes stay, meals & taxes) at Jungli.
                   </p>
                   {/* <ul className="space-y-2">
                     <li className="flex items-center">
@@ -497,7 +505,7 @@ export default function WhiteWaterKayakingCourse() {
               <h2 className="font-serif text-3xl font-bold mb-6">Things to Carry</h2>
               <div className="bg-white rounded-lg border p-6 mb-12">
                 <p className="text-lg text-gray-700 mb-6">
-                  To ensure you have a comfortable and safe experience during the White Water Kayaking Foundation
+                  To ensure you have a comfortable experience during the White Water Kayaking Foundation
                   Course, please bring the following items with you:
                 </p>
 
@@ -515,7 +523,7 @@ export default function WhiteWaterKayakingCourse() {
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Water shoes or old sneakers (that can get wet)</span>
+                        <span>Water shoes or sneakers (that can get wet)</span>
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
@@ -589,21 +597,29 @@ export default function WhiteWaterKayakingCourse() {
                 </div>
               </div>
               {/* Instructor Profile */}
-              <h2 className="font-serif text-3xl font-bold mb-6">Primary Instructor Profile</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6">Instructor Profile</h2>
               <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
-                <div className="md:w-1/3">
+                <div className="md:w-1/3 w-[100%]">
                   <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                     <Image src="/jogi-instructor-dp.jpg" alt="Jogi Nayak" fill className="object-cover" />
                   </div>
                 </div>
-                <div className="md:w-2/3">
+                <div className="md:w-2/3 w-[100%]">
                   <h3 className="font-serif text-2xl font-bold text-gray-600 mb-2">Jogi Nayak</h3>
-                  <p className="text-lg text-gray-700 mb-4">
-                    Jogi Nayak first learned white water kayaking in Rishikesh 13 years ago and it changed his life
-                    forever. The love for the sport has made him explore more than 15 rivers across India, Nepal and
-                    USA. He has completed the white water rescue technician course from Rescue 3 international and is a
-                    certified river guide from US National White Water Center.
-                  </p>
+                  <div className="text-lg text-gray-700">
+                    <p className="mb-2">Jogi is a passionate kayaker and an advocate for the sport. His passion for the sport has made him explore more than 15 rivers across India, Nepal and
+                    USA. He believes that kayaking is not just a sport, but a way of life that connects people with nature and helps them discover their true potential.
+                    He is committed to sharing his knowledge and experience with others, and helping them develop their skills and confidence on the water. </p>
+                    
+                    <p className="mb-2">With credentials as a White Water Rescue Technician course from Rescue 3 international and being a certified
+                    river guide from US National White Water Center, he has previously trained over 100 students 
+                    at General Thimayya National Academy of Adventure and various other kayaking schools in India.</p>
+                    
+
+                    <p>His mission with National Outdoor School is to make white water kayaking accessible to all,
+                    create a community of kayakers who are passionate about the sport and the environment, and produce 
+                    athletes in India that reach the world stage.</p>
+                  </div>
                 </div>
               </div>
             </div>
