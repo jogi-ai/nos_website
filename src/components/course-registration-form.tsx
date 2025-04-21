@@ -156,7 +156,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
     console.log("Submitting form data:", formData)
     try {
       // Submit form data to API
-      const response = await fetch("/api/course-enquiry", {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/enquiries/course`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
