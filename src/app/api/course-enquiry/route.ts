@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       }
     }
     const errors: Record<string, string> = {}
-
+    console.log("received data",data)
     // Validate fullName
     if (!data.fullName || data.fullName.length < 2 || data.fullName.length > 200) {
       errors.fullName = "Full name must be between 2 and 200 characters."
@@ -153,21 +153,23 @@ async function addToSendGridList(data: {
     dataToSend.last_name = lastName
   }
   console.log("sending to sendgrid2")
+  const reqBody = {
+    list_ids: [courseDataNameWise[courseName].listId],
+    contacts: [dataToSend],
+  }
+  console.log("SendGrid request body:", reqBody)
   const response = await fetch("https://api.sendgrid.com/v3/marketing/contacts", {
     method: "PUT",
     headers: {
       Authorization: `Bearer ${process.env.SENDGRID_API_KEY}`,
       "Content-Type": "application/json",
     },
-    body: JSON.stringify({
-      list_ids: [courseDataNameWise[courseName].listId],
-      contacts: [
-        dataToSend
-      ],
-    }),
+    body: JSON.stringify(reqBody),
   })
-
-  if (!response.ok) {
+  console.log("SendGrid response status:", response.status)
+  if (response.status !=  202) {
+    console.log("SendGrid response error:", response.statusText)
+    console.log("SendGrid response body:", await response.json())
     throw new Error(`SendGrid API error: ${response.statusText} (${response.status}) ${JSON.stringify(await response.json())}`)
   }
   const responseData = await response.json()
