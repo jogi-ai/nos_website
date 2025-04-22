@@ -8,6 +8,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
+    fbq?: (...args: unknown[]) => void;
   }
 }
 
@@ -20,6 +21,7 @@ export default function Analytics() {
     window.gtag?.('config', 'G-5SREHPDN1E', {
       page_path: url,
     });
+    window.fbq?.('track', 'PageView');
   }, [pathname, searchParams]);
 
   return null;
