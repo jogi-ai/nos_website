@@ -4,7 +4,7 @@ import ContactForm from "@/components/contact-form"
 import { Mail, MessageCircle, Instagram } from "lucide-react"
 import { Metadata } from "next"
 export const metadata: Metadata = {
-  title: "Contact Us | National Outdoor School",
+  title: "Contact Us",
   description:
     "Get in touch with National Outdoor School. Have questions about our outdoor education courses? Contact us via email, whatsApp, or our online form.",
   keywords:

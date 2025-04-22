@@ -10,7 +10,7 @@ import { CheckCircle, Clock, Calendar, MapPin, Users, Award, AlertTriangle, Chec
 import RegisterButton from "@/components/register-button"
 import { Metadata } from "next"
 export const metadata: Metadata = {
-  title: "White Water Kayaking Foundation Course | National Outdoor School",
+  title: "White Water Kayaking Foundation Course",
   description:
     "Master the fundamentals of white water kayaking in our 4-day foundation course. Learn paddling techniques, river features, safety skills, and eskimo roll.",
   keywords:
@@ -559,29 +559,29 @@ export default function WhiteWaterKayakingCourse() {
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Sunglasses with strap</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Hat or cap with brim</span>
-                      </li>
-                      <li className="flex items-start">
-                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
                         <span>Towel</span>
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
                         <span>Water bottle (1 liter minimum)</span>
                       </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>ID Proof</span>
+                      </li>
                     </ul>
                   </div>
 
                   <div>
-                    <h3 className="font-serif text-xl font-bold mb-4">Additional Recommended Items</h3>
+                    <h3 className="font-serif text-xl font-bold mb-4">Additional Good To Have Items</h3>
                     <ul className="space-y-2">
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Rash guard or thermal top (depending on weather)</span>
+                        <span>Sunglasses</span>
+                      </li>
+                      <li className="flex items-start">
+                        <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
+                        <span>Hat or cap</span>
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
@@ -601,7 +601,7 @@ export default function WhiteWaterKayakingCourse() {
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                        <span>Camera (waterproof or with waterproof case)</span>
+                        <span>Camera (waterproof)</span>
                       </li>
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
