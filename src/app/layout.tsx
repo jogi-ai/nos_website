@@ -4,6 +4,8 @@ import { Inter, Merriweather } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
+import Script from "next/script"
+import Analytics from "@/components/analytics"
 // Load fonts
 const inter = Inter({
   subsets: ["latin"],
@@ -86,8 +88,19 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
+      <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-5SREHPDN1E"></Script>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5SREHPDN1E', { debug_mode: ${process.env.NEXT_PUBLIC_ENV=="production"?"false":"true"} });
+          `}
+        </Script>
+      </head>
       <body className="min-h-screen font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <Analytics />
           {children}
           <Toaster />
         </ThemeProvider>
