@@ -109,13 +109,12 @@ export default function RootLayout({
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '2250017495394221');
-          fbq('track', 'PageView');`
-        }
+          fbq('track', 'PageView');
+          `}
         </Script>
-        <noscript><img height="1" width="1" style="display:none"
+        <noscript><img height="1" width="1" style={{ display: "none" }}
         src="https://www.facebook.com/tr?id=2250017495394221&ev=PageView&noscript=1"
         /></noscript>
-<!-- End Meta Pixel Code -->
       </head>
       <body className="min-h-screen font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
