@@ -7,57 +7,108 @@ import Link from "next/link"
 import { Instagram, Mail, MapPin } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { toast } from "@/components/ui/use-toast"
+type FormData = {
+  email: string
+}
+
+type FormErrors = {
+  [key in keyof FormData]?: string
+}
 export default function Footer() {
-  const [email, setEmail] = useState("")
+  const [formData, setFormData] = useState<FormData>({
+      email: "",
+  })
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [touched, setTouched] = useState<Record<string, boolean>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [subscribed, setSubscribed] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-
-    // Validate email
-    const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
-    if (!emailRegex.test(email)) {
-      toast({
-        title: "Invalid Email",
-        description: "Please enter a valid email address.",
-        variant: "destructive",
-      })
-      return
-    }
-
-    setIsSubmitting(true)
-
-    try {
-      const response = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ email }),
-      })
-
-      if (!response.ok) {
-        throw new Error("Failed to subscribe to newsletter")
-      }
-
-      setSubscribed(true)
-      toast({
-        title: "Subscription Successful!",
-        description: "Thank you for subscribing to our newsletter.",
-      })
-    } catch (error) {
-      console.error("Newsletter subscription error:", error)
-      toast({
-        title: "Subscription Failed",
-        description: "There was a problem with your subscription. Please try again.",
-        variant: "destructive",
-      })
-    } finally {
-      setIsSubmitting(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
+// Validation rules
+  const validateField = (name: keyof FormData, value: string): string => {
+    switch (name) {
+        case "email":
+            return !value.trim()
+            ? "Email is required"
+            : !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value)
+                ? "Invalid email address"
+                : ""
+        default:
+            return ""
     }
   }
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {}
+    let isValid = true
+
+    // Validate each field
+    Object.entries(formData).forEach(([key, value]) => {
+      const fieldName = key as keyof FormData
+      const error = validateField(fieldName, value)
+      if (error) {
+        newErrors[fieldName] = error
+        isValid = false
+      }
+    })
+
+    setErrors(newErrors)
+    return isValid
+  }
+  const handleChange = (name: keyof FormData, value: string) => {
+    if(isSubmitted)
+        setIsSubmitted(false)
+    setFormData((prev) => ({ ...prev, [name]: value }))
+
+    // If field has been touched, validate on change
+    if (touched[name]) {
+      const error = validateField(name, value)
+      setErrors((prev) => ({ ...prev, [name]: error }))
+    }
+  }
+  const handleSubmit = async (e: React.FormEvent) => {
+      e.preventDefault()
+      // Mark all fields as touched
+      const allTouched = Object.keys(formData).reduce(
+        (acc, key) => {
+          acc[key] = true
+          return acc
+        },
+        {} as Record<string, boolean>,
+      )
+      setTouched(allTouched)
+  
+      // Validate all fields
+      const isValid = validateForm()
+  
+      if (!isValid) {
+        return
+      }
+  
+      setIsSubmitting(true)
+  
+      try {
+        // Submit form data to API
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/enquiries/newsletter`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        })
+  
+        if (!response.ok) {
+          throw new Error("Failed to submit form")
+        }
+  
+        // Show success state
+        setIsSubmitted(true)
+        setFormData({
+          email: ""
+        })
+      } catch (error) {
+        console.error("Contact form error:", error)
+      } finally {
+        setIsSubmitting(false)
+      }
+    }
 
   return (
     <footer className="bg-black text-white pt-16 pb-8">
@@ -114,16 +165,17 @@ export default function Footer() {
             <p className="mb-4">
               Subscribe to our newsletter for updates on new courses, outdoor tips, and special offers.
             </p>
-            {!subscribed ? (
+            {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-3">
                 <Input
                   type="email"
                   placeholder="Your email address"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  value={formData.email}
+                  onChange={(e) => handleChange("email", e.target.value)}
                   required
                   disabled={isSubmitting}
                 />
+                {errors.email && <p className="text-sm text-red-700">{errors.email}</p>}
                 <Button type="submit" className="w-full btnPrimary" disabled={isSubmitting}>
                   {isSubmitting ? "Subscribing..." : "Subscribe"}
                 </Button>
