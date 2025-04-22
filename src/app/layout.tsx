@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import Script from "next/script"
 import Analytics from "@/components/analytics"
+import { Suspense } from "react"
 // Load fonts
 const inter = Inter({
   subsets: ["latin"],
@@ -100,7 +101,9 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen font-sans antialiased">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
-          <Analytics />
+          <Suspense fallback={null}>
+            <Analytics />
+          </Suspense>
           {children}
           <Toaster />
         </ThemeProvider>

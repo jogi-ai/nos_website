@@ -17,7 +17,7 @@ export default function Analytics() {
 
   useEffect(() => {
     const url = pathname + (searchParams?.toString() || '');
-    window.gtag?.('config', 'G-XXXXXXX', {
+    window.gtag?.('config', 'G-5SREHPDN1E', {
       page_path: url,
     });
   }, [pathname, searchParams]);
