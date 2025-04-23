@@ -145,6 +145,10 @@ export default function WhiteWaterKayakingCourse() {
               <ul className="space-y-4 mb-12">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Previous kayaking experience not required</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-lg">Navigate a white water kayak in grade 2 rapids</span>
                 </li>
                 <li className="flex items-start">
@@ -184,6 +188,34 @@ export default function WhiteWaterKayakingCourse() {
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-lg">Proven physical fitness</span>
+                </li>
+              </ul>
+              
+              {/* Eligibility */}
+              <h2 className="font-serif text-3xl font-bold mb-6">Safety</h2>
+              <p className="mb-6 text-lg">We understand that learning kayaking is an enjoyable experience when practice is conducted in the safest environment possible among highly experienced instructors and resuce professionals. Here are some highlights about safety during the course:</p>
+              <ul className="space-y-4 mb-12">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Practice sessions in a highly safe and secured environment</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Certified instructor with 13 years of expereince in white water</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">
+                    Minimum of 2 certified rescue professionals on the river during the course along with the instrcutor
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">High quality safety equipment like PFDs and throw ropes</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Beginners will not be taken in rapids above Grade 2+</span>
                 </li>
               </ul>
 
@@ -507,7 +539,7 @@ export default function WhiteWaterKayakingCourse() {
                   <h3 className="font-serif text-lg font-bold mb-2">Special Kayaker Discount</h3>
                   <p className="mb-2">
                     As a participant National Outdoor School&apos;s White Water Kayaking Foundation Course, you&apos;re eligible for a special
-                    discounted rate of Rs. 2500 / head / night for twin sharing rooms(includes stay, meals & taxes) at Jungli.
+                    discounted rate of Rs. 2500 / head / night for sharing rooms(includes stay, meals & taxes) at Jungli.
                   </p>
                   {/* <ul className="space-y-2">
                     <li className="flex items-center">
