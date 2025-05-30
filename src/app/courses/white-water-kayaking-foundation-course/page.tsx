@@ -105,8 +105,8 @@ export default function WhiteWaterKayakingCourse() {
                       <Calendar className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Upcoming course date</h3>
                     </div>
-                    <p className="mb-2">May 22 - 25, 2025 (4 days)</p>
-                    <p className="text-sm text-gray-600">*Mention in enquiry form if other dates are preferred</p>
+                    <p className="mb-2">Jul & Aug 2025, every Thu - Sun</p>
+                    {/* <p className="text-sm text-gray-600">*Mention in enquiry form if other dates are preferred</p> */}
                   </CardContent>
                 </Card>
 
@@ -116,7 +116,7 @@ export default function WhiteWaterKayakingCourse() {
                       <MapPin className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Location</h3>
                     </div>
-                    <p>Kali River, Dandeli Karnataka</p>
+                    <p>Kodencherry, Kerala</p>
                   </CardContent>
                 </Card>
 
@@ -467,7 +467,7 @@ export default function WhiteWaterKayakingCourse() {
               </div>
 
               {/* Accommodation - NEW SECTION */}
-              <h2 className="font-serif text-3xl font-bold mb-6">Recommended Accommodation</h2>
+              {/* <h2 className="font-serif text-3xl font-bold mb-6">Recommended Accommodation</h2>
               <div className="bg-white rounded-lg border p-6 mb-12">
                 <div className="flex flex-col md:flex-row gap-6 mb-6">
                   <div className="md:w-1/3">
@@ -541,26 +541,8 @@ export default function WhiteWaterKayakingCourse() {
                     As a participant National Outdoor School&apos;s White Water Kayaking Foundation Course, you&apos;re eligible for a special
                     discounted rate of Rs. 2500 / head / night for sharing rooms(includes stay, meals & taxes) at Jungli.
                   </p>
-                  {/* <ul className="space-y-2">
-                    <li className="flex items-center">
-                      <Badge className="bg-green-100 mr-2">20% OFF</Badge>
-                      <span>Standard rooms (normally ₹2,500/night, kayaker rate: ₹2,000/night)</span>
-                    </li>
-                    <li className="flex items-center">
-                      <Badge className="bg-green-100 mr-2">15% OFF</Badge>
-                      <span>Deluxe riverside rooms (normally ₹3,500/night, kayaker rate: ₹2,975/night)</span>
-                    </li>
-                    <li className="flex items-center">
-                      <Badge className="bg-green-100 mr-2">10% OFF</Badge>
-                      <span>All meals when purchased as a package</span>
-                    </li>
-                  </ul> */}
-                  {/* <p className="mt-2 text-sm">
-                    To avail this discount, mention &quot;National Outdoor School Kayaking Course&quot; when booking directly with
-                    Riverside Retreat.
-                  </p> */}
                 </div>
-              </div>
+              </div> */}
               {/* Things to Carry - NEW SECTION */}
               <h2 className="font-serif text-3xl font-bold mb-6">Things to Carry</h2>
               <div className="bg-white rounded-lg border p-6 mb-12">

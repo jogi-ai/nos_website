@@ -11,8 +11,8 @@ export default function CoursesSection() {
       description:
         "A perfect course for beginners to learn the essential skills required to navigate white water with balance and control.",
       image: "/intro-to-white-water-kayaking.jpg",
-      date: "May 22-25, 2025",
-      location: "Kali River, Dandeli, Karnataka, India",
+      date: "Jul & Aug 2025, every Thu to Sun",
+      location: "Kodencherry, Kerala",
       link: "/courses/white-water-kayaking-foundation-course"
     }
   ]

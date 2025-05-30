@@ -316,14 +316,34 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
               onValueChange={(value) => handleChange("preferredCourseDate", value)}
               onBlur={() => handleBlur("preferredCourseDate")}
             >
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="may-22-may-25" id="may-22-may-25" />
-                  <Label htmlFor="may-22-may-25">May 22 - May 25</Label>
+              <div>
+                <div className="flex items-center space-x-1 mb-2">
+                  <RadioGroupItem value="jul-3-jul-6" id="jul-3-jul-6" />
+                  <Label htmlFor="jul-3-jul-6">Jul 3 - Jul 6</Label>
+                </div>
+                <div className="flex items-center space-x-1 mb-2">
+                  <RadioGroupItem value="jul-10-jul-13" id="jul-10-jul-13" />
+                  <Label htmlFor="jul-10-jul-13">Jul 10 - Jul 13</Label>
+                </div>
+                <div className="flex items-center space-x-1 mb-2">
+                  <RadioGroupItem value="jul-17-jul-20" id="jul-17-jul-20" />
+                  <Label htmlFor="jul-17-jul-20">Jul 17 - Jul 20</Label>
+                </div>
+                <div className="flex items-center space-x-1 mb-2">
+                  <RadioGroupItem value="jul-31-aug-3" id="jul-31-aug-3" />
+                  <Label htmlFor="jul-31-aug-3">Jul 31 - Aug 3</Label>
+                </div>
+                <div className="flex items-center space-x-1 mb-2">
+                  <RadioGroupItem value="aug-7-aug-10" id="aug-7-aug-10" />
+                  <Label htmlFor="aug-7-aug-10">Aug 7 - Aug 10</Label>
+                </div>
+                <div className="flex items-center space-x-1 mb-2">
+                  <RadioGroupItem value="aug-14-aug-17" id="aug-14-aug-17" />
+                  <Label htmlFor="aug-14-aug-17">Aug 14 - Aug 17</Label>
                 </div>
                 <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="may-29-june-1" id="may-29-june-1" />
-                  <Label htmlFor="may-29-june-1">May 29 - June 1</Label>
+                  <RadioGroupItem value="aug-21-aug-24" id="aug-21-aug-24" />
+                  <Label htmlFor="aug-21-aug-24">Aug 21 - Aug 24</Label>
                 </div>
               </div>
             </RadioGroup>
