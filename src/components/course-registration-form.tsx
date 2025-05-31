@@ -341,10 +341,10 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
                   <RadioGroupItem value="aug-14-aug-17" id="aug-14-aug-17" />
                   <Label htmlFor="aug-14-aug-17">Aug 14 - Aug 17</Label>
                 </div>
-                <div className="flex items-center space-x-1">
+                {/* <div className="flex items-center space-x-1">
                   <RadioGroupItem value="aug-21-aug-24" id="aug-21-aug-24" />
                   <Label htmlFor="aug-21-aug-24">Aug 21 - Aug 24</Label>
-                </div>
+                </div> */}
               </div>
             </RadioGroup>
           </div>
