@@ -145,10 +145,6 @@ export default function WhiteWaterKayakingCourse() {
               <ul className="space-y-4 mb-12">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">Previous kayaking experience not required</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-lg">Navigate a white water kayak in grade 2 rapids</span>
                 </li>
                 <li className="flex items-start">
@@ -170,6 +166,10 @@ export default function WhiteWaterKayakingCourse() {
               {/* Eligibility */}
               <h2 className="font-serif text-3xl font-bold mb-6">Eligibility</h2>
               <ul className="space-y-4 mb-12">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span className="text-lg">Previous kayaking experience not required</span>
+                </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-lg">Above age 15</span>
@@ -206,16 +206,16 @@ export default function WhiteWaterKayakingCourse() {
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                   <span className="text-lg">
-                    Minimum of 2 certified rescue professionals on the river during the course along with the instrcutor
+                    Certified rescue professionals on the river during the course along with the instrcutor
                   </span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">High quality safety equipment like PFDs and throw ropes</span>
+                  <span className="text-lg">High quality safety equipment like PFDs, throw ropes, helmet and airbags</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">Beginners will not be taken in rapids above Grade 2+</span>
+                  <span className="text-lg">Beginners will not be taken in rapids above Grade 3</span>
                 </li>
               </ul>
 
@@ -404,7 +404,7 @@ export default function WhiteWaterKayakingCourse() {
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Transportation from recommended accommodation to training spots</span>
+                      <span>Transportation to training spots within training location</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
@@ -422,7 +422,7 @@ export default function WhiteWaterKayakingCourse() {
                     </li>
                     <li className="flex items-start">
                       <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Transportation to and from Dandeli</span>
+                      <span>Transportation to course location</span>
                     </li>
                     <li className="flex items-start">
                       <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -668,7 +668,7 @@ export default function WhiteWaterKayakingCourse() {
 
             {/* Sidebar */}
             <div className="lg:w-1/3 course-registration-form">
-              <div className="sticky top-24 bg-white rounded-lg shadow-lg overflow-hidden">
+              <div className="sticky top-20 bg-white rounded-lg shadow-lg overflow-hidden">
                 <div className="bg-primary text-white p-6">
                   <h3 className="font-serif text-2xl font-bold mb-2">Enquiry form</h3>
                   <p className="text-green-100">Register your interest and we will get back as soon as possible</p>
