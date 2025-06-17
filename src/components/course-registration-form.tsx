@@ -326,8 +326,8 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
                   <Label htmlFor="jul-10-jul-13">Jul 10 - Jul 13</Label>
                 </div>
                 <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="jul-17-jul-20" id="jul-17-jul-20" />
-                  <Label htmlFor="jul-17-jul-20">Jul 17 - Jul 20</Label>
+                  <RadioGroupItem value="jul-16-jul-19" id="jul-16-jul-19" />
+                  <Label htmlFor="jul-16-jul-19">Jul 16 - Jul 19</Label>
                 </div>
                 <div className="flex items-center space-x-1 mb-2">
                   <RadioGroupItem value="jul-31-aug-3" id="jul-31-aug-3" />
