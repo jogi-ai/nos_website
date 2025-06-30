@@ -317,7 +317,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
               onBlur={() => handleBlur("preferredCourseDate")}
             >
               <div>
-                <div className="flex items-center space-x-1 mb-2">
+                {/* <div className="flex items-center space-x-1 mb-2">
                   <RadioGroupItem value="jul-3-jul-6" id="jul-3-jul-6" />
                   <Label htmlFor="jul-3-jul-6">Jul 3 - Jul 6</Label>
                 </div>
@@ -328,7 +328,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
                 <div className="flex items-center space-x-1 mb-2">
                   <RadioGroupItem value="jul-16-jul-19" id="jul-16-jul-19" />
                   <Label htmlFor="jul-16-jul-19">Jul 16 - Jul 19</Label>
-                </div>
+                </div> */}
                 <div className="flex items-center space-x-1 mb-2">
                   <RadioGroupItem value="jul-31-aug-3" id="jul-31-aug-3" />
                   <Label htmlFor="jul-31-aug-3">Jul 31 - Aug 3</Label>

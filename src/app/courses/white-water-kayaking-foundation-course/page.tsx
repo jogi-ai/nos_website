@@ -105,8 +105,8 @@ export default function WhiteWaterKayakingCourse() {
                       <Calendar className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Upcoming course date</h3>
                     </div>
-                    <p className="mb-2">Jul & Aug 2025, every Thu - Sun</p>
-                    {/* <p className="text-sm text-gray-600">*Mention in enquiry form if other dates are preferred</p> */}
+                    <p className="mb-2">Aug 2025</p>
+                    <p className="text-sm text-gray-600">*Check enquiry form for dates</p>
                   </CardContent>
                 </Card>
 
