@@ -385,7 +385,7 @@ export default function WhiteWaterKayakingCourse() {
               <h2 className="font-serif text-3xl font-bold mb-6">Course Fees</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
                 <h3 className="font-serif text-xl font-bold mb-4">Introductory Offer</h3>
-                <div className="text-xl font-bold mb-6"><span className="line-through">₹25,000</span> ₹22,000</div>
+                <div className="text-xl font-bold mb-6"><span className="line-through">₹22,000</span> ₹19,000</div>
 
                 <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
