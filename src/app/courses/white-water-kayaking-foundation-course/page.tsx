@@ -653,8 +653,8 @@ export default function WhiteWaterKayakingCourse() {
                     USA. He believes that kayaking is not just a sport, but a way of life that connects people with nature and helps them discover their true potential.
                     He is committed to sharing his knowledge and experience with others, and helping them develop their skills and confidence on the water. </p>
                     
-                    <p className="mb-2">With credentials as a White Water Rescue Technician course from Rescue 3 international and being a certified
-                    river guide from US National White Water Center, he has previously trained over 100 students 
+                    <p className="mb-2">He is certified as a White Water Rescue Technician from Rescue 3 international, Swift Water Rescue Technician from ITRA and
+                    river guide from US National White Water Center. He has previously trained over 100 students 
                     at General Thimayya National Academy of Adventure and various other kayaking schools in India.</p>
                     
 
