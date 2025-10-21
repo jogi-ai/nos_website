@@ -1,5 +1,3 @@
-import Navigation from "@/components/navigation"
-import Footer from "@/components/footer"
 import ContactForm from "@/components/contact-form"
 import { Mail, MessageCircle, Instagram } from "lucide-react"
 import { Metadata } from "next"
@@ -43,9 +41,8 @@ export default function ContactPage() {
   const whatsappNumber = "917019052454"
 
   return (
-    <main className="min-h-screen bg-stone-50">
-      <Navigation />
-      <section className="py-16 bg-white pt-[150px]">
+    <>
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             {/* Contact Information */}
@@ -129,7 +126,6 @@ export default function ContactPage() {
           </div>
         </div>
       </section>
-      <Footer />
-    </main>
+    </>
   )
 }

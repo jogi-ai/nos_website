@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
 import Script from "next/script"
 import Analytics from "@/components/analytics"
+import Navigation from "@/components/navigation"
+import Footer from "@/components/footer"
 import { Suspense } from "react"
 // Load fonts
 const inter = Inter({
@@ -121,7 +123,13 @@ export default function RootLayout({
           <Suspense fallback={null}>
             <Analytics />
           </Suspense>
-          {children}
+          <Navigation />
+          <main className="min-h-screen bg-stone-50">
+            <div className="pt-[139px]"> {/* Padding to account for nav + breadcrumb (88px base + 51px breadcrumb) */}
+              {children}
+            </div>
+          </main>
+          <Footer />
           <Toaster />
         </ThemeProvider>
       </body>

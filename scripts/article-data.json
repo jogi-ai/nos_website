@@ -1,0 +1,78 @@
+{
+  "author": {
+    "_type": "author",
+    "name": "Jogi Pandit",
+    "slug": {
+      "_type": "slug",
+      "current": "jogi-pandit"
+    },
+    "bio": "Professional kayaking instructor and founder of National Outdoor School. With over 15 years of experience in white water kayaking, Jogi has trained hundreds of paddlers across India and is passionate about promoting safe and sustainable water sports."
+  },
+  
+  "category": {
+    "_type": "category",
+    "title": "White Water Kayaking",
+    "slug": {
+      "_type": "slug",
+      "current": "white-water-kayaking"
+    },
+    "description": "Everything you need to know about white water kayaking - from beginner guides to advanced techniques, locations, and gear reviews."
+  },
+
+  "articles": [
+    {
+      "_type": "post",
+      "title": "What is White Water Kayaking and Why Are People Obsessing About It These Days?",
+      "slug": {
+        "_type": "slug",
+        "current": "what-is-white-water-kayaking-and-why-are-people-obsessing-about-it"
+      },
+      "excerpt": "Discover the thrilling world of white water kayaking and understand why this adrenaline-pumping sport is capturing hearts across India. From the basics to the benefits, learn everything you need to know.",
+      "tags": ["beginner", "techniques", "adventure"],
+      "readTime": "8 min read",
+      "featured": true,
+      "publishedAt": "2024-10-01T00:00:00Z",
+      "seo": {
+        "metaTitle": "What is White Water Kayaking? Complete Beginner's Guide 2024",
+        "metaDescription": "Discover what white water kayaking is and why it's becoming India's most popular adventure sport. Learn basics, benefits, and how to get started safely.",
+        "keywords": "white water kayaking, kayaking for beginners, adventure sports India, water sports, kayaking basics"
+      }
+    },
+    {
+      "_type": "post",
+      "title": "Where to Learn White Water Kayaking Near Bangalore",
+      "slug": {
+        "_type": "slug",
+        "current": "where-to-learn-white-water-kayaking-near-bangalore"
+      },
+      "excerpt": "Explore the best destinations around Bangalore for learning white water kayaking. From Dandeli's Kali River to Coorg's Barapole River and Kerala's pristine waters, find your perfect learning spot.",
+      "tags": ["beginner", "locations", "courses", "seasonal"],
+      "readTime": "10 min read",
+      "featured": true,
+      "publishedAt": "2024-09-28T00:00:00Z",
+      "seo": {
+        "metaTitle": "Best Places to Learn White Water Kayaking Near Bangalore 2024",
+        "metaDescription": "Discover top kayaking destinations near Bangalore including Dandeli, Coorg, and Kerala. Complete guide with best times to visit and course details.",
+        "keywords": "kayaking near bangalore, dandeli kayaking, coorg rafting, kerala kayaking, white water kayaking courses"
+      }
+    },
+    {
+      "_type": "post",
+      "title": "Where to Learn White Water Kayaking in Kerala",
+      "slug": {
+        "_type": "slug",
+        "current": "where-to-learn-white-water-kayaking-in-kerala"
+      },
+      "excerpt": "Kerala offers some of India's best white water kayaking experiences. Discover Kodencherry's pristine rivers, the famous Malabar River Festival, and why Kerala is perfect for progressing from beginner to pro.",
+      "tags": ["intermediate", "locations", "festivals", "seasonal"],
+      "readTime": "12 min read",
+      "featured": false,
+      "publishedAt": "2024-09-25T00:00:00Z",
+      "seo": {
+        "metaTitle": "White Water Kayaking in Kerala: Complete Guide to Kodencherry 2024",
+        "metaDescription": "Discover Kerala's best kayaking destinations including Kodencherry, Iruvanjipuzha and Chalipuzha rivers. Learn about the Malabar River Festival and monsoon kayaking.",
+        "keywords": "kerala kayaking, kodencherry kayaking, malabar river festival, monsoon kayaking, iruvanjipuzha river, chalipuzha river"
+      }
+    }
+  ]
+}

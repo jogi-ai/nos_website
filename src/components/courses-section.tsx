@@ -7,22 +7,30 @@ export default function CoursesSection() {
   const courses = [
     {
       id: 1,
-      title: "White Water Kayaking Foundation Course",
+      title: "Beginner White Water Kayaking Course (Level 1)",
       description:
         "A perfect course for beginners to learn the essential skills required to navigate white water with balance and control.",
       image: "/intro-to-white-water-kayaking.jpg",
-      date: "Jul & Aug 2025, every Thu to Sun",
-      location: "Kodencherry, Kerala",
-      link: "/courses/white-water-kayaking-foundation-course"
+      // date: "Jul & Aug 2025, every Thu to Sun",
+      // location: "Kodencherry, Kerala",
+      link: "/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course",
+    },
+    {
+      id: 2,
+      title: "Intermediate White Water Kayaking Course (Level 2)",
+      description:
+        "Build on your foundational skills and learn advanced techniques to tackle more challenging white water conditions with confidence.",
+      image: "/navigating-a-rapid-in-a-kayak.jpg",
+      link: "/activities/white-water-kayaking/courses/intermediate-white-water-kayaking-course",
     }
   ]
 
   return (
     <section className="py-20 bg-stone-100">
       <div className="container mx-auto px-4">
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">Upcoming Courses</h2>
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">White water kayaking courses</h2>
         <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto mb-16">
-          Discover our range of immersive outdoor education courses led by expert instructors
+          Learn white water kayaking with our expert-led courses designed for all skill levels. Whether you're a beginner or looking to enhance your skills, we have the perfect course for you.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -34,9 +42,6 @@ export default function CoursesSection() {
                 </div>
                 <CardHeader>
                   <CardTitle className="font-serif text-xl text-gray-600">{course.title}</CardTitle>
-                  <CardDescription className="text-sm">
-                    {course.date} • {course.location}
-                  </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700">{course.description}</p>
