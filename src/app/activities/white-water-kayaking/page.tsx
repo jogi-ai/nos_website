@@ -111,7 +111,7 @@ export default function WhiteWaterKayakingPage() {
               </div>
               <div className="md:w-1/2">
                 <h2 className="font-serif text-4xl md:text-5xl font-bold mb-6 text-gray-900">
-                  Guided Day Trips
+                  Guided Trips
                 </h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
                   Discover India&apos;s most breathtaking rivers with our expert guides. From the pristine waters of the 
@@ -136,7 +136,7 @@ export default function WhiteWaterKayakingPage() {
                 </div>
                 <Link href="/activities/white-water-kayaking/guided-day-trips">
                   <Button className="btnPrimary">
-                    Book Day Trips
+                    Explore Guided Trips
                     <ChevronRight className="ml-2 h-5 w-5" />
                   </Button>
                 </Link>

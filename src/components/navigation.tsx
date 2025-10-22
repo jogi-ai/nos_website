@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { Menu, ChevronDown, ChevronRight } from "lucide-react"
+import { Menu, ChevronDown, ChevronRight, ArrowLeft } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import Image from "next/image"
@@ -133,20 +133,20 @@ export default function Navigation() {
           name: "White Water Kayaking",
           href: "/activities/white-water-kayaking",
           children: [
-            {
-              name: "Locations",
-              href: "/activities/white-water-kayaking/locations",
-              children: [
-                {
-                  name: "Dandeli, Karnataka",
-                  href: "/activities/white-water-kayaking/locations/kali-river-dandeli",
-                },
-                {
-                  name: "Kodencherry, Kerala",
-                  href: "/activities/white-water-kayaking/locations/kodencherry-kerala",
-                }
-              ]
-            },
+            // {
+            //   name: "Locations",
+            //   href: "/activities/white-water-kayaking/locations",
+            //   children: [
+            //     {
+            //       name: "Dandeli, Karnataka",
+            //       href: "/activities/white-water-kayaking/locations/kali-river-dandeli",
+            //     },
+            //     {
+            //       name: "Kodencherry, Kerala",
+            //       href: "/activities/white-water-kayaking/locations/kodencherry-kerala",
+            //     }
+            //   ]
+            // },
             {
               name: "Courses",
               href: "/activities/white-water-kayaking/courses",
@@ -155,15 +155,15 @@ export default function Navigation() {
                   name: "Beginner White Water Kayaking Course (Level 1)",
                   href: "/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course",
                 },
-                {
-                  name: "Intermediate White Water Kayaking Course (Level 2)",
-                  href: "/activities/white-water-kayaking/courses/intermediate-white-water-kayaking-course",
-                }
+                // {
+                //   name: "Intermediate White Water Kayaking Course (Level 2)",
+                //   href: "/activities/white-water-kayaking/courses/intermediate-white-water-kayaking-course",
+                // }
               ]
             },
             {
-              name: "Guided day trips",
-              href: "/activities/white-water-kayaking/guided-day-trips",
+              name: "Guided trips",
+              href: "/activities/white-water-kayaking/guided-trips",
             },
             {
               name: "Expeditions",
@@ -177,7 +177,7 @@ export default function Navigation() {
         }
       ]
     },
-    { name: "Insights", href: "/insights" },
+    // { name: "Insights", href: "/insights" },
     { name: "Contact", href: "/contact" },
   ]
 
@@ -318,11 +318,12 @@ export default function Navigation() {
           </Sheet>
         </div>
 
-        {/* Breadcrumb Section */}
+        {/* Breadcrumb/Back Button Section */}
         {showBreadcrumbs && (
           <div className="bg-white border-t border-gray-200">
             <div className="container mx-auto px-4 py-3">
-              <nav className="flex items-center space-x-2 text-sm">
+              {/* Desktop: Full Breadcrumbs */}
+              <nav className="hidden md:flex items-center space-x-2 text-sm">
                 {breadcrumbs.map((item, index) => (
                   <div key={item.href} className="flex items-center space-x-2">
                     {index > 0 && <ChevronRight className="h-4 w-4 text-gray-400" />}
@@ -339,6 +340,17 @@ export default function Navigation() {
                   </div>
                 ))}
               </nav>
+
+              {/* Mobile: Back Button */}
+              {breadcrumbs.length > 1 && (
+                <Link 
+                  href={breadcrumbs[breadcrumbs.length - 2].href}
+                  className="md:hidden inline-flex items-center text-sm text-gray-600 hover:text-gray-900 transition-colors"
+                >
+                  <ArrowLeft className="h-4 w-4 mr-2" />
+                  <span>Back to {breadcrumbs[breadcrumbs.length - 2].label}</span>
+                </Link>
+              )}
             </div>
           </div>
         )}

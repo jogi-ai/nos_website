@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: "White Water Kayaking Foundation Course | National Outdoor School",
     description:
       "Master the fundamentals of white water kayaking in our 4-day foundation course. Learn paddling techniques, river features, safety skills, and eskimo roll.",
-    url: "https://nationaloutdoorschool.com/courses/white-water-kayaking-foundation-course",
+    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course",
     siteName: "National Outdoor School",
     images: [
       {
@@ -45,7 +45,7 @@ export default function WhiteWaterKayakingCourse() {
         <div className="absolute inset-0 bg-black/30 z-10 flex items-center justify-center">
           <div className="container px-4 text-center">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              White Water Kayaking Foundation Course
+              Beginner White Water Kayaking Course
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg">4 Days of Learning & Adventure</p>
           </div>
@@ -101,7 +101,7 @@ export default function WhiteWaterKayakingCourse() {
                       <Calendar className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Upcoming course date</h3>
                     </div>
-                    <p className="mb-2">Aug 2025</p>
+                    <p className="mb-2">Nov 2025</p>
                     <p className="text-sm text-gray-600">*Check enquiry form for dates</p>
                   </CardContent>
                 </Card>
@@ -112,7 +112,7 @@ export default function WhiteWaterKayakingCourse() {
                       <MapPin className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Location</h3>
                     </div>
-                    <p>Kodencherry, Kerala</p>
+                    <p>Kali River, Dandeli</p>
                   </CardContent>
                 </Card>
 
