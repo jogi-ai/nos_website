@@ -21,14 +21,15 @@ interface SearchParams {
   page?: string
 }
 
-export default function InsightsPage({
+export default async function InsightsPage({
   searchParams,
 }: {
-  searchParams: SearchParams
+  searchParams: Promise<SearchParams>
 }) {
-  const currentPage = parseInt(searchParams.page || "1")
-  const selectedCategory = searchParams.category || ""
-  const selectedTag = searchParams.tag || ""
+  const resolvedParams = await searchParams
+  const currentPage = parseInt(resolvedParams.page || "1")
+  const selectedCategory = resolvedParams.category || ""
+  const selectedTag = resolvedParams.tag || ""
 
   return (
     <div className="min-h-screen bg-white">
