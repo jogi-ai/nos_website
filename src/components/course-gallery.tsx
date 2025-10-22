@@ -8,122 +8,122 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
 // Sample gallery items - in a real application, this would come from a database or CMS
-// const galleryItems = [
-//   {
-//     id: 1,
-//     type: "image",
-//     thumbnail: "/roll-practice.jpg",
-//     fullSize: "/roll-practice.jpg",
-//     alt: "Eskimo roll practice",
-//   },
-//   {
-//     id: 2,
-//     type: "image",
-//     thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
-//     fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
-//     alt: "Navigating the Kali River in a kayak",
-//   },
-//   {
-//     id: 3,
-//     type: "image",
-//     thumbnail: "/eskimo-roll-in-a-rapid.jpg",
-//     fullSize: "/eskimo-roll-in-a-rapid.jpg",
-//     alt: "Eskimo roll in a rapid",
-//   },
-//   {
-//     id: 4,
-//     type: "video",
-//     thumbnail: "/rapid-run.png",
-//     videoSrc: "/kali-rapid-run.mp4", 
-//     alt: "Rapid run",
-//   },
-//   {
-//     id: 5,
-//     type: "image",
-//     thumbnail: "/rapid-run-2.jpg",
-//     fullSize: "/rapid-run-2.jpg",
-//     alt: "Running the first rapid",
-//   },
-//   {
-//     id: 6,
-//     type: "image",
-//     thumbnail: "/kali-river-ariel-view.jpg",
-//     fullSize: "/kali-river-ariel-view.jpg",
-//     alt: "Aerial view of the Kali River",
-//   },
-//   {
-//     id: 7,
-//     type: "image",
-//     thumbnail: "/first-rapid.jpg",
-//     fullSize: "/first-rapid.jpg",
-//     alt: "First rapid ariel view",
-//   },
-//   {
-//     id: 8,
-//     type: "image",
-//     thumbnail: "/unloading-kayak.jpg",
-//     fullSize: "/unloading-kayak.jpg",
-//     alt: "Kayaker preparing equipment",
-//   },
-// ]
 const galleryItems = [
   {
     id: 1,
     type: "image",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
-    fullSize: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
-    alt: "View of river from the bridge",
+    thumbnail: "/roll-practice.jpg",
+    fullSize: "/roll-practice.jpg",
+    alt: "Eskimo roll practice",
   },
   {
     id: 2,
     type: "image",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
-    fullSize: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
-    alt: "Kodencherry ariel view",
+    thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
+    fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
+    alt: "Navigating the Kali River in a kayak",
   },
-  {  
+  {
     id: 3,
-    type: "video",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/game_of_thorns_thumb.jpg",
-    videoSrc: "https://igutafeeling.com/uploads/nos_media/game_of_thorns.mp4", 
-    alt: "Game of thorns rapid",
+    type: "image",
+    thumbnail: "/eskimo-roll-in-a-rapid.jpg",
+    fullSize: "/eskimo-roll-in-a-rapid.jpg",
+    alt: "Eskimo roll in a rapid",
   },
-  {  
+  {
     id: 4,
     type: "video",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/pool_roll_thumb.jpg",
-    videoSrc: "https://igutafeeling.com/uploads/nos_media/pool_roll.mp4", 
-    alt: "Pool roll practice",
+    thumbnail: "/rapid-run.png",
+    videoSrc: "/kali-rapid-run.mp4", 
+    alt: "Rapid run",
   },
-  {  
+  {
     id: 5,
-    type: "video",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/river_roll_thumb.jpg",
-    videoSrc: "https://igutafeeling.com/uploads/nos_media/river_roll.mp4", 
-    alt: "Student rolling in the river",
+    type: "image",
+    thumbnail: "/rapid-run-2.jpg",
+    fullSize: "/rapid-run-2.jpg",
+    alt: "Running the first rapid",
   },
-  {  
+  {
     id: 6,
-    type: "video",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/river_run_thumb.jpg",
-    videoSrc: "https://igutafeeling.com/uploads/nos_media/river_run.mp4", 
-    alt: "Students running rapids",
+    type: "image",
+    thumbnail: "/kali-river-ariel-view.jpg",
+    fullSize: "/kali-river-ariel-view.jpg",
+    alt: "Aerial view of the Kali River",
   },
-  {  
+  {
     id: 7,
-    type: "video",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/bracing_thumb.jpg",
-    videoSrc: "https://igutafeeling.com/uploads/nos_media/bracing.mp4", 
-    alt: "Bracing technique practice",
+    type: "image",
+    thumbnail: "/first-rapid.jpg",
+    fullSize: "/first-rapid.jpg",
+    alt: "First rapid ariel view",
   },
-  {  
-    id: 7,
-    type: "video",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/white_water_swimming_thumb.jpg",
-    videoSrc: "https://igutafeeling.com/uploads/nos_media/white_water_swimming.mp4", 
-    alt: "White water swimming practice",
+  {
+    id: 8,
+    type: "image",
+    thumbnail: "/unloading-kayak.jpg",
+    fullSize: "/unloading-kayak.jpg",
+    alt: "Kayaker preparing equipment",
   },
 ]
+// const galleryItems = [
+//   {
+//     id: 1,
+//     type: "image",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
+//     fullSize: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
+//     alt: "View of river from the bridge",
+//   },
+//   {
+//     id: 2,
+//     type: "image",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
+//     fullSize: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
+//     alt: "Kodencherry ariel view",
+//   },
+//   {  
+//     id: 3,
+//     type: "video",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/game_of_thorns_thumb.jpg",
+//     videoSrc: "https://igutafeeling.com/uploads/nos_media/game_of_thorns.mp4", 
+//     alt: "Game of thorns rapid",
+//   },
+//   {  
+//     id: 4,
+//     type: "video",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/pool_roll_thumb.jpg",
+//     videoSrc: "https://igutafeeling.com/uploads/nos_media/pool_roll.mp4", 
+//     alt: "Pool roll practice",
+//   },
+//   {  
+//     id: 5,
+//     type: "video",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/river_roll_thumb.jpg",
+//     videoSrc: "https://igutafeeling.com/uploads/nos_media/river_roll.mp4", 
+//     alt: "Student rolling in the river",
+//   },
+//   {  
+//     id: 6,
+//     type: "video",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/river_run_thumb.jpg",
+//     videoSrc: "https://igutafeeling.com/uploads/nos_media/river_run.mp4", 
+//     alt: "Students running rapids",
+//   },
+//   {  
+//     id: 7,
+//     type: "video",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/bracing_thumb.jpg",
+//     videoSrc: "https://igutafeeling.com/uploads/nos_media/bracing.mp4", 
+//     alt: "Bracing technique practice",
+//   },
+//   {  
+//     id: 7,
+//     type: "video",
+//     thumbnail: "https://igutafeeling.com/uploads/nos_media/white_water_swimming_thumb.jpg",
+//     videoSrc: "https://igutafeeling.com/uploads/nos_media/white_water_swimming.mp4", 
+//     alt: "White water swimming practice",
+//   },
+// ]
 
 export default function CourseGallery() {
   const [open, setOpen] = useState(false)
