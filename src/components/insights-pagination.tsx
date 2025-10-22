@@ -14,7 +14,7 @@ interface InsightsPaginationProps {
 const TOTAL_ARTICLES = 3
 const ARTICLES_PER_PAGE = 6
 
-export default function InsightsPagination({ currentPage, category, tag }: InsightsPaginationProps) {
+export default function InsightsPagination({ currentPage }: InsightsPaginationProps) {
   const router = useRouter()
   const searchParams = useSearchParams()
 

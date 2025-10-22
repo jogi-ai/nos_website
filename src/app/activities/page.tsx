@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { ArrowRight, MapPin, Clock, Users, Star } from "lucide-react"
+import { ArrowRight, MapPin, Users, Star } from "lucide-react"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -92,7 +92,7 @@ export default function ActivitiesPage() {
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
             Discover a world of outdoor adventure and education. Our carefully crafted programs 
-            combine expert instruction with unforgettable experiences in nature's most beautiful settings.
+            combine expert instruction with unforgettable experiences in nature&apos most beautiful settings.
           </p>
           <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
@@ -177,7 +177,7 @@ export default function ActivitiesPage() {
               More Adventures Coming Soon
             </h3>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              We're constantly expanding our offerings to include more exciting outdoor activities. 
+              We&apore constantly expanding our offerings to include more exciting outdoor activities. 
               Stay tuned for rock climbing, wilderness survival, trekking expeditions, and more!
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -200,7 +200,7 @@ export default function ActivitiesPage() {
                   <span className="text-2xl">🥾</span>
                 </div>
                 <h4 className="font-semibold text-gray-900 mb-2">Trekking Expeditions</h4>
-                <p className="text-sm text-gray-600">Multi-day adventures through India's most spectacular mountain ranges.</p>
+                <p className="text-sm text-gray-600">Multi-day adventures through India&apos most spectacular mountain ranges.</p>
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function ActivitiesPage() {
           </h2>
           <p className="text-lg text-gray-300 mb-8 max-w-2xl mx-auto">
             Join us for an unforgettable outdoor experience. Our expert instructors and carefully planned programs 
-            ensure you'll have both the adventure and education you're looking for.
+            ensure you&apoll have both the adventure and education you&apore looking for.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

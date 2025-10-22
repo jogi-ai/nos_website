@@ -1,6 +1,6 @@
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import Link from "next/link"
 
 export default function CoursesSection() {
@@ -30,7 +30,7 @@ export default function CoursesSection() {
       <div className="container mx-auto px-4">
         <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">White water kayaking courses</h2>
         <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto mb-16">
-          Learn white water kayaking with our expert-led courses designed for all skill levels. Whether you're a beginner or looking to enhance your skills, we have the perfect course for you.
+          Learn white water kayaking with our expert-led courses designed for all skill levels. Whether you&apos;re a beginner or looking to enhance your skills, we have the perfect course for you.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

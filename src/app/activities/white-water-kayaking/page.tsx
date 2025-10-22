@@ -21,7 +21,7 @@ export default function WhiteWaterKayakingPage() {
           className="absolute inset-0 w-full h-full object-cover z-11"
         >
           <source src="/banner-video-1.mp4" type="video/mp4" />
-          {/* Fallback image for browsers that don't support video */}
+          {/* Fallback image for browsers that don&apos;t support video */}
           <img 
             src="/kayaking-course-bg.jpg" 
             alt="White water kayaking background"
@@ -38,7 +38,7 @@ export default function WhiteWaterKayakingPage() {
               White Water Kayaking
             </h1>
             <h2 className="text-lg md:text-xl font-light max-w-3xl mx-auto leading-relaxed text-gray-200">
-              Experience the thrill of navigating pristine rapids through India's most spectacular river valleys. 
+              Experience the thrill of navigating pristine rapids through India&apos;s most spectacular river valleys. 
               From beginner-friendly courses to adrenaline-pumping guided expeditions.
             </h2>
             <div className="mt-8">
@@ -114,8 +114,8 @@ export default function WhiteWaterKayakingPage() {
                   Guided Day Trips
                 </h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Discover India's most breathtaking rivers with our expert guides. From the pristine waters of the 
-                  Kali River in Dandeli to the challenging rapids of the Ganges, experience the country's diverse 
+                  Discover India&apos;s most breathtaking rivers with our expert guides. From the pristine waters of the 
+                  Kali River in Dandeli to the challenging rapids of the Ganges, experience the country&apos;s diverse 
                   river systems in a safe and thrilling environment.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -154,7 +154,7 @@ export default function WhiteWaterKayakingPage() {
                   Equipment Rental
                 </h2>
                 <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                  Don't have your own gear? No problem! We provide high-quality kayaking equipment including 
+                  Don&apos;t have your own gear? No problem! We provide high-quality kayaking equipment including 
                   kayaks, paddles, helmets, and safety gear. All our equipment is regularly inspected and 
                   maintained to ensure your safety and comfort on the water.
                 </p>

@@ -19,7 +19,7 @@ export default function InsightsGrid({ page, category, tag }: InsightsGridProps)
   const [articles, setArticles] = useState<Article[]>([])
   const [featuredArticles, setFeaturedArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
-  const [totalPages, setTotalPages] = useState(1)
+  // const [totalPages, setTotalPages] = useState(1)
 
   useEffect(() => {
     const fetchArticles = async () => {
@@ -27,7 +27,7 @@ export default function InsightsGrid({ page, category, tag }: InsightsGridProps)
       
       try {
         // Fetch regular articles
-        const { articles: regularArticles, totalPages: pages } = await getArticles({
+        const { articles: regularArticles } = await getArticles({
           category,
           tag,
           page,
@@ -47,7 +47,7 @@ export default function InsightsGrid({ page, category, tag }: InsightsGridProps)
         
         setArticles(regularArticles)
         setFeaturedArticles(featured)
-        setTotalPages(pages)
+        // setTotalPages(pages)
       } catch (error) {
         console.error('Error fetching articles:', error)
       } finally {

@@ -154,7 +154,7 @@ export default async function ArticlePage({
                 Ready to Start Your Kayaking Journey?
               </h3>
               <p className="text-white/90 mb-6 max-w-2xl mx-auto">
-                Don't just read about the adventure - experience it! Join our expert-led courses and discover the thrill of white water kayaking for yourself.
+                Don&apos;t just read about the adventure - experience it! Join our expert-led courses and discover the thrill of white water kayaking for yourself.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/activities/white-water-kayaking/courses">

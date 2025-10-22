@@ -96,7 +96,7 @@ export async function getArticles({
 }> {
   let categoryFilter = ''
   let tagFilter = ''
-  let featuredFilter = featured ? ' && featured == true' : ''
+  const featuredFilter = featured ? ' && featured == true' : ''
 
   if (category) {
     categoryFilter = ` && references(*[_type == "category" && slug.current == "${category}"]._id)`
