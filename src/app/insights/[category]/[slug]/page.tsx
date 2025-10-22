@@ -12,9 +12,10 @@ import { urlFor } from "@/sanity/lib/image"
 export async function generateMetadata({ 
   params 
 }: { 
-  params: { category: string; slug: string } 
+  params: Promise<{ category: string; slug: string }> 
 }): Promise<Metadata> {
-  const article = await getArticle(params.category, params.slug)
+  const { category, slug } = await params
+  const article = await getArticle(category, slug)
   
   if (!article) {
     return {
@@ -39,7 +40,7 @@ export async function generateMetadata({
       authors: [article.author?.name || 'Unknown'],
     },
     alternates: {
-      canonical: `/insights/${params.category}/${params.slug}`,
+      canonical: `/insights/${category}/${slug}`,
     },
   }
 }
@@ -47,9 +48,10 @@ export async function generateMetadata({
 export default async function ArticlePage({ 
   params 
 }: { 
-  params: { category: string; slug: string } 
+  params: Promise<{ category: string; slug: string }> 
 }) {
-  const article = await getArticle(params.category, params.slug)
+  const { category, slug } = await params
+  const article = await getArticle(category, slug)
 
   if (!article) {
     notFound()
