@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     return [
       {
         source: '/courses/white-water-kayaking-foundation-course',
-        destination: '/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course',
+        destination: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course',
         permanent: true,
       },
     ];

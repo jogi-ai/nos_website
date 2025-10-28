@@ -7,13 +7,11 @@ export default function CoursesSection() {
   const courses = [
     {
       id: 1,
-      title: "Beginner White Water Kayaking Course (Level 1)",
+      title: "White Water Kayaking Foundation Course (Level 1)",
       description:
         "A perfect course for beginners to learn the essential skills required to navigate white water with balance and control.",
       image: "/intro-to-white-water-kayaking.jpg",
-      // date: "Jul & Aug 2025, every Thu to Sun",
-      // location: "Kodencherry, Kerala",
-      link: "/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course",
+      link: "/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course",
     }
   ]
 

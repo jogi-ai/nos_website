@@ -8,23 +8,23 @@ import { CheckCircle, Clock, Calendar, MapPin, Users, Award, AlertTriangle, Chec
 import RegisterButton from "@/components/register-button"
 import { Metadata } from "next"
 export const metadata: Metadata = {
-  title: "White Water Kayaking Foundation Course",
+  title: "White Water Kayaking Foundation Course - Level 1",
   description:
     "Master the fundamentals of white water kayaking in our 4-day foundation course. Learn paddling techniques, river features, safety skills, and eskimo roll.",
   keywords:
     "white water kayaking, kayaking course, kayaking foundation, river kayaking, water sports, outdoor adventure",
   openGraph: {
-    title: "White Water Kayaking Foundation Course | National Outdoor School",
+    title: "White Water Kayaking Foundation Course - Level 1",
     description:
       "Master the fundamentals of white water kayaking in our 4-day foundation course. Learn paddling techniques, river features, safety skills, and eskimo roll.",
-    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course",
+    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course",
     siteName: "National Outdoor School",
     images: [
       {
         url: "https://nationaloutdoorschool.com/og-image-kayaking.jpg", // Replace with actual image path
         width: 1200,
         height: 630,
-        alt: "White Water Kayaking Course - National Outdoor School",
+        alt: "White Water Kayaking Foundation Course - National Outdoor School",
       },
     ],
     locale: "en_US",
@@ -45,9 +45,9 @@ export default function WhiteWaterKayakingCourse() {
         <div className="absolute inset-0 bg-black/30 z-10 flex items-center justify-center">
           <div className="container px-4 text-center">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              Beginner White Water Kayaking Course
+              White Water Kayaking Foundation Course - Level 1
             </h1>
-            <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg">4 Days of Learning & Adventure</p>
+            <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg">4 day intro course into the facinating world of white water kayaking</p>
           </div>
         </div>
         <Image
@@ -381,7 +381,7 @@ export default function WhiteWaterKayakingCourse() {
               <h2 className="font-serif text-3xl font-bold mb-6">Course Fees</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
                 <h3 className="font-serif text-xl font-bold mb-4">Introductory Offer</h3>
-                <div className="text-xl font-bold mb-6"><span className="line-through">₹22,000</span> ₹19,000</div>
+                <div className="text-xl font-bold mb-6"><span className="line-through">₹22,000</span> ₹18,000</div>
 
                 <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>

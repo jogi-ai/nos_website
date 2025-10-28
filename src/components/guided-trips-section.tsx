@@ -7,22 +7,25 @@ export default function GuidedTripsSection() {
   const guidedTrips = [
     {
       id: 1,
-      title: "Kali River Day Trip",
+      title: "White Water Kayaking in Kali River, Dandeli",
       description:
         "Experience the thrill of white water kayaking on the Kali River. Perfect for beginners and intermediate paddlers looking for an exciting day on the water.",
       image: "/first-rapid.jpg",
       // date: "Available year-round",
       // location: "Dandeli, Karnataka",
-      link: "/activities/white-water-kayaking/guided-trips/kali-river-day-trip",
+      link: "/activities/white-water-kayaking/guided-trips/white-water-kayaking-in-kali-river-dandeli",
+      features : [
+        "Grade 2-3 Rapids",
+      ]
     }
   ]
 
   return (
-    <section className="py-20 bg-stone-100">
+    <section className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">White water kayaking guided trips</h2>
+        <h2 className="font-serif text-4xl md:text-5xl font-bold text-center mb-4">White Water Kayaking - Guided Trips</h2>
         <p className="text-xl text-gray-700 text-center max-w-3xl mx-auto mb-16">
-          Join our expert guides and experience the thrill of navigating rapids with professional support and guidance.
+          Join our expert guides and experience the thrill of navigating rivers with professional support and guidance.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -38,6 +41,18 @@ export default function GuidedTripsSection() {
                 <CardContent>
                   <p className="text-gray-700">{trip.description}</p>
                 </CardContent>
+                <div className="border-t pt-4 px-6">
+                    <div className="flex flex-wrap gap-2">
+                    {trip.features.map((feature, index) => (
+                        <span 
+                        key={index}
+                        className="bg-stone-100 text-gray-700 px-2 py-1 rounded text-xs font-medium"
+                        >
+                        {feature}
+                        </span>
+                    ))}
+                    </div>
+                </div>
                 <CardFooter>
                     <Button className="w-full btnPrimary text-white">Learn More</Button>
                 </CardFooter>

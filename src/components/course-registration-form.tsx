@@ -21,7 +21,7 @@ type FormData = {
   phone: string
   age: string
   gender: string
-  preferredCourseDate: string
+  preferredCourseDate?: string
   message: string
 }
 
@@ -34,13 +34,14 @@ const initFormData: FormData = {
     phone: "",
     age: "",
     gender: "male",
-    preferredCourseDate: "may-22-may-25",
     message:""
 }
 export default function CourseRegistrationForm({ courseName }: CourseRegistrationFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-
+  if(courseName=="White Water Kayaking Foundation Course"){
+    initFormData.preferredCourseDate = "may-22-may-25"
+  }
   const [formData, setFormData] = useState<FormData>(initFormData)
 
   const [errors, setErrors] = useState<FormErrors>({})
@@ -156,7 +157,8 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
     console.log("Submitting form data:", formData)
     try {
       // Submit form data to API
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/nos/enquiries/course`, {
+      const apiUrl = courseName=="White Water Kayaking Foundation Course"?`${process.env.NEXT_PUBLIC_API_URL}/nos/enquiries/course`:`${process.env.NEXT_PUBLIC_API_URL}/nos/enquiries/guided-trip`
+      const response = await fetch(apiUrl, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -308,55 +310,33 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
               </div>
             </RadioGroup>
           </div>
-          <div className="space-y-2 mt-1">
-            <Label>Preferred course date (year 2025)</Label>
-            <RadioGroup
-              defaultValue={formData.preferredCourseDate}
-              value={formData.preferredCourseDate}
-              onValueChange={(value) => handleChange("preferredCourseDate", value)}
-              onBlur={() => handleBlur("preferredCourseDate")}
-            >
-              <div>
-                {/* <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="jul-3-jul-6" id="jul-3-jul-6" />
-                  <Label htmlFor="jul-3-jul-6">Jul 3 - Jul 6</Label>
+          {courseName=="White Water Kayaking Foundation Course" && 
+            <div className="space-y-2 mt-1">
+              <Label>Preferred course date (year 2025)</Label>
+              <RadioGroup
+                defaultValue={formData.preferredCourseDate}
+                value={formData.preferredCourseDate}
+                onValueChange={(value) => handleChange("preferredCourseDate", value)}
+                onBlur={() => handleBlur("preferredCourseDate")}
+              >
+                <div>
+                  <div className="flex items-center space-x-1 mb-2">
+                    <RadioGroupItem value="nov-27-nov-30" id="nov-27-nov-30" />
+                    <Label htmlFor="nov-27-nov-30">Nov 27th - Nov 30th</Label>
+                  </div>
+                  <div className="flex items-center space-x-1 mb-2">
+                    <RadioGroupItem value="other" id="other" />
+                    <Label htmlFor="other">Other (Please mention preferred date in November 2025)</Label>
+                  </div>
                 </div>
-                <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="jul-10-jul-13" id="jul-10-jul-13" />
-                  <Label htmlFor="jul-10-jul-13">Jul 10 - Jul 13</Label>
-                </div>
-                <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="jul-16-jul-19" id="jul-16-jul-19" />
-                  <Label htmlFor="jul-16-jul-19">Jul 16 - Jul 19</Label>
-                </div> */}
-                {/* <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="jul-31-aug-3" id="jul-31-aug-3" />
-                  <Label htmlFor="jul-31-aug-3">Jul 31 - Aug 3</Label>
-                </div> */}
-                <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="nov-27-nov-30" id="nov-27-nov-30" />
-                  <Label htmlFor="nov-27-nov-30">Nov 27th - Nov 30th</Label>
-                </div>
-                <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="other" id="other" />
-                  <Label htmlFor="other">Other (Please mention preferred date in November 2025)</Label>
-                </div>
-                {/* <div className="flex items-center space-x-1 mb-2">
-                  <RadioGroupItem value="aug-14-aug-17" id="aug-14-aug-17" />
-                  <Label htmlFor="aug-14-aug-17">Aug 14 - Aug 17</Label>
-                </div> */}
-                {/* <div className="flex items-center space-x-1">
-                  <RadioGroupItem value="aug-21-aug-24" id="aug-21-aug-24" />
-                  <Label htmlFor="aug-21-aug-24">Aug 21 - Aug 24</Label>
-                </div> */}
-              </div>
-            </RadioGroup>
-          </div>
+              </RadioGroup>
+            </div>
+          }
           <div className="space-y-2">
             <Label htmlFor="medical">Message (optional)</Label>
             <Textarea
               id="message"
-              placeholder="Leave a message if you need to share any medical conditions or special requests."
+              placeholder="Add preferred date or any other information here."
               value={formData.message}
               onChange={(e) => handleChange("message", e.target.value)}
               onBlur={() => handleBlur("message")}

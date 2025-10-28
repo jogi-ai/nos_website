@@ -134,7 +134,7 @@ export default function WhiteWaterKayakingPage() {
                     </CardContent>
                   </Card>
                 </div>
-                <Link href="/activities/white-water-kayaking/guided-day-trips">
+                <Link href="/activities/white-water-kayaking/guided-trips">
                   <Button className="btnPrimary">
                     Explore Guided Trips
                     <ChevronRight className="ml-2 h-5 w-5" />

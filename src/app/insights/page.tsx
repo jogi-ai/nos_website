@@ -101,10 +101,10 @@ export default async function InsightsPage({
               View Our Courses
             </a>
             <a
-              href="/activities/white-water-kayaking/guided-day-trips"
+              href="/activities/white-water-kayaking/guided-trips"
               className="btnSecondary inline-flex items-center justify-center px-8 py-3 text-lg font-medium"
             >
-              Book a Day Trip
+              Explore Rivers
             </a>
           </div>
         </div>

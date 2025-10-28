@@ -55,14 +55,14 @@ export default function Navigation() {
         case "kali-river-dandeli":
           label = "Kali River, Dandeli"
           break
-        case "beginner-white-water-kayaking-course":
-          label = "Beginner White Water Kayaking Course (Level 1)"
+        case "white-water-kayaking-foundation-course":
+          label = "White Water Kayaking Foundation Course (Level 1)"
           break
         case "intermediate-white-water-kayaking-course":
           label = "Intermediate White Water Kayaking Course (Level 2)"
           break
-        case "guided-day-trips":
-          label = "Guided Day Trips"
+        case "guided-trips":
+          label = "Guided Trips"
           break
         case "equipment-rental":
           label = "Equipment Rental"
@@ -152,8 +152,8 @@ export default function Navigation() {
               href: "/activities/white-water-kayaking/courses",
               children: [
                 {
-                  name: "Beginner White Water Kayaking Course (Level 1)",
-                  href: "/activities/white-water-kayaking/courses/beginner-white-water-kayaking-course",
+                  name: "White Water Kayaking Foundation Course (Level 1)",
+                  href: "/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course",
                 },
                 // {
                 //   name: "Intermediate White Water Kayaking Course (Level 2)",
