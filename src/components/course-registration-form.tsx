@@ -49,30 +49,31 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
 
   // Validation rules
   const validateField = (name: keyof FormData, value: FormData[keyof FormData]): string => {
+    value = value?.trim() || ""
     switch (name) {
       case "fullName":
-        return !value.trim()
+        return !value
           ? "Full name is required"
-          : value.trim().length < 2
+          : value.length < 2
             ? "Name must be at least 2 characters"
-            : value.trim().length > 200 
+            : value.length > 200 
             ? "Name cannot be greater than 200 characters"
             : ""
       case "email":
-        return !value.trim()
+        return !value
           ? "Email is required"
           : !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(value) || value.length > 350
             ? "Invalid email address"
             : ""
       case "phone":
-        return !value.trim()
+        return !value
           ? "Phone number is required"
           : !/^[0-9+\-\s()]{10,15}$/.test(value)
             ? "Invalid phone number"
             : ""
       case "age":
         const ageNum = Number.parseInt(value)
-        return !value.trim()
+        return !value
           ? "Age is required"
           : isNaN(ageNum)
             ? "Invalid age"
@@ -82,8 +83,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
                 ? "Age cannot be greater than 100"
                 : ""
       case "message":
-        const trimmedMsg: string = value.trim()
-        return trimmedMsg.length > 1000
+        return value.length > 1000
             ? "Message cannot be greater than 1000 characters"
                 : ""
       default:
