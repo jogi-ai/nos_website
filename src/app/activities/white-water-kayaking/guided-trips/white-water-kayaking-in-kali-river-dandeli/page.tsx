@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords:
     "kali river kayaking, white water kayaking dandeli, kayaking day trip, river kayaking, water sports dandeli",
   openGraph: {
-    title: "Kali River Day Trip | National Outdoor School",
+    title: "White Water Kayaking in Kali River, Dandeli | National Outdoor School",
     description:
       "Experience an exciting day of white water kayaking on the Kali River with expert guides.",
     url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/kali-river-day-trip",
@@ -256,7 +256,7 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                         </li>
                         <li className="flex items-start">
                           <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span>Transportation to course location</span>
+                          <span>Transportation to river location</span>
                         </li>
                         <li className="flex items-start">
                           <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
@@ -271,19 +271,19 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                       <ul className="space-y-3">
                         <li className="flex items-start">
                           <span className="font-medium mr-2">100% refund:</span>
-                          <span>If cancelled 20+ days before course start date</span>
+                          <span>If cancelled 20+ days before trip start date</span>
                         </li>
                         <li className="flex items-start">
                           <span className="font-medium mr-2">50% refund:</span>
-                          <span>If cancelled 15-19 days before course start date</span>
+                          <span>If cancelled 15-19 days before trip start date</span>
                         </li>
                         <li className="flex items-start">
                           <span className="font-medium mr-2">30% refund:</span>
-                          <span>If cancelled 7-14 days before course start date</span>
+                          <span>If cancelled 7-14 days before trip start date</span>
                         </li>
                         <li className="flex items-start">
                           <span className="font-medium mr-2">No refund:</span>
-                          <span>If cancelled less than 7 days before course start date</span>
+                          <span>If cancelled less than 7 days before trip start date</span>
                         </li>
                       </ul>
                     </div>
