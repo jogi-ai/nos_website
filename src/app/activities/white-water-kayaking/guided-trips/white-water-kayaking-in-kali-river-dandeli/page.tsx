@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: "White Water Kayaking in Kali River, Dandeli | National Outdoor School",
     description:
       "Experience an exciting day of white water kayaking on the Kali River with expert guides.",
-    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/kali-river-day-trip",
+    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/white-water-kayaking-in-kali-river-dandeli",
     siteName: "National Outdoor School",
     images: [
       {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/kali-river-day-trip",
+    canonical: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/white-water-kayaking-in-kali-river-dandeli",
   },
 }
 
