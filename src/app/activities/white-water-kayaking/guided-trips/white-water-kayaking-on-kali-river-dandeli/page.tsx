@@ -278,7 +278,7 @@ export default function KaliRiverDayTrip() {
                         </li>
                         <li className="flex items-start">
                           <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span>Transportation to river location</span>
+                          <span>Transportation to Dandeli</span>
                         </li>
                         <li className="flex items-start">
                           <X className="h-5 w-5 text-red-500 mr-3 mt-0.5 flex-shrink-0" />
