@@ -161,7 +161,7 @@ export default function KaliRiverDayTrip() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Ability to swim and float comfortably in deep water</span>
+                      <span>Ability to swim and float comfortably in deep water with the help of a PFD</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
