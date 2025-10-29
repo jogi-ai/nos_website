@@ -8,64 +8,278 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
 // Sample gallery items - in a real application, this would come from a database or CMS
-const galleryItems = [
-  {
-    id: 1,
-    type: "image",
-    thumbnail: "/roll-practice.jpg",
-    fullSize: "/roll-practice.jpg",
-    alt: "Eskimo roll practice",
-  },
-  {
-    id: 2,
-    type: "image",
-    thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
-    fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
-    alt: "Navigating the Kali River in a kayak",
-  },
-  {
-    id: 3,
-    type: "image",
-    thumbnail: "/eskimo-roll-in-a-rapid.jpg",
-    fullSize: "/eskimo-roll-in-a-rapid.jpg",
-    alt: "Eskimo roll in a rapid",
-  },
-  {
-    id: 4,
-    type: "video",
-    thumbnail: "/rapid-run.png",
-    videoSrc: "/kali-rapid-run.mp4", 
-    alt: "Rapid run",
-  },
-  {
-    id: 5,
-    type: "image",
-    thumbnail: "/rapid-run-2.jpg",
-    fullSize: "/rapid-run-2.jpg",
-    alt: "Running the first rapid",
-  },
-  {
-    id: 6,
-    type: "image",
-    thumbnail: "/kali-river-ariel-view.jpg",
-    fullSize: "/kali-river-ariel-view.jpg",
-    alt: "Aerial view of the Kali River",
-  },
-  {
-    id: 7,
-    type: "image",
-    thumbnail: "/first-rapid.jpg",
-    fullSize: "/first-rapid.jpg",
-    alt: "First rapid ariel view",
-  },
-  {
-    id: 8,
-    type: "image",
-    thumbnail: "/unloading-kayak.jpg",
-    fullSize: "/unloading-kayak.jpg",
-    alt: "Kayaker preparing equipment",
-  },
-]
+const galleryItems = {
+  "foundation-course":[
+    {
+      id: 6,
+      type: "image",
+      thumbnail: "/kali-river-ariel-view.jpg",
+      fullSize: "/kali-river-ariel-view.jpg",
+      alt: "Aerial view of the Kali River",
+    },
+    {
+      id: 7,
+      type: "image",
+      thumbnail: "/first-rapid.jpg",
+      fullSize: "/first-rapid.jpg",
+      alt: "First rapid ariel view",
+    },
+    {
+      id: 2,
+      type: "image",
+      thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
+      fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
+      alt: "Navigating the Kali River in a kayak",
+    },
+    {
+      id: 4,
+      type: "video",
+      thumbnail: "/rapid-run.png",
+      videoSrc: "/kali-rapid-run.mp4", 
+      alt: "Rapid run",
+    },
+    {
+      id: 5,
+      type: "image",
+      thumbnail: "/rapid-run-2.jpg",
+      fullSize: "/rapid-run-2.jpg",
+      alt: "Running the first rapid",
+    },
+    {
+      id: 8,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/bracing.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/bracing.mp4",
+      alt: "Student learning bracing technique",
+    },
+    {
+      id: 9,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/class-2-rapid-run.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/class-2-rapid-run.mp4",
+      alt: "Class 2 rapid run",
+    },
+    {
+      id: 10,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/eddy-out-and-in.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/eddy-out-and-in.mp4",
+      alt: "Learners trying eddy out and in technique",
+    },
+    {
+      id: 11,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/eddy-out.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/eddy-out.mp4",
+      alt: "Learners trying eddy out and in technique",
+    },
+    {
+      id: 12,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/forward.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/forward.mp4",
+      alt: "Learners practicing paddling",
+    },
+    {
+      id: 13,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-1.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-1.mov",
+      alt: "Practicing roll in swimming pool",
+    },
+    {
+      id: 14,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-2.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-2.mov",
+      alt: "Practicing roll in swimming pool",
+    },
+    {
+      id: 15,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/progress.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/progress.mov",
+      alt: "Student making progress",
+    },
+    {
+      id: 16,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.mp4",
+      alt: "Rapid run",
+    },
+    {
+      id: 17,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.mp4",
+      alt: "River run",
+    },
+    {
+      id: 18,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.mp4",
+      alt: "River run",
+    },
+    {
+      id: 19,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.mp4",
+      alt: "River run",
+    },
+    {
+      id: 21,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.mp4",
+      alt: "River run",
+    },
+    {
+      id: 22,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.mp4",
+      alt: "River run",
+    },
+    {
+      id: 23,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/simple-boof-practice.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/simple-boof-practice.mp4",
+      alt: "Boof practice",
+    },
+    {
+      id: 24,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/simple-ferry-practice.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/simple-ferry-practice.mp4",
+      alt: "Ferry practice",
+    },
+    {
+      id: 25,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-1.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-1.mov",
+      alt: "White water swimming",
+    },
+    {
+      id: 26,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.mov",
+      alt: "White water swimming",
+    },
+    {
+      id: 27,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.mov",
+      alt: "White water swimming",
+    }
+  ],
+  "kali-kayaking-trip":[
+    {
+      id: 6,
+      type: "image",
+      thumbnail: "/kali-river-ariel-view.jpg",
+      fullSize: "/kali-river-ariel-view.jpg",
+      alt: "Aerial view of the Kali River",
+    },
+    {
+      id: 7,
+      type: "image",
+      thumbnail: "/first-rapid.jpg",
+      fullSize: "/first-rapid.jpg",
+      alt: "First rapid ariel view",
+    },
+    {
+      id: 2,
+      type: "image",
+      thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
+      fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
+      alt: "Navigating the Kali River in a kayak",
+    },
+    {
+      id: 4,
+      type: "video",
+      thumbnail: "/rapid-run.png",
+      videoSrc: "/kali-rapid-run.mp4", 
+      alt: "Rapid run",
+    },
+    {
+      id: 5,
+      type: "image",
+      thumbnail: "/rapid-run-2.jpg",
+      fullSize: "/rapid-run-2.jpg",
+      alt: "Running the first rapid",
+    },
+    {
+      id: 16,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.mp4",
+      alt: "Rapid run",
+    },
+    {
+      id: 17,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.mp4",
+      alt: "River run",
+    },
+    {
+      id: 18,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.mp4",
+      alt: "River run",
+    },
+    {
+      id: 19,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.mp4",
+      alt: "River run",
+    },
+    {
+      id: 21,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.mp4",
+      alt: "River run",
+    },
+    {
+      id: 22,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.mp4",
+      alt: "River run",
+    },
+    {
+      id: 23,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-1.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-1.mp4",
+      alt: "River run",
+    },
+    {
+      id: 24,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-2.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-2.mp4",
+      alt: "River run",
+    },
+    {
+      id: 25,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.mp4",
+      alt: "River run",
+    }
+  ]
+}
 // const galleryItems = [
 //   {
 //     id: 1,
@@ -125,7 +339,7 @@ const galleryItems = [
 //   },
 // ]
 
-export default function CourseGallery() {
+export default function CourseGallery({ galleryName } : { galleryName: string }) {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -136,11 +350,11 @@ export default function CourseGallery() {
   }
 
   const handlePrevious = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? galleryItems.length - 1 : prevIndex - 1))
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? galleryItems[galleryName].length - 1 : prevIndex - 1))
   }
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex === galleryItems.length - 1 ? 0 : prevIndex + 1))
+    setCurrentIndex((prevIndex) => (prevIndex === galleryItems[galleryName].length - 1 ? 0 : prevIndex + 1))
   }
 
   // Keyboard navigation
@@ -168,13 +382,13 @@ export default function CourseGallery() {
     preventScrollOnSwipe: true,
     trackMouse: true,
   })
-
-  const currentItem = galleryItems[currentIndex]
+  console.log(galleryItems, galleryName);
+  const currentItem = galleryItems[galleryName][currentIndex]
 
   return (
     <>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {galleryItems.map((item, index) => (
+        {galleryItems[galleryName].map((item, index) => (
           <div
             key={item.id}
             className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
@@ -259,7 +473,7 @@ export default function CourseGallery() {
           <div className="p-4 bg-black text-white text-center">
             <p>{currentItem.alt}</p>
             <p className="text-sm text-gray-400">
-              {currentIndex + 1} of {galleryItems.length}
+              {currentIndex + 1} of {galleryItems[galleryName].length}
             </p>
           </div>
         </DialogContent>

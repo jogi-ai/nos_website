@@ -7,23 +7,23 @@ import { CheckCircle, Clock, Calendar, MapPin, Users, Award, Check, X } from "lu
 import RegisterButton from "@/components/register-button"
 import { Metadata } from "next"
 export const metadata: Metadata = {
-  title: "White Water Kayaking in Kali River, Dandeli | National Outdoor School",
+  title: "White Water Kayaking on Kali River, Dandeli | National Outdoor School",
   description:
     "Experience an exciting day of white water kayaking on the Kali River. Perfect for beginners and intermediate paddlers looking for adventure.",
   keywords:
     "kali river kayaking, white water kayaking dandeli, kayaking day trip, river kayaking, water sports dandeli",
   openGraph: {
-    title: "White Water Kayaking in Kali River, Dandeli | National Outdoor School",
+    title: "White Water Kayaking on Kali River, Dandeli | National Outdoor School",
     description:
       "Experience an exciting day of white water kayaking on the Kali River with expert guides.",
-    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/white-water-kayaking-in-kali-river-dandeli",
+    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/white-water-kayaking-on-kali-river-dandeli",
     siteName: "National Outdoor School",
     images: [
       {
         url: "https://nationaloutdoorschool.com/og-image-kayaking.jpg",
         width: 1200,
         height: 630,
-        alt: "Kali River Kayaking Trip - National Outdoor School",
+        alt: "White water kayaking on Kali River - National Outdoor School",
       },
     ],
     locale: "en_US",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/white-water-kayaking-in-kali-river-dandeli",
+    canonical: "https://nationaloutdoorschool.com/activities/white-water-kayaking/guided-trips/white-water-kayaking-on-kali-river-dandeli",
   },
 }
 
@@ -39,17 +39,17 @@ export default function KaliRiverDayTrip() {
   return (
      <>
           {/* Banner Video/Image */}
-          <div className="relative w-full h-[60vh]">
+          <div className="relative w-full h-[67vh]">
             <div className="absolute inset-0 bg-black/30 z-10 flex items-center justify-center">
               <div className="container px-4 text-center">
                 <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-                  White Water Kayaking in Kali River, Dandeli
+                  White Water Kayaking on Kali River, Dandeli
                 </h1>
                 <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg"> </p>
               </div>
             </div>
             <Image
-              src="/kayaking-course-bg.jpg"
+              src="/kali-river-ariel-view.jpg"
               alt="White Water Kayaking"
               fill
               className="object-cover"
@@ -65,10 +65,22 @@ export default function KaliRiverDayTrip() {
                 <div className="lg:w-2/3">
                   
                   <div className="course-description">
-                    <h2 className="font-serif text-3xl font-bold mb-6">Details about the river section</h2>
-                    <p>The trip on the Kali typically launch from Ganeshgudi (just downstream of the Supa Dam) and covers roughly 9km of the river until Mounlangi, the finishing point.
-The section has numerous grade 2-3 rapids along the way, perfect for beginner/intermediate paddlers to practice their river reading and kayaking skills.
-Along the way the river carves a scenic canyon: lush green forest walls line the path almost the entire way.</p>
+                    <h2 className="font-serif text-3xl font-bold mb-6">About the Kali River</h2>
+                    
+                    <p className="mb-4">Nestled in the heart of the Western Ghats in Karnataka&apos;s Uttara Kannada district, the Kali River offers one of South India&apos;s most exhilarating white water kayaking experiences. The kayaking section near Dandeli presents paddlers with an unforgettable journey through lush tropical forests of Dandeli Wildlife Sanctuary, a 475-square-kilometer protected area that forms part of the larger Kali Tiger Reserve.​</p>
+
+                    <p className="mb-2"><strong>Rapids Grade and Technical Challenge</strong></p>
+                    <p className="mb-4">The Kali River presents paddlers with primarily Grade II and Grade II+ rapids, making it accessible to intermediate kayakers. Grade II rapids feature moderate difficulty with clear passages and some rocks to navigate, requiring basic paddling skills and an understanding of river currents. Grade II+ rapids, which constitute slightly more technical sections, bring narrow passages that demand maneuvering and good boat control.</p>
+
+                    <p className="mb-2"><strong>Best time to paddle</strong></p>
+                    <p className="mb-4">The river&apos;s flow is largely dependent on water releases from the Supa Dam, which typically occur from October to June, with the most consistent and optimal conditions between October and March. This dam-controlled release creates a reliable white water season, giving Dandeli a significant advantage over many other South Indian paddling destinations that rely solely on seasonal rainfall.</p>
+
+                    <p className="mb-2"><strong>The Forest Corridor: Paddling Through a Biodiversity Hotspot</strong></p>
+                    <p className="mb-2">What truly sets the Kali River kayaking experience apart is the extraordinary natural environment through which you&apos;ll paddle. The river flows through the Dandeli Wildlife Sanctuary, a globally recognized biodiversity hotspot within the Western Ghats.</p>
+                    <p className="mb-2">This protected area encompasses a stunning mosaic of moist deciduous and semi-evergreen forests, with pockets of dense evergreen vegetation in the western reaches and deep valleys. The forest canopy overhead hosts over 300 species of birds, including the magnificent Malabar Pied Hornbill and Great Hornbill, whose calls echo across the water as you paddle beneath their roosting trees.​</p>
+                    <p className="mb-2">As you paddle through this living cathedral of green, the dense vegetation often closes overhead, filtering the sunlight into dappled patterns on the water&apos;s surface. The air is thick with the scent of wild ginger and jasmine, and the symphony of bird calls, insects, and flowing water creates a sensory experience that goes far beyond the physical challenge of navigating rapids.​</p>
+
+                    <p className="mb-2">A kayaking journey down the Kali River through Dandeli offers more than just white water thrills—it&apos;s an opportunity to connect with ancient forests, encounter remarkable wildlife, and experience the raw power of a river that has carved its path through these mountains for millennia.</p>
 <br />
 <br />
                   </div>
@@ -114,36 +126,46 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                       </CardContent>
                     </Card>
                   </div>
-    
+
+                  {/* Gallery - NEW SECTION */}
+                  <h2 className="font-serif text-3xl font-bold mb-6">Gallery</h2>
+                  <div className="mb-12">
+                    <p className="text-gray-700 mb-6 text-lg">
+                      Get a glimpse of the exciting experiences that await you on the guided trip on the Kali River! These images showcase the beautiful river environments and the thrill of white water kayaking.
+                    </p>
+                    <CourseGallery galleryName="kali-kayaking-trip" />
+                  </div>
+
                   {/* Eligibility */}
                   <h2 className="font-serif text-3xl font-bold mb-6">Eligibility</h2>
+                  <p className="mb-6 text-lg">The following are mandatory requirements to join this trip:</p>
                   <ul className="space-y-4 mb-12">
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Participant should have completed a beginner white water kayaking course with us or any other reputed kayak school.</span>
+                      <span>Participant should have completed a beginner white water kayaking course with us or any other reputed kayak school.</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Above age 16</span>
+                      <span>Above age 16</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Comfortable doing the eskimo roll</span>
+                      <span>Comfortable doing the eskimo roll</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">
+                      <span>
                         Must not suffer from medical issues that prevents the participant from taking part in
                         physical intensive activities
                       </span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Ability to swim and float comfortably in deep water</span>
+                      <span>Ability to swim and float comfortably in deep water</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Proven physical fitness</span>
+                      <span>Proven physical fitness</span>
                     </li>
                   </ul>
                   
@@ -153,15 +175,15 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                   <ul className="space-y-4 mb-12">
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">All guides have many years of experience in white water and are certified white water rescue professionals.</span>
+                      <span>All guides have many years of experience in white water and are certified white water rescue professionals.</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">High quality safety equipment like PFDs, throw ropes, helmet and airbags</span>
+                      <span>High quality safety equipment like PFDs, throw ropes, helmet and airbags</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span className="text-lg">Paddlers will be assessed on day 1 and 2 to ensure they are ready for the more technical sections.</span>
+                      <span>Paddlers will be assessed on day 1 and 2 to ensure they are ready for the more technical sections.</span>
                     </li>
                   </ul>
     
@@ -289,14 +311,6 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                     </div>
                   </div>
     
-                  {/* Gallery - NEW SECTION */}
-                  <h2 className="font-serif text-3xl font-bold mb-6">Gallery</h2>
-                  <div className="mb-12">
-                    <p className="text-lg text-gray-700 mb-6">
-                      Get a glimpse of the exciting experiences that await you on the guided trip on the Kali River! These images showcase the beautiful river environments and the thrill of white water kayaking.
-                    </p>
-                    <CourseGallery />
-                  </div>
                   <h2 className="font-serif text-3xl font-bold mb-6">Things to Carry</h2>
                   <div className="bg-white rounded-lg border p-6 mb-12">
                     <p className="text-lg text-gray-700 mb-6">
@@ -400,7 +414,7 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                     </div>
                     <div className="md:w-2/3 w-[100%]">
                       <h3 className="font-serif text-2xl font-bold text-gray-600 mb-2">Jogi Nayak</h3>
-                      <div className="text-lg text-gray-700">
+                      <div className=" text-gray-700">
                         <p className="mb-2">Jogi is a passionate kayaker and an advocate for the sport. His passion for the sport has made him explore more than 20 rivers across India, Nepal and
                         USA. He believes that kayaking is not just a sport, but a way of life that connects people with nature and helps them discover their true potential.
                         He is committed to sharing his knowledge and experience with others, and helping them develop their skills and confidence on the water. </p>
@@ -424,7 +438,7 @@ Along the way the river carves a scenic canyon: lush green forest walls line the
                     </div>
                     <div className="md:w-2/3 w-[100%]">
                       <h3 className="font-serif text-2xl font-bold text-gray-600 mb-2">Daman Singh</h3>
-                      <div className="text-lg text-gray-700">
+                      <div className=" text-gray-700">
                         <p className="mb-2">Daman Singh is a highly accomplished white water kayaker in India. He has won accolades in International competitions and has vast experience across rivers in India, Nepal and Iceland. 
                         He loves sharing his knowledge and experience with others, guiding them into becoming better paddlers. He is among top white water kayakers in the country.</p>
                         

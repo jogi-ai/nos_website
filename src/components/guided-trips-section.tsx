@@ -7,13 +7,13 @@ export default function GuidedTripsSection() {
   const guidedTrips = [
     {
       id: 1,
-      title: "White Water Kayaking in Kali River, Dandeli",
+      title: "White Water Kayaking on Kali River, Dandeli",
       description:
         "Experience the thrill of white water kayaking on the Kali River. Perfect for beginners and intermediate paddlers looking for an exciting day on the water.",
       image: "/first-rapid.jpg",
       // date: "Available year-round",
       // location: "Dandeli, Karnataka",
-      link: "/activities/white-water-kayaking/guided-trips/white-water-kayaking-in-kali-river-dandeli",
+      link: "/activities/white-water-kayaking/guided-trips/white-water-kayaking-on-kali-river-dandeli",
       features : [
         "Grade 2-3 Rapids",
       ]

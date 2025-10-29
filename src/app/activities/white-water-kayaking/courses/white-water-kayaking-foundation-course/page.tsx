@@ -459,7 +459,7 @@ export default function WhiteWaterKayakingCourse() {
                   Course. These images showcase the beautiful river environments, learning moments, and the thrill of
                   kayaking.
                 </p>
-                <CourseGallery />
+                <CourseGallery galleryName="foundation-course"/>
               </div>
 
               {/* Accommodation - NEW SECTION */}
@@ -660,6 +660,22 @@ export default function WhiteWaterKayakingCourse() {
                   </div>
                 </div>
               </div>
+              <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
+                  <div className="md:w-1/3 w-[100%]">
+                    <div className="relative w-full aspect-square rounded-lg overflow-hidden">
+                      <Image src="/Daman-Dp.jpg" alt="Daman Singh" fill className="object-cover" />
+                    </div>
+                  </div>
+                  <div className="md:w-2/3 w-[100%]">
+                    <h3 className="font-serif text-2xl font-bold text-gray-600 mb-2">Daman Singh</h3>
+                    <div className=" text-gray-700">
+                      <p className="mb-2">Daman Singh is a highly accomplished white water kayaker in India. He has won accolades in International competitions and has vast experience across rivers in India, Nepal and Iceland. 
+                      He loves sharing his knowledge and experience with others, guiding them into becoming better paddlers. He is among top white water kayakers in the country.</p>
+                      
+                      <p className="mb-2">Daman is a certified white water rescue professional. He has vast experience working as a river guide in reputed companies like Alakananda Whitewater, in India and Arctic Rafting, in Iceland.</p>
+                    </div>
+                  </div>
+                </div>
             </div>
 
             {/* Sidebar */}

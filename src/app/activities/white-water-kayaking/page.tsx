@@ -42,9 +42,11 @@ export default function WhiteWaterKayakingPage() {
               From beginner-friendly courses to adrenaline-pumping guided expeditions.
             </h2>
             <div className="mt-8">
-              <Button className="btnPrimary px-8 py-3 text-lg">
-                Start Your Adventure
-              </Button>
+              <a href="/contact">
+                <Button className="btnPrimary px-8 py-3 text-lg">
+                  Start Your Adventure
+                </Button>
+              </a>
             </div>
           </div>
         </section>
