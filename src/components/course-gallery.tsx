@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import Image from "next/image"
 import { Dialog, DialogContent } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
@@ -8,7 +8,18 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
 // Sample gallery items - in a real application, this would come from a database or CMS
-const galleryItems = {
+type GalleryItem = {
+  id: number;
+  type: "image" | "video";
+  thumbnail: string;
+  alt: string;
+  fullSize?: string;
+  videoSrc?: string;
+};
+
+type GalleryName = "foundation-course" | "kali-kayaking-trip";
+
+const galleryItems: Record<GalleryName, GalleryItem[]> = {
   "foundation-course":[
     {
       id: 6,
@@ -339,7 +350,7 @@ const galleryItems = {
 //   },
 // ]
 
-export default function CourseGallery({ galleryName } : { galleryName: string }) {
+export default function CourseGallery({ galleryName } : { galleryName: GalleryName }) {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -349,13 +360,13 @@ export default function CourseGallery({ galleryName } : { galleryName: string })
     setOpen(true)
   }
 
-  const handlePrevious = () => {
+  const handlePrevious = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? galleryItems[galleryName].length - 1 : prevIndex - 1))
-  }
+  }, [galleryName])
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setCurrentIndex((prevIndex) => (prevIndex === galleryItems[galleryName].length - 1 ? 0 : prevIndex + 1))
-  }
+  }, [galleryName])
 
   // Keyboard navigation
   useEffect(() => {
@@ -373,7 +384,7 @@ export default function CourseGallery({ galleryName } : { galleryName: string })
 
     window.addEventListener("keydown", handleKeyDown)
     return () => window.removeEventListener("keydown", handleKeyDown)
-  }, [open])
+  }, [open, handleNext, handlePrevious])
 
   // Swipe handlers for mobile
   const swipeHandlers = useSwipeable({
