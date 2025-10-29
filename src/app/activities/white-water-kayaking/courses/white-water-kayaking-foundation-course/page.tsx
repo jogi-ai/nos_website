@@ -179,7 +179,7 @@ export default function WhiteWaterKayakingCourse() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-lg">Ability to swim and float comfortably in deep water</span>
+                  <span className="text-lg">Ability to swim and float comfortably in deep water with the help of a PFD</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
