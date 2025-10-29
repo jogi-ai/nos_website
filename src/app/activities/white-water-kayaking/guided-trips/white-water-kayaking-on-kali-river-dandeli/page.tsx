@@ -179,7 +179,7 @@ export default function KaliRiverDayTrip() {
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                      <span>High quality safety equipment like PFDs, throw ropes, helmet and airbags</span>
+                      <span>High quality safety equipment like PFDs, throw ropes, helmet and airbags.</span>
                     </li>
                     <li className="flex items-start">
                       <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -264,7 +264,7 @@ export default function KaliRiverDayTrip() {
                         </li>
                         <li className="flex items-start">
                           <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                          <span>Transportation to training spots within training location</span>
+                          <span>Transportation between accommodation and river location</span>
                         </li>
                       </ul>
                     </div>
