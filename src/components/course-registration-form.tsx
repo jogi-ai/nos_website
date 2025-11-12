@@ -321,12 +321,12 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
               >
                 <div>
                   <div className="flex items-center space-x-1 mb-2">
-                    <RadioGroupItem value="nov-27-nov-30" id="nov-27-nov-30" />
-                    <Label htmlFor="nov-27-nov-30">Nov 27th - Nov 30th</Label>
+                    <RadioGroupItem value="nov-23-nov-26" id="nov-23-nov-26" />
+                    <Label htmlFor="nov-23-nov-26">Nov 23rd - Nov 26th</Label>
                   </div>
                   <div className="flex items-center space-x-1 mb-2">
                     <RadioGroupItem value="other" id="other-date" />
-                    <Label htmlFor="other-date">Other (Please mention in message below your preferred date in November 2025)</Label>
+                    <Label htmlFor="other-date">Other (Please mention in message below your preferred date between November 23 - December 2nd 2025)</Label>
                   </div>
                 </div>
               </RadioGroup>

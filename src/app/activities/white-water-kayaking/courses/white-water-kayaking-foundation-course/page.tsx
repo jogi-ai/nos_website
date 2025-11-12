@@ -463,7 +463,7 @@ export default function WhiteWaterKayakingCourse() {
               </div>
 
               {/* Accommodation - NEW SECTION */}
-              {/* <h2 className="font-serif text-3xl font-bold mb-6">Recommended Accommodation</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6">Recommended Accommodation</h2>
               <div className="bg-white rounded-lg border p-6 mb-12">
                 <div className="flex flex-col md:flex-row gap-6 mb-6">
                   <div className="md:w-1/3">
@@ -479,7 +479,7 @@ export default function WhiteWaterKayakingCourse() {
                   <div className="md:w-2/3">
                     <h3 className="font-serif text-xl font-bold mb-2">Jungli, The Nomad Village</h3>
                     <p className="text-lg text-gray-700 mb-4">
-                      Our recommended accommodation partner is the Jungli, The Nomad Village located in Moulangi, Dandeli. For more details about the accommodation visit <a className="underline" href="https://www.junglithenomad.com/the-big-bungalow" target="_blank">Jungli&apos;s website.</a>
+                      Our recommended accommodation partner is the Jungli, The Nomad Village located in Moulangi, Dandeli. For more details about the accommodation and to apply to stay - visit <a className="underline" href="https://www.junglithenomad.com/the-big-bungalow" target="_blank">Jungli&apos;s website.</a>
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
@@ -535,10 +535,10 @@ export default function WhiteWaterKayakingCourse() {
                   <h3 className="font-serif text-lg font-bold mb-2">Special Kayaker Discount</h3>
                   <p className="mb-2">
                     As a participant National Outdoor School&apos;s White Water Kayaking Foundation Course, you&apos;re eligible for a special
-                    discounted rate of Rs. 2500 / head / night for sharing rooms(includes stay, meals & taxes) at Jungli.
+                    discounted rate for your stay and meals at Jungli. Mention kayaking in your application form to unlock the special kayaker discount.
                   </p>
                 </div>
-              </div> */}
+              </div>
               {/* Things to Carry - NEW SECTION */}
               <h2 className="font-serif text-3xl font-bold mb-6">Things to Carry</h2>
               <div className="bg-white rounded-lg border p-6 mb-12">
