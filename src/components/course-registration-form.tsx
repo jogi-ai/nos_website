@@ -312,7 +312,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
           </div>
           {courseName=="White Water Kayaking Foundation Course" && 
             <div className="space-y-2 mt-1">
-              <Label>Preferred course date (year 2025)</Label>
+              <Label>Preferred course date (please mention exact preferred dates in message below. 4 days are required.)</Label>
               <RadioGroup
                 defaultValue={formData.preferredCourseDate}
                 value={formData.preferredCourseDate}
@@ -321,12 +321,12 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
               >
                 <div>
                   <div className="flex items-center space-x-1 mb-2">
-                    <RadioGroupItem value="nov-23-nov-26" id="nov-23-nov-26" />
-                    <Label htmlFor="nov-23-nov-26">Nov 23rd - Nov 26th</Label>
+                    <RadioGroupItem value="jan-2026" id="jan-2026" />
+                    <Label htmlFor="jan-2026">Jan 2026</Label>
                   </div>
                   <div className="flex items-center space-x-1 mb-2">
-                    <RadioGroupItem value="other" id="other-date" />
-                    <Label htmlFor="other-date">Other (Please mention in message below your preferred dates between November 23 - December 2nd 2025)</Label>
+                    <RadioGroupItem value="feb-2026" id="feb-2026" />
+                    <Label htmlFor="feb-2026">Feb 2026</Label>
                   </div>
                 </div>
               </RadioGroup>
