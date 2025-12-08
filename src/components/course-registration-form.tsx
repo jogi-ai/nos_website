@@ -312,7 +312,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
           </div>
           {courseName=="White Water Kayaking Foundation Course" && 
             <div className="space-y-2 mt-1">
-              <Label>Preferred course date (please mention exact preferred dates in message below. 4 days are required.)</Label>
+              <Label>Preferred dates (please mention exact preferred dates in message below. 4 days are required.)</Label>
               <RadioGroup
                 defaultValue={formData.preferredCourseDate}
                 value={formData.preferredCourseDate}
