@@ -188,7 +188,63 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
       thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.jpg",
       videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.mov",
       alt: "White water swimming",
+    },
+    {
+      id: 28,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
+      alt: "View of river from the bridge",
+    },
+    {
+      id: 29,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
+      alt: "Kodencherry ariel view",
+    },
+    {  
+      id: 30,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/game_of_thorns_thumb.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/game_of_thorns.mp4", 
+      alt: "Game of thorns rapid",
     }
+    // {  
+    //   id: 31,
+    //   type: "video",
+    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/pool_roll_thumb.jpg",
+    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/pool_roll.mp4", 
+    //   alt: "Pool roll practice",
+    // },
+    // {  
+    //   id: 32,
+    //   type: "video",
+    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/river_roll_thumb.jpg",
+    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/river_roll.mp4", 
+    //   alt: "Student rolling in the river",
+    // },
+    // {  
+    //   id: 33,
+    //   type: "video",
+    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/river_run_thumb.jpg",
+    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/river_run.mp4", 
+    //   alt: "Students running rapids",
+    // },
+    // {  
+    //   id: 34,
+    //   type: "video",
+    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/bracing_thumb.jpg",
+    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/bracing.mp4", 
+    //   alt: "Bracing technique practice",
+    // },
+    // {  
+    //   id: 35,
+    //   type: "video",
+    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/white_water_swimming_thumb.jpg",
+    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/white_water_swimming.mp4", 
+    //   alt: "White water swimming practice",
+    // }
   ],
   "kali-kayaking-trip":[
     {

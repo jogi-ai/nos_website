@@ -400,10 +400,6 @@ export default function WhiteWaterKayakingCourse() {
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Transportation to training spots within training location</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
                       <span>Course completion certificate</span>
                     </li>
                   </ul>
