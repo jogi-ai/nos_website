@@ -91,7 +91,7 @@ export default function KaliRiverDayTrip() {
                           <Calendar className="h-6 w-6 text-charcoal" />
                           <h3 className="font-serif text-xl font-bold">Upcoming date</h3>
                         </div>
-                        <p className="mb-2">Nov 20 - 30th 2025</p>
+                        <p className="mb-2">Jan & Feb 2026</p>
                         <p className="text-sm text-gray-600">*Join us for any number of days</p>
                       </CardContent>
                     </Card>
@@ -102,7 +102,7 @@ export default function KaliRiverDayTrip() {
                           <MapPin className="h-6 w-6 text-charcoal" />
                           <h3 className="font-serif text-xl font-bold">Location</h3>
                         </div>
-                        <p>Kali River, Dandeli</p>
+                        <p>Multiple locations in Karnataka and Kerala</p>
                       </CardContent>
                     </Card>
     

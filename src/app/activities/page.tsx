@@ -51,21 +51,21 @@ interface Activity {
 }
 
 const activities: Activity[] = [
-  {
-    id: "white-water-kayaking",
-    title: "White Water Kayaking",
-    description: "Experience the thrill of navigating pristine rapids through India's most spectacular river valleys. Our comprehensive programs cater to all skill levels, from complete beginners to advanced paddlers seeking to refine their technique.",
-    shortDescription: "Navigate pristine rapids and experience the thrill of white water adventure in India's most beautiful river valleys.",
-    image: "/rapid-run-2.jpg",
-    href: "/activities/white-water-kayaking",
-    difficulty: "All Levels",
-    features: [
-      "Courses",
-      "Guided day trips",
-      "Expeditions",
-      "Equipment rental"
-    ]
-  }
+  // {
+  //   id: "white-water-kayaking",
+  //   title: "White Water Kayaking",
+  //   description: "Experience the thrill of navigating pristine rapids through India's most spectacular river valleys. Our comprehensive programs cater to all skill levels, from complete beginners to advanced paddlers seeking to refine their technique.",
+  //   shortDescription: "Navigate pristine rapids and experience the thrill of white water adventure in India's most beautiful river valleys.",
+  //   image: "/rapid-run-2.jpg",
+  //   href: "/activities/white-water-kayaking",
+  //   difficulty: "All Levels",
+  //   features: [
+  //     "Courses",
+  //     "Guided day trips",
+  //     "Expeditions",
+  //     "Equipment rental"
+  //   ]
+  // }
   // Future activities can be added here:
   // {
   //   id: "rock-climbing",
