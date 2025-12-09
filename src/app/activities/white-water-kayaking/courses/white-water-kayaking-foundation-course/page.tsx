@@ -101,7 +101,7 @@ export default function WhiteWaterKayakingCourse() {
                       <Calendar className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Upcoming course date</h3>
                     </div>
-                    <p className="mb-2">Nov 2025</p>
+                    <p className="mb-2">Jan & Feb 2026</p>
                     <p className="text-sm text-gray-600">*Check enquiry form for dates</p>
                   </CardContent>
                 </Card>
@@ -112,7 +112,7 @@ export default function WhiteWaterKayakingCourse() {
                       <MapPin className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Location</h3>
                     </div>
-                    <p>Kali River, Dandeli</p>
+                    <p>Multiple locations in Karnataka &amp; Kerala</p>
                   </CardContent>
                 </Card>
 
