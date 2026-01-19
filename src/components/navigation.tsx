@@ -161,10 +161,10 @@ export default function Navigation() {
                 // }
               ]
             },
-            // {
-            //   name: "Guided trips",
-            //   href: "/activities/white-water-kayaking/guided-trips",
-            // },
+            {
+              name: "Guided trips",
+              href: "/activities/white-water-kayaking/guided-trips",
+            },
             {
               name: "Expeditions",
               href: "/activities/white-water-kayaking/multi-day-expeditions",
