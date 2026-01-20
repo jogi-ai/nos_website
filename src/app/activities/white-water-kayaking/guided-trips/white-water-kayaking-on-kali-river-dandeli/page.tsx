@@ -246,7 +246,19 @@ export default function KaliRiverDayTrip() {
                   <div className="bg-white rounded-lg border p-6 mb-8">
                     <h3 className="font-serif text-xl font-bold mb-4">Introductory Offer</h3>
                     <div className="text-xl font-bold mb-6"><span className="line-through">₹5000</span> ₹4,500 per day</div>
-    
+                    <div className="mb-6">
+                      <h3 className="font-serif text-xl font-bold mb-4">Other costs</h3>
+                      <ul className="space-y-3">
+                        <li>
+                          <span className="font-medium mr-2">Accommodation:</span>
+                          <span>Rs. 1200 - Rs. 1500 per head per day including meals</span>
+                        </li>
+                        <li>
+                          <span className="font-medium mr-2">Forest department permit:</span>
+                          <span>Rs. 500 per head per day</span>
+                        </li>
+                      </ul>
+                    </div>
                     <div className="mb-6">
                       <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
                       <ul className="space-y-3">
@@ -430,7 +442,7 @@ export default function KaliRiverDayTrip() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
+                  {/* <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
                     <div className="md:w-1/3 w-[100%]">
                       <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                         <Image src="/Daman-Dp.jpg" alt="Daman Singh" fill className="object-cover" />
@@ -445,7 +457,7 @@ export default function KaliRiverDayTrip() {
                         <p className="mb-2">Daman is a certified white water rescue professional. He has vast experience working as a river guide in reputed companies like Alakananda Whitewater, in India and Arctic Rafting, in Iceland.</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
     
                 {/* Sidebar */}

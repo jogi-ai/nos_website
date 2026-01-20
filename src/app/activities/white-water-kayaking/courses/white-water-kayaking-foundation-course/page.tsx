@@ -668,7 +668,7 @@ export default function WhiteWaterKayakingCourse() {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
+              {/* <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
                   <div className="md:w-1/3 w-[100%]">
                     <div className="relative w-full aspect-square rounded-lg overflow-hidden">
                       <Image src="/Daman-Dp.jpg" alt="Daman Singh" fill className="object-cover" />
@@ -683,7 +683,7 @@ export default function WhiteWaterKayakingCourse() {
                       <p className="mb-2">Daman is a certified white water rescue professional. He has vast experience working as a river guide in reputed companies like Alakananda Whitewater, in India and Arctic Rafting, in Iceland.</p>
                     </div>
                   </div>
-                </div>
+              </div> */}
             </div>
 
             {/* Sidebar */}
