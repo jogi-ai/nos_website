@@ -91,7 +91,7 @@ export default function KaliRiverDayTrip() {
                           <Calendar className="h-6 w-6 text-charcoal" />
                           <h3 className="font-serif text-xl font-bold">Upcoming date</h3>
                         </div>
-                        <p className="mb-2">Feb 22nd - March 8th 2026</p>
+                        <p className="mb-2">Feb 20th - March 8th 2026</p>
                         <p className="text-sm text-gray-600">*Join us for any number of days</p>
                       </CardContent>
                     </Card>
