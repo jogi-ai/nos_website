@@ -98,8 +98,8 @@ export default function WhiteWaterKayakingPage() {
           </div>
         </section>
 
-        {/* Guided Day Trips Section */}
-        {/* <section className="py-20 bg-stone-50">
+        
+        <section className="py-20 bg-stone-50">
           <div className="container mx-auto px-4">
             <div className="flex flex-col md:flex-row items-center gap-12">
               <div className="md:w-1/2 relative w-full rounded-lg overflow-hidden shadow-xl">
@@ -145,7 +145,7 @@ export default function WhiteWaterKayakingPage() {
               </div>
             </div>
           </div>
-        </section> */}
+        </section>
 
         {/* Equipment Rental Section */}
         <section className="py-20 bg-white">
