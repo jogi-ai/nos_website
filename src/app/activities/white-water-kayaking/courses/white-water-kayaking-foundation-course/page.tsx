@@ -378,7 +378,7 @@ export default function WhiteWaterKayakingCourse() {
                 </TabsContent>
               </Tabs>
               {/* Course Fees - NEW SECTION */}
-              <h2 className="font-serif text-3xl font-bold mb-6" id="#fees">Fees</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6" id="fees">Fees</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
                 <h3 className="font-serif text-xl font-bold mb-4">Course fees</h3>
                 <div className="text-xl font-bold mb-6"><span className="line-through">₹22,000</span> ₹18,000/- per head (Rs. 4,500 per day)</div>
