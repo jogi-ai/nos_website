@@ -643,7 +643,7 @@ export default function WhiteWaterKayakingCourse() {
                 </div>
               </div>
               {/* Instructor Profile */}
-              <h2 className="font-serif text-3xl font-bold mb-6">Instructor Profile</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6" id="instructor-profile">Instructor Profile</h2>
               <div className="flex flex-col md:flex-row gap-6 items-start mb-12">
                 <div className="md:w-1/3 w-[100%]">
                   <div className="relative w-full aspect-square rounded-lg overflow-hidden">
@@ -653,7 +653,7 @@ export default function WhiteWaterKayakingCourse() {
                 <div className="md:w-2/3 w-[100%]">
                   <h3 className="font-serif text-2xl font-bold text-gray-600 mb-2">Jogi Nayak</h3>
                   <div className="text-lg text-gray-700">
-                    <p className="mb-2">Jogi is a passionate kayaker and an advocate for the sport. His passion for the sport has made him explore more than 15 rivers across India, Nepal and
+                    <p className="mb-2">Jogi is a passionate kayaker and an advocate for the sport. His passion for the sport has made him explore more than 20+ rivers across India, Nepal and
                     USA. He believes that kayaking is not just a sport, but a way of life that connects people with nature and helps them discover their true potential.
                     He is committed to sharing his knowledge and experience with others, and helping them develop their skills and confidence on the water. </p>
                     
