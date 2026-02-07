@@ -378,23 +378,10 @@ export default function WhiteWaterKayakingCourse() {
                 </TabsContent>
               </Tabs>
               {/* Course Fees - NEW SECTION */}
-              <h2 className="font-serif text-3xl font-bold mb-6">Fees</h2>
+              <h2 className="font-serif text-3xl font-bold mb-6" id="fees">Fees</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
                 <h3 className="font-serif text-xl font-bold mb-4">Course fees</h3>
-                <div className="text-xl font-bold mb-6"><span className="line-through">₹22,000</span> ₹18,000</div>
-                <div className="mb-6">
-                  <h3 className="font-serif text-xl font-bold mb-4">Other costs</h3>
-                  <ul className="space-y-3">
-                    <li>
-                      <span className="font-medium mr-2">Accommodation:</span>
-                      <span>Rs. 1200 - Rs. 1500 per head per day including meals</span>
-                    </li>
-                    <li>
-                      <span className="font-medium mr-2">Forest department permit:</span>
-                      <span>Rs. 500 per head per day</span>
-                    </li>
-                  </ul>
-                </div>
+                <div className="text-xl font-bold mb-6"><span className="line-through">₹22,000</span> ₹18,000/- per head (Rs. 4,500 per day)</div>
                 <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
                   <ul className="space-y-3">
@@ -436,7 +423,7 @@ export default function WhiteWaterKayakingCourse() {
                   </ul>
                 </div>
 
-                <div>
+                <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">Refund Policy</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
@@ -456,6 +443,21 @@ export default function WhiteWaterKayakingCourse() {
                       <span>If cancelled less than 7 days before course start date</span>
                     </li>
                   </ul>
+                </div>
+                <div>
+                  <h3 className="font-serif text-xl font-bold mb-4">Other costs</h3>
+                  <div className="space-y-3">
+                      <p className="font-medium mr-2"><strong>Accommodation:</strong></p>
+                      <p>
+                        Approximately Rs. 1500 per head per day including meals at:
+                      </p>
+                      <p><a href="https://share.google/C1RVf6KqtvnOFuvi2" target="_blank" className="underline">Fireflies Resort, Ganesh Gudi, Dandeli (1.5 km from the training location)</a></p>
+                      <p>You are free to choose your own accommodation anywhere in Ganesh Gudi.</p>
+                      <p><strong>Permit to access the river:</strong></p>
+                      <p>Rs. 350 - Rs. 500 / head / day depending on the length of the river section accessed.</p>
+                      <p><strong>Transportation and other logistics</strong></p>
+                      <p>Approximately Rs. 150 / head (Only on the days when we do river runs which typically happens on 3rd and 4th day of the course depending on progress and river conditions)</p>
+                  </div>
                 </div>
               </div>
 
