@@ -455,6 +455,7 @@ export default function WhiteWaterKayakingCourse() {
                       <p>You are free to choose your own accommodation anywhere in Ganesh Gudi.</p>
                       <p><strong>Permit to access the river:</strong></p>
                       <p>Rs. 350 - Rs. 500 / head / day depending on the length of the river section accessed.</p>
+                      <p>Rs. 700 / head / day if 11km stretch is accessed(Only open to experienced paddlers).</p>
                       <p><strong>Transportation and other logistics</strong></p>
                       <p>Approximately Rs. 150 / head (Only on the days when we do river runs which typically happens on 3rd and 4th day of the course depending on progress and river conditions)</p>
                   </div>
