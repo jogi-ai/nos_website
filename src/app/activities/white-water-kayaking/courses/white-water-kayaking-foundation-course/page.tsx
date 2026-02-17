@@ -41,8 +41,8 @@ export default function WhiteWaterKayakingCourse() {
   return (
     <>
       {/* Banner Video/Image */}
-      <div className="relative w-full h-[60vh]">
-        <div className="absolute inset-0 bg-black/30 z-10 flex items-center justify-center">
+      <div className="relative w-full h-[70vh]">
+        <div className="absolute inset-0 bg-black/10 z-10 flex items-center justify-center">
           <div className="container px-4 text-center">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
               White Water Kayaking Foundation Course - Level 1

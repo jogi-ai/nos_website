@@ -58,6 +58,9 @@ export default function Navigation() {
         case "white-water-kayaking-foundation-course":
           label = "White Water Kayaking Foundation Course (Level 1)"
           break
+        case "white-water-kayaking-kids-summer-camp-uttarakhand":
+          label = "Himalayan White Water Kayaking Kids Summer Camp"
+          break
         case "intermediate-white-water-kayaking-course":
           label = "Intermediate White Water Kayaking Course (Level 2)"
           break
@@ -155,10 +158,10 @@ export default function Navigation() {
                   name: "White Water Kayaking Foundation Course (Level 1)",
                   href: "/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course",
                 },
-                // {
-                //   name: "Intermediate White Water Kayaking Course (Level 2)",
-                //   href: "/activities/white-water-kayaking/courses/intermediate-white-water-kayaking-course",
-                // }
+                {
+                  name: "Himalayan White Water Kayaking Kids Summer Camp",
+                  href: "/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand",
+                },
               ]
             },
             {

@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
         destination: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course',
         permanent: true,
       },
+      {
+        source: '/courses/white-water-kayaking-kids-summer-camp-uttarakhand',
+        destination: '/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand',
+        permanent: true,
+      },
     ];
   },
 };

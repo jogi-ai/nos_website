@@ -12,7 +12,15 @@ export default function CoursesSection() {
         "A perfect course for beginners to learn the essential skills required to navigate white water with balance and control.",
       image: "/intro-to-white-water-kayaking.jpg",
       link: "/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course",
-    }
+    },
+    {
+      id: 2,
+      title: "Himalayan White Water Kayaking Kids Summer Camp",
+      description:
+        "Introduce kids to the outdoors and white water kayaking in the Indian Himalayas. Minimum 4 days at Shivanandi River Lodge, Rudraprayag. Parents can learn along too.",
+      image: "/kayaking-course-bg.jpg",
+      link: "/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand",
+    },
   ]
 
   return (

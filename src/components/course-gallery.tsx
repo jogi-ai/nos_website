@@ -17,7 +17,7 @@ type GalleryItem = {
   videoSrc?: string;
 };
 
-type GalleryName = "foundation-course" | "kali-kayaking-trip";
+type GalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp";
 
 const galleryItems: Record<GalleryName, GalleryItem[]> = {
   "foundation-course":[
@@ -345,6 +345,134 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
       videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.mp4",
       alt: "River run",
     }
+  ],
+  "kids-kayaking-camp": [
+    {
+      id: 1,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/family_shivanandi.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/family_shivanandi.jpg",
+      alt: "Family enjoying their time at Shivanandi River Lodge",
+    },
+    {
+      id: 2,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg",
+      alt: "Kayaks arranged in front of the lodge",
+    },
+    {
+      id: 3,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_rafting.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_rafting.jpg",
+      alt: "Kids enjoyingrafting on Alaknanda River",
+    },
+    {
+      id: 4,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_kayak_session.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_kayak_session.jpg",
+      alt: "Kids enjoying a pool kayak session",
+    },
+    {
+      id: 5,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg",
+      alt: "Pro kayaker practicing in the pool",
+    },
+    {
+      id: 6,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg",
+      alt: "Pets at Shivanandi River Lodge",
+    },
+    {
+      id: 7,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg",
+      alt: "Fresh healthy homely food",
+    },
+    {
+      id: 8,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
+      alt: "The main lodge buildings",
+    },
+    {
+      id: 9,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
+      alt: "Rainbow by the river. Surreal feeling",
+    },
+    {
+      id: 10,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg",
+      alt: "A room at Shivanandi River Lodge",
+    },
+    {
+      id: 11,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg",
+      alt: "A room at Shivanandi River Lodge",
+    },
+    {
+      id: 12,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
+      alt: "A surreal sunset at Shivanandi",
+    },
+    {
+      id: 13,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.mp4",
+      alt: "Kayaking POV in Alaknanda River",
+    },
+    {
+      id: 14,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/eddy_practice.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/eddy_practice.mp4",
+      alt: "Eddy practice",
+    },
+    {
+      id: 15,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.mp4",
+      alt: "Mornings in front of Shivanandi River Lodge",
+    },
+    {
+      id: 16,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.mp4",
+      alt: "Kayaking practice in the pool",
+    },
+    {
+      id: 17,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.mp4",
+      alt: "Practicing eskimo roll",
+    },
+    {
+      id: 18,
+      type: "video",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.jpg",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.mp4",
+      alt: "Walking around Shivanandi River Lodge",
+    }
   ]
 }
 // const galleryItems = [
@@ -449,7 +577,6 @@ export default function CourseGallery({ galleryName } : { galleryName: GalleryNa
     preventScrollOnSwipe: true,
     trackMouse: true,
   })
-  console.log(galleryItems, galleryName);
   const currentItem = galleryItems[galleryName][currentIndex]
 
   return (
