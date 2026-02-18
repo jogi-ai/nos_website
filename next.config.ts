@@ -14,7 +14,17 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/courses/white-water-kayaking-kids-summer-camp-uttarakhand',
-        destination: '/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand',
+        destination: '/activities/white-water-kayaking/courses/himalayan-white-water-kayaking-summer-program-for-kids',
+        permanent: true,
+      },
+      {
+        source: '/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand',
+        destination: '/activities/white-water-kayaking/courses/himalayan-white-water-kayaking-summer-program-for-kids',
+        permanent: true,
+      },
+      {
+        source: '/courses/himalayan-white-water-kayaking-summer-program-for-kids',
+        destination: '/activities/white-water-kayaking/courses/himalayan-white-water-kayaking-summer-program-for-kids',
         permanent: true,
       },
     ];

@@ -9,30 +9,30 @@ import RegisterButton from "@/components/register-button"
 import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Himalayan White Water Kayaking Kids Summer Camp",
+  title: "Himalayan White Water Kayaking Summer Program for Kids",
   description:
-    "Introduce your kids to the outdoors with our white water kayaking summer camp in the Indian Himalayas. Minimum 4 days at Shivanandi River Lodge, Rudraprayag. Parents can learn along too.",
+    "A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the country.",
   keywords:
-    "kids white water kayaking, kids summer camp, himalayas kayaking, rudraprayag, uttarakhand, kids outdoor camp, family kayaking",
+    "kids white water kayaking, kids summer camp, himalayas, rudraprayag, uttarakhand, kids outdoor camp, family kayaking",
   openGraph: {
-    title: "Himalayan White Water Kayaking Kids Summer Camp",
+    title: "Himalayan White Water Kayaking Summer Program for Kids",
     description:
-      "Introduce your kids to the outdoors with our white water kayaking summer camp in the Indian Himalayas. Minimum 4 days at Shivanandi River Lodge, Rudraprayag.",
-    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand",
+      "A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the country.",
+    url: "https://nationaloutdoorschool.com/activities/white-water-kayaking/courses/himalayan-white-water-kayaking-summer-program-for-kids",
     siteName: "National Outdoor School",
     images: [
       {
-        url: "https://nationaloutdoorschool.com/og-image-kayaking.jpg",
+        url: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_program_og_image.jpg",
         width: 1200,
         height: 630,
-        alt: "Himalayan White Water Kayaking Kids Summer Camp - National Outdoor School",
+        alt: "Himalayan White Water Kayaking Summer Program for Kids - by National Outdoor School",
       },
     ],
     locale: "en_US",
     type: "website",
   },
   alternates: {
-    canonical: "https://nationaloutdoorschool.com/courses/white-water-kayaking-kids-summer-camp-uttarakhand",
+    canonical: "https://nationaloutdoorschool.com/courses/himalayan-white-water-kayaking-summer-program-for-kids",
   },
 }
 
@@ -40,8 +40,8 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
   return (
     <>
       {/* Banner */}
-      <div className="relative w-full h-[70vh]">
-        <div className="absolute inset-0 bg-black/10 z-10 flex items-center justify-center">
+      <div className="relative w-full h-[80vh]">
+        <div className="absolute inset-0 bg-black/30 z-10 flex items-center justify-center">
           <div className="container px-4 text-center">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
               Himalayan White Water Kayaking Summer Program for Kids
@@ -52,8 +52,8 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
           </div>
         </div>
         <Image
-          src="https://igutafeeling.com/uploads/nos_media/kids_kayaking/hero.jpg"
-          alt="Himalayan White Water Kayaking Kids Summer Camp"
+          src="https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_program_banner.jpg"
+          alt="Himalayan White Water Kayaking Summer Program for Kids - by National Outdoor School"
           fill
           className="object-cover"
           priority
@@ -64,6 +64,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row gap-12">
             <div className="lg:w-2/3">
+              <div className="course-description">
               {/* Course Description */}
               <h2 className="font-serif text-3xl font-bold mb-6">Course Description</h2>
               <p className="mb-6">
@@ -76,6 +77,28 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                 the option to learn white water kayaking alongside their child, making it a memorable family adventure
                 in the Himalayas.
               </p>
+              <h4 className="font-serif text-lg font-bold mb-6">At the end of the course the student will:</h4>
+              <ul className="space-y-4 mb-12">
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Be able to navigate a kayak in grade 1-2 rapids</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Be able to perform basic self-rescue techniques and have more confidence in water
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Have a deeper understanding of how to deal with water and river features</span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span>Have better survival skills and knowledge about the outdoors</span>
+                </li>
+              </ul>
+              </div>
               {/* Overview cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 <Card>
@@ -114,7 +137,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                       <Award className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Skill Level</h3>
                     </div>
-                    <p className="mb-2">Beginner Kids</p>
+                    <p className="mb-2">Beginner</p>
                     <p className="text-sm text-gray-600">Basic comfort in water is required.</p>
                   </CardContent>
                 </Card>
@@ -127,18 +150,12 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                   Shalabh is a pioneer in the sport and is a well known personality in the white water kayaking community worldwide.
                 </p>
                 <p className="mb-4">
-                  Shivanandi River Lodge is a popular destination among adventure and outdoors enthusiasts and especially among kayakers from across the country and the world.
-                  The lodge offers a family-friendly base with comfortable accommodation, meals, a natural swimming pool and direct access to the river Alaknanda. 
+                  Shivanandi River Lodge is a popular destination among adventure and outdoors enthusiasts and especially among kayakers from across world.
+                  The lodge offers a family-friendly base with comfortable accommodation, meals, a natural swimming pool and direct access to the river Alaknanda and other classic Himalayan rivers in the region. 
                   Its peaceful and natural setting and make it ideal for kids their families to connect with nature and learn white water kayaking.</p>
               </div>
               <div className="mb-[2rem] mt-[2rem]">
-                <Image
-                    src="https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg"
-                    alt="Shivanandi River Lodge Aerial View"
-                    width={1000}
-                    height={1000}
-                    className="w-[80%] h-auto"
-                />
+                <CourseGallery galleryName="shivanandi" columns={2} />
               </div>
               
               {/* Eligibility */}
@@ -182,7 +199,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Multiple certified rescue professionals at all times during the sessions</span>
+                  <span>Multiple certified rescue and first aidprofessionals at all times during the sessions</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -190,7 +207,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Kids will not be taken on rapids above Grade 1+</span>
+                  <span>Kids will not be taken on rapids above Grade 2</span>
                 </li>
               </ul>
 
@@ -200,24 +217,29 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                 <div>
                   <h3 className="font-serif text-xl font-bold text-gray-600 mb-3">Introduction to kayaking</h3>
                   <ul className="space-y-2 pl-6">
-                    <li className="list-disc">Kayak and equipment basics</li>
+                    <li className="list-disc">Kayak design</li>
+                    <li className="list-disc">About kayaking equipment</li>
                     <li className="list-disc">River safety briefing</li>
-                    <li className="list-disc">Getting comfortable in the boat</li>
+                    <li className="list-disc">Seat positioning</li>
+                    <li className="list-disc">Kayak carrying technique</li>
                   </ul>
                 </div>
                 <div>
                   <h3 className="font-serif text-xl font-bold text-gray-600 mb-3">Basic paddling</h3>
                   <ul className="space-y-2 pl-6">
-                    <li className="list-disc">Forward and back strokes</li>
-                    <li className="list-disc">Steering and turning</li>
+                    <li className="list-disc">Forward stroke</li>
+                    <li className="list-disc">Back stroke</li>
+                    <li className="list-disc">Basic self rescue skills</li>
                     <li className="list-disc">Wet exit</li>
+                    <li className="list-disc">Edge control</li>
                   </ul>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-3">River and nature</h3>
+                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-3">River running</h3>
                   <ul className="space-y-2 pl-6">
-                    <li className="list-disc">Safe swimming in moving water</li>
-                    <li className="list-disc">Fun on the river and building confidence</li>
+                    <li className="list-disc">Protocols for river running</li>
+                    <li className="list-disc">Signals</li>
+                    <li className="list-disc">Running Grade 1 and 2 rapids</li>
                   </ul>
                 </div>
               </div>
@@ -288,7 +310,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                   </ul>
                 </TabsContent>
                 <TabsContent value="day4" className="border rounded-lg p-6">
-                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-4">Day 4 — Consolidation</h3>
+                  <h3 className="font-serif text-xl font-bold text-gray-600 mb-4">Day 4 — Long river run</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -317,7 +339,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
               <h2 className="font-serif text-3xl font-bold mb-6" id="fees">Price</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
                 {/* <h3 className="font-serif text-xl font-bold mb-4">All inclusive price</h3> */}
-                <p className="text-xl font-bold mb-6">Rs. 35,000/- per head.</p>
+                <p className="text-xl font-bold mb-6">Rs. 40,000/- per head.</p>
                 <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
                   <ul className="space-y-3">
@@ -566,11 +588,10 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                   Rudraprayag is a gateway to the Char Dham and offers plenty for families when not on the river:
                 </p>
                 <ul className="space-y-2 pl-6">
-                  <li className="list-disc">Rudraprayag town and confluence of Alaknanda & Mandakini</li>
-                  <li className="list-disc">Short treks and nature walks in the valley</li>
-                  <li className="list-disc">Temple visits and cultural sites in the region</li>
-                  <li className="list-disc">Access to Kedarnath route (seasonal)</li>
-                  <li className="list-disc">Riverside picnics and photography</li>
+                  <li className="list-disc">Rudraprayag town and confluence of Alaknanda & Mandakini Rivers</li>
+                  <li className="list-disc">Day hike to Karthik Swamy temple</li>
+                  <li className="list-disc">Trip to Chandrashila Peak</li>
+                  <li className="list-disc">Riverside picnics</li>
                   <li className="list-disc">Local villages and mountain views</li>
                 </ul>
               </div>
