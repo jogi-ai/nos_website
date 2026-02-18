@@ -47,7 +47,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
               Himalayan White Water Kayaking Summer Program for Kids
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg w-[80%] mx-auto">
-              A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the country.
+              A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the countryb.
             </p>
           </div>
         </div>
