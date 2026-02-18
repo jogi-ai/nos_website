@@ -15,11 +15,11 @@ export default function CoursesSection() {
     },
     {
       id: 2,
-      title: "Himalayan White Water Kayaking Kids Summer Camp",
+      title: "Himalayan White Water Kayaking Summer Program for Kids",
       description:
-        "Introduce kids to the outdoors and white water kayaking in the Indian Himalayas. Minimum 4 days at Shivanandi River Lodge, Rudraprayag. Parents can learn along too.",
-      image: "/kayaking-course-bg.jpg",
-      link: "/activities/white-water-kayaking/courses/white-water-kayaking-kids-summer-camp-uttarakhand",
+        "A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the country.",
+      image: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_program_thumb.jpg",
+      link: "/activities/white-water-kayaking/courses/himalayan-white-water-kayaking-summer-program-for-kids",
     },
   ]
 

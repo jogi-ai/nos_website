@@ -17,7 +17,7 @@ type GalleryItem = {
   videoSrc?: string;
 };
 
-type GalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp";
+type GalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi";
 
 const galleryItems: Record<GalleryName, GalleryItem[]> = {
   "foundation-course":[
@@ -473,6 +473,36 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
       videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.mp4",
       alt: "Walking around Shivanandi River Lodge",
     }
+  ],
+  "shivanandi": [
+    {
+      id: 12,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
+      alt: "A surreal sunset at Shivanandi",
+    },
+    {
+      id: 1,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
+      alt: "Shivanandi River Lodge Aerial View",
+    },
+    {
+      id: 9,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
+      alt: "Rainbow by the river. Surreal feeling",
+    },
+    {
+      id: 8,
+      type: "image",
+      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
+      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
+      alt: "The main lodge buildings",
+    }
   ]
 }
 // const galleryItems = [
@@ -534,10 +564,19 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
 //   },
 // ]
 
-export default function CourseGallery({ galleryName } : { galleryName: GalleryName }) {
+type CourseGalleryProps = {
+  galleryName: GalleryName;
+  columns?: 2 | 4;
+};
+
+export default function CourseGallery({ galleryName, columns = 4 }: CourseGalleryProps) {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
+
+  const gridClass = columns === 2
+    ? "grid grid-cols-2 gap-4"
+    : "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4";
 
   const openGallery = (index: number) => {
     setCurrentIndex(index)
@@ -581,7 +620,7 @@ export default function CourseGallery({ galleryName } : { galleryName: GalleryNa
 
   return (
     <>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className={gridClass}>
         {galleryItems[galleryName].map((item, index) => (
           <div
             key={item.id}
