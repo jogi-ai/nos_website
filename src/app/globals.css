@@ -11,7 +11,8 @@
   /* --color-persian-green: #2A9D8F; */
   --color-sandy-brown: #F4A261;
   --color-burnt-sienna: #E76F51;
-  /* ... */
+  /* System serif stack (no external font fetch – avoids fonts.gstatic.com timeouts) */
+  --font-family-serif: Georgia, "Times New Roman", Times, serif;
 }
 
 .btnPrimary{

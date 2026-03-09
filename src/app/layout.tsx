@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Merriweather } from "next/font/google"
+import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Toaster } from "@/components/ui/toaster"
@@ -13,13 +13,6 @@ import { Suspense } from "react"
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
-  display: "swap",
-})
-
-const merriweather = Merriweather({
-  weight: ["400", "700", "900"],
-  subsets: ["latin"],
-  variable: "--font-merriweather",
   display: "swap",
 })
 
@@ -90,7 +83,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${merriweather.variable}`}>
+    <html lang="en" className={inter.variable}>
       <head>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-5SREHPDN1E"></Script>
         <Script id="google-analytics" strategy="afterInteractive">

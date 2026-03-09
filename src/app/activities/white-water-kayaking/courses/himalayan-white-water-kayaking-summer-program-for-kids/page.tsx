@@ -1,10 +1,9 @@
 import Image from "next/image"
-import CourseRegistrationForm from "@/components/course-registration-form"
+import KidsRegistrationForm from "@/components/kids-registration-form"
 import CourseGallery from "@/components/course-gallery"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
-import { Alert, AlertDescription } from "@/components/ui/alert"
-import { CheckCircle, Clock, Calendar, MapPin, Users, Award, AlertTriangle, Check, X } from "lucide-react"
+import { CheckCircle, Clock, Calendar, MapPin, Users, Award, Check, X } from "lucide-react"
 import RegisterButton from "@/components/register-button"
 import { Metadata } from "next"
 
@@ -127,7 +126,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                       <Users className="h-6 w-6 text-charcoal" />
                       <h3 className="font-serif text-xl font-bold">Age</h3>
                     </div>
-                    <p className="mb-2">10-15 years.</p>
+                    <p className="mb-2">10-16 years.</p>
                     <p className="text-sm text-gray-600">Parents may also join as participants.</p>
                   </CardContent>
                 </Card>
@@ -163,7 +162,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
               <ul className="space-y-4 mb-12">
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Age 10-15 (kids). Parents may also join as participants.</span>
+                  <span>Age 10-16 (kids). Parents may also join as participants.</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -173,6 +172,12 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                   <span>
                     Ability to swim and float comfortably in deep water with the help of a PFD (life jacket)
+                  </span>
+                </li>
+                <li className="flex items-start">
+                  <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                  <span>
+                    Ability to swim comfortably in a swimming pool without any assistance
                   </span>
                 </li>
                 <li className="flex items-start">
@@ -605,7 +610,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                   <p className="text-green-100">Register your interest and we will get back as soon as possible</p>
                 </div>
                 <div className="p-6">
-                  <CourseRegistrationForm courseName="Himalayan White Water Kayaking Kids Summer Camp" />
+                  <KidsRegistrationForm courseName="Himalayan White Water Kayaking Kids Summer Camp" />
                 </div>
               </div>
             </div>
