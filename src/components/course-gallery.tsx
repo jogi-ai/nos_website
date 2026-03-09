@@ -449,14 +449,14 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
       id: 15,
       type: "video",
       thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.m4v",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.mp4",
       alt: "Mornings in front of Shivanandi River Lodge",
     },
     {
       id: 16,
       type: "video",
       thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.m4v",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.mp4",
       alt: "Kayaking practice in the pool",
     },
     {
@@ -470,7 +470,7 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
       id: 18,
       type: "video",
       thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.m4v",
+      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.mp4",
       alt: "Walking around Shivanandi River Lodge",
     }
   ],

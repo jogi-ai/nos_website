@@ -46,7 +46,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
               Himalayan White Water Kayaking Summer Program for Kids
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg w-[80%] mx-auto">
-              A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the countryb.
+              A special opportunity for kids to explore their wild side by immersing themselves in the prestine rivers and mountains of the Himalayas while learning white water kayaking from the top instructors in the country.
             </p>
           </div>
         </div>
@@ -204,7 +204,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
-                  <span>Multiple certified rescue and first aidprofessionals at all times during the sessions</span>
+                  <span>Multiple certified rescue and first aid professionals at all times during the sessions</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="h-6 w-6 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
@@ -273,6 +273,10 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                     <li className="flex items-start">
                       <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
                       <div>Simple strokes in an eddy</div>
+                    </li>
+                    <li className="flex items-start">
+                      <Clock className="h-5 w-5 text-charcoal mr-3 mt-0.5 flex-shrink-0" />
+                      <div>Practice in the pool</div>
                     </li>
                   </ul>
                 </TabsContent>
@@ -344,13 +348,13 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
               <h2 className="font-serif text-3xl font-bold mb-6" id="fees">Price</h2>
               <div className="bg-white rounded-lg border p-6 mb-8">
                 {/* <h3 className="font-serif text-xl font-bold mb-4">All inclusive price</h3> */}
-                <p className="text-xl font-bold mb-6">Rs. 40,000/- per head.</p>
+                <p className="text-xl font-bold mb-6"><span className="line-through">Rs. 40,000</span> Rs. 36,000/- per head (Discounted price for limited time).</p>
                 <div className="mb-6">
                   <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
                   <ul className="space-y-3">
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Instruction from professional white waterkayaking instructors</span>
+                      <span>Instruction from professional white water kayaking instructors</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
@@ -362,7 +366,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
-                      <span>Accommodation in Rooms (at Shivanandi River Lodge)</span>
+                      <span>Accommodation at Shivanandi River Lodge</span>
                     </li>
                     <li className="flex items-start">
                       <Check className="h-5 w-5 text-green-700 mr-3 mt-0.5 flex-shrink-0" />
