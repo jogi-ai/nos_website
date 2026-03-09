@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     siteName: "National Outdoor School",
     images: [
       {
-        url: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_program_og_image.jpg",
+        url: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_program_og_image_1.jpg",
         width: 1200,
         height: 630,
         alt: "Himalayan White Water Kayaking Summer Program for Kids - by National Outdoor School",
