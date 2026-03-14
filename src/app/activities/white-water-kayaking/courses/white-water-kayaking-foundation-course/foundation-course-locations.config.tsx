@@ -3,7 +3,7 @@
  * Replace getFoundationCourseLocation() implementation with CMS fetch when ready.
  */
 
-import type { ReactNode } from "react"
+import React from "react"
 import type { ScheduleTab } from "@/components/sections/schedule-tabs"
 
 // Gallery names must match CourseGallery's GalleryName type
@@ -28,8 +28,8 @@ export interface FoundationCoursePricing {
   included: string[]
   notIncluded: string[]
   refundPolicy: { label: string; description: string }[]
-  accommodation?: ReactNode
-  otherCosts?: ReactNode
+  accommodation?: React.ReactNode
+  otherCosts?: React.ReactNode
 }
 
 export interface FoundationCourseThingsToCarry {
