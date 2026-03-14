@@ -58,6 +58,15 @@ export default function Navigation() {
         case "white-water-kayaking-foundation-course":
           label = "White Water Kayaking Foundation Course (Level 1)"
           break
+        case "kali-river-dandeli-karnataka":
+          label = "Foundation Course – Kali River, Dandeli"
+          break
+        case "kondencherry-kerala":
+          label = "Foundation Course – Kondencherry, Kerala"
+          break
+        case "shivanandi-river-lodge-rudraprayag-uttarakhand":
+          label = "Foundation Course – Shivanandi River Lodge, Rudraprayag"
+          break
         case "himalayan-white-water-kayaking-summer-program-for-kids":
           label = "Himalayan White Water Kayaking Kids Summer Camp"
           break

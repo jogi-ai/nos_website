@@ -17,7 +17,7 @@ type GalleryItem = {
   videoSrc?: string;
 };
 
-type GalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi";
+export type GalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi";
 
 const galleryItems: Record<GalleryName, GalleryItem[]> = {
   "foundation-course":[

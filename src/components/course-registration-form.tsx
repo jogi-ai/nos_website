@@ -14,6 +14,7 @@ import { Loader2 } from "lucide-react"
 
 interface CourseRegistrationFormProps {
   courseName: string
+  location?: string
 }
 type FormData = {
   fullName: string
@@ -36,7 +37,7 @@ const initFormData: FormData = {
     gender: "male",
     message:""
 }
-export default function CourseRegistrationForm({ courseName }: CourseRegistrationFormProps) {
+export default function CourseRegistrationForm({ courseName, location }: CourseRegistrationFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   if(courseName=="White Water Kayaking Foundation Course"){
@@ -166,6 +167,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
         body: JSON.stringify({
           ...formData,
           courseName,
+          ...(location && { location }),
         }),
       })
 

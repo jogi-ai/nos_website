@@ -13,6 +13,21 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course-kali-river-dandeli-karnataka',
+        destination: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course/kali-river-dandeli-karnataka',
+        permanent: true,
+      },
+      {
+        source: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course-kondencherry-kerala',
+        destination: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course/kondencherry-kerala',
+        permanent: true,
+      },
+      {
+        source: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course-shivanandi-river-lodge-rudraprayag-uttarakhand',
+        destination: '/activities/white-water-kayaking/courses/white-water-kayaking-foundation-course/shivanandi-river-lodge-rudraprayag-uttarakhand',
+        permanent: true,
+      },
+      {
         source: '/courses/white-water-kayaking-kids-summer-camp-uttarakhand',
         destination: '/activities/white-water-kayaking/courses/himalayan-white-water-kayaking-summer-program-for-kids',
         permanent: true,
