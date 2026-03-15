@@ -99,7 +99,7 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
                 <InfoCard
                   icon={<Calendar className="h-6 w-6 text-charcoal" />}
-                  title="Upcoming course date"
+                  title="Season"
                   value={data.infoCards.date}
                   subtitle={data.infoCards.dateSubtitle}
                 />
@@ -149,7 +149,7 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
               />
 
               <ImageGallery
-                galleryName={data.galleryName}
+                items={data.galleryItems}
                 title="Gallery"
                 description={data.galleryDescription}
               />

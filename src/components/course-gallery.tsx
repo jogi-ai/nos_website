@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
-// Sample gallery items - in a real application, this would come from a database or CMS
-type GalleryItem = {
+// Gallery item type – can also be supplied via items prop (e.g. from location config)
+export type GalleryItem = {
   id: number;
   type: "image" | "video";
   thumbnail: string;
@@ -17,235 +17,9 @@ type GalleryItem = {
   videoSrc?: string;
 };
 
-export type GalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi";
+export type GalleryName = "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi";
 
 const galleryItems: Record<GalleryName, GalleryItem[]> = {
-  "foundation-course":[
-    {
-      id: 6,
-      type: "image",
-      thumbnail: "/kali-river-ariel-view.jpg",
-      fullSize: "/kali-river-ariel-view.jpg",
-      alt: "Aerial view of the Kali River",
-    },
-    {
-      id: 7,
-      type: "image",
-      thumbnail: "/first-rapid.jpg",
-      fullSize: "/first-rapid.jpg",
-      alt: "First rapid ariel view",
-    },
-    {
-      id: 2,
-      type: "image",
-      thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
-      fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
-      alt: "Navigating the Kali River in a kayak",
-    },
-    {
-      id: 4,
-      type: "video",
-      thumbnail: "/rapid-run.png",
-      videoSrc: "/kali-rapid-run.mp4", 
-      alt: "Rapid run",
-    },
-    {
-      id: 5,
-      type: "image",
-      thumbnail: "/rapid-run-2.jpg",
-      fullSize: "/rapid-run-2.jpg",
-      alt: "Running the first rapid",
-    },
-    {
-      id: 8,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/bracing.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/bracing.mp4",
-      alt: "Student learning bracing technique",
-    },
-    {
-      id: 9,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/class-2-rapid-run.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/class-2-rapid-run.mp4",
-      alt: "Class 2 rapid run",
-    },
-    {
-      id: 10,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/eddy-out-and-in.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/eddy-out-and-in.mp4",
-      alt: "Learners trying eddy out and in technique",
-    },
-    {
-      id: 11,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/eddy-out.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/eddy-out.mp4",
-      alt: "Learners trying eddy out and in technique",
-    },
-    {
-      id: 12,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/forward.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/forward.mp4",
-      alt: "Learners practicing paddling",
-    },
-    {
-      id: 13,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-1.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-1.mov",
-      alt: "Practicing roll in swimming pool",
-    },
-    {
-      id: 14,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-2.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-2.mov",
-      alt: "Practicing roll in swimming pool",
-    },
-    {
-      id: 15,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/progress.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/progress.mov",
-      alt: "Student making progress",
-    },
-    {
-      id: 16,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.mp4",
-      alt: "Rapid run",
-    },
-    {
-      id: 17,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.mp4",
-      alt: "River run",
-    },
-    {
-      id: 18,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.mp4",
-      alt: "River run",
-    },
-    {
-      id: 19,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.mp4",
-      alt: "River run",
-    },
-    {
-      id: 21,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.mp4",
-      alt: "River run",
-    },
-    {
-      id: 22,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.mp4",
-      alt: "River run",
-    },
-    {
-      id: 23,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/simple-boof-practice.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/simple-boof-practice.mp4",
-      alt: "Boof practice",
-    },
-    {
-      id: 24,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/simple-ferry-practice.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/simple-ferry-practice.mp4",
-      alt: "Ferry practice",
-    },
-    {
-      id: 25,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-1.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-1.mov",
-      alt: "White water swimming",
-    },
-    {
-      id: 26,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.mov",
-      alt: "White water swimming",
-    },
-    {
-      id: 27,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.mov",
-      alt: "White water swimming",
-    },
-    {
-      id: 28,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
-      alt: "View of river from the bridge",
-    },
-    {
-      id: 29,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
-      alt: "Kodencherry ariel view",
-    },
-    {  
-      id: 30,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/game_of_thorns_thumb.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/game_of_thorns.mp4", 
-      alt: "Game of thorns rapid",
-    }
-    // {  
-    //   id: 31,
-    //   type: "video",
-    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/pool_roll_thumb.jpg",
-    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/pool_roll.mp4", 
-    //   alt: "Pool roll practice",
-    // },
-    // {  
-    //   id: 32,
-    //   type: "video",
-    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/river_roll_thumb.jpg",
-    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/river_roll.mp4", 
-    //   alt: "Student rolling in the river",
-    // },
-    // {  
-    //   id: 33,
-    //   type: "video",
-    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/river_run_thumb.jpg",
-    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/river_run.mp4", 
-    //   alt: "Students running rapids",
-    // },
-    // {  
-    //   id: 34,
-    //   type: "video",
-    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/bracing_thumb.jpg",
-    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/bracing.mp4", 
-    //   alt: "Bracing technique practice",
-    // },
-    // {  
-    //   id: 35,
-    //   type: "video",
-    //   thumbnail: "https://igutafeeling.com/uploads/nos_media/white_water_swimming_thumb.jpg",
-    //   videoSrc: "https://igutafeeling.com/uploads/nos_media/white_water_swimming.mp4", 
-    //   alt: "White water swimming practice",
-    // }
-  ],
   "kali-kayaking-trip":[
     {
       id: 6,
@@ -565,14 +339,19 @@ const galleryItems: Record<GalleryName, GalleryItem[]> = {
 // ]
 
 type CourseGalleryProps = {
-  galleryName: GalleryName;
+  /** When provided, use these items instead of galleryName lookup (e.g. from location config). */
+  items?: GalleryItem[];
+  /** Gallery key when items are not provided (used by other course pages). */
+  galleryName?: GalleryName;
   columns?: 2 | 4;
 };
 
-export default function CourseGallery({ galleryName, columns = 4 }: CourseGalleryProps) {
+export default function CourseGallery({ items: itemsProp, galleryName, columns = 4 }: CourseGalleryProps) {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
+
+  const items = itemsProp ?? (galleryName ? galleryItems[galleryName] : [])
 
   const gridClass = columns === 2
     ? "grid grid-cols-2 gap-4"
@@ -584,12 +363,12 @@ export default function CourseGallery({ galleryName, columns = 4 }: CourseGaller
   }
 
   const handlePrevious = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex === 0 ? galleryItems[galleryName].length - 1 : prevIndex - 1))
-  }, [galleryName])
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1))
+  }, [items.length])
 
   const handleNext = useCallback(() => {
-    setCurrentIndex((prevIndex) => (prevIndex === galleryItems[galleryName].length - 1 ? 0 : prevIndex + 1))
-  }, [galleryName])
+    setCurrentIndex((prevIndex) => (prevIndex === items.length - 1 ? 0 : prevIndex + 1))
+  }, [items.length])
 
   // Keyboard navigation
   useEffect(() => {
@@ -616,12 +395,14 @@ export default function CourseGallery({ galleryName, columns = 4 }: CourseGaller
     preventScrollOnSwipe: true,
     trackMouse: true,
   })
-  const currentItem = galleryItems[galleryName][currentIndex]
+  if (items.length === 0) return null
+
+  const currentItem = items[currentIndex]
 
   return (
     <>
       <div className={gridClass}>
-        {galleryItems[galleryName].map((item, index) => (
+        {items.map((item, index) => (
           <div
             key={item.id}
             className="relative aspect-[4/3] rounded-lg overflow-hidden cursor-pointer hover:opacity-90 transition-opacity"
@@ -706,7 +487,7 @@ export default function CourseGallery({ galleryName, columns = 4 }: CourseGaller
           <div className="p-4 bg-black text-white text-center">
             <p>{currentItem.alt}</p>
             <p className="text-sm text-gray-400">
-              {currentIndex + 1} of {galleryItems[galleryName].length}
+              {currentIndex + 1} of {items.length}
             </p>
           </div>
         </DialogContent>

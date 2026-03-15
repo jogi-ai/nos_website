@@ -6,8 +6,14 @@
 import React from "react"
 import type { ScheduleTab } from "@/components/sections/schedule-tabs"
 
-// Gallery names must match CourseGallery's GalleryName type
-export type FoundationCourseGalleryName = "foundation-course" | "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi"
+export interface FoundationCourseGalleryItem {
+  id: number
+  type: "image" | "video"
+  thumbnail: string
+  alt: string
+  fullSize?: string
+  videoSrc?: string
+}
 
 export interface FoundationCourseLocationMeta {
   title: string
@@ -49,13 +55,14 @@ export interface FoundationCourseInstructor {
 
 export interface FoundationCourseLocationData {
   slug: string
+  listingLocationLabel: string
   locationLabel: string
   shortDescription?: string
   meta: FoundationCourseLocationMeta
   infoCards: FoundationCourseInfoCards
   schedule: ScheduleTab[]
   pricing: FoundationCoursePricing
-  galleryName: FoundationCourseGalleryName
+  galleryItems: FoundationCourseGalleryItem[]
   galleryDescription?: string
   thingsToCarry: FoundationCourseThingsToCarry
   instructor: FoundationCourseInstructor
@@ -113,18 +120,46 @@ export const FOUNDATION_COURSE_SHARED = {
   },
 } as const
 
+const FOUNDATION_COURSE_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
+  { id: 6, type: "image", thumbnail: "/kali-river-ariel-view.jpg", fullSize: "/kali-river-ariel-view.jpg", alt: "Aerial view of the Kali River" },
+  { id: 7, type: "image", thumbnail: "/first-rapid.jpg", fullSize: "/first-rapid.jpg", alt: "First rapid ariel view" },
+  { id: 2, type: "image", thumbnail: "/navigating-a-rapid-in-a-kayak.jpg", fullSize: "/navigating-a-rapid-in-a-kayak.jpg", alt: "Navigating the Kali River in a kayak" },
+  { id: 4, type: "video", thumbnail: "/rapid-run.png", videoSrc: "/kali-rapid-run.mp4", alt: "Rapid run" },
+  { id: 5, type: "image", thumbnail: "/rapid-run-2.jpg", fullSize: "/rapid-run-2.jpg", alt: "Running the first rapid" },
+  { id: 8, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/bracing.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/bracing.mp4", alt: "Student learning bracing technique" },
+  { id: 9, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/class-2-rapid-run.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/class-2-rapid-run.mp4", alt: "Class 2 rapid run" },
+  { id: 10, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/eddy-out-and-in.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/eddy-out-and-in.mp4", alt: "Learners trying eddy out and in technique" },
+  { id: 11, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/eddy-out.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/eddy-out.mp4", alt: "Learners trying eddy out and in technique" },
+  { id: 12, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/forward.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/forward.mp4", alt: "Learners practicing paddling" },
+  { id: 13, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-1.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-1.mov", alt: "Practicing roll in swimming pool" },
+  { id: 14, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/pool-practice-2.mov", alt: "Practicing roll in swimming pool" },
+  { id: 15, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/progress.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/progress.mov", alt: "Student making progress" },
+  { id: 16, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.mp4", alt: "Rapid run" },
+  { id: 17, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.mp4", alt: "River run" },
+  { id: 18, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.mp4", alt: "River run" },
+  { id: 19, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.mp4", alt: "River run" },
+  { id: 21, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.mp4", alt: "River run" },
+  { id: 22, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.mp4", alt: "River run" },
+  { id: 23, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/simple-boof-practice.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/simple-boof-practice.mp4", alt: "Boof practice" },
+  { id: 24, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/simple-ferry-practice.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/simple-ferry-practice.mp4", alt: "Ferry practice" },
+  { id: 25, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-1.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-1.mov", alt: "White water swimming" },
+  { id: 26, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.mov", alt: "White water swimming" },
+  { id: 27, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.mov", alt: "White water swimming" },
+]
+
 const LOCATIONS: FoundationCourseLocationData[] = [
   {
     slug: "kali-river-dandeli-karnataka",
+    listingLocationLabel: "Dandeli, Karnataka",
     locationLabel: "Kali River, Dandeli, Karnataka",
-    shortDescription: "Kayak on the Kali River in the Western Ghats.",
+    shortDescription: "A perfect destination for beginners to learn white water kayaking in the serene surroundings of the Western Ghats.",
     meta: {
       title: "White Water Kayaking Foundation Course in Dandeli, Karnataka | National Outdoor School",
       description: "Master the fundamentals of white water kayaking on the Kali River, Dandeli. 4-day foundation course with certified instructors. Learn paddling, safety, and eskimo roll.",
     },
     infoCards: {
-      date: "Feb 22nd - March 8th 2026",
-      dateSubtitle: "*Join any 4 days",
+      date: "Jan, Feb, Mar, Sept, Oct, Nov",
+      dateSubtitle: "",
       location: "Kali River, Dandeli, Karnataka",
       groupSize: "Maximum 5 participants per batch",
       skillLevel: "Beginner",
@@ -189,7 +224,7 @@ const LOCATIONS: FoundationCourseLocationData[] = [
         </>
       ),
     },
-    galleryName: "foundation-course",
+    galleryItems: FOUNDATION_COURSE_GALLERY_ITEMS,
     galleryDescription: "Get a glimpse of the exciting experiences that await you on our White Water Kayaking Foundation Course. These images showcase the beautiful river environments, learning moments, and the thrill of kayaking.",
     thingsToCarry: {
       intro: "To ensure you have a comfortable experience during the White Water Kayaking Foundation Course, please bring the following items with you:",
@@ -228,16 +263,17 @@ His mission with National Outdoor School is to make white water kayaking accessi
     },
   },
   {
-    slug: "kondencherry-kerala",
-    locationLabel: "Kondencherry, Kerala",
-    shortDescription: "White water kayaking in the scenic rivers of Kerala.",
+    slug: "kodancherry-kerala",
+    listingLocationLabel: "Kodancherry, Kerala",
+    locationLabel: "Kodancherry, Kerala",
+    shortDescription: "Perfect location for beginners and intermediate paddlers to step up their kayaking skills.",
     meta: {
-      title: "White Water Kayaking Foundation Course in Kondencherry, Kerala | National Outdoor School",
+      title: "White Water Kayaking Foundation Course in Kodancherry, Kerala | National Outdoor School",
       description: "Learn white water kayaking in Kondencherry, Kerala. 4-day foundation course with certified instructors. Paddling, safety, and river skills.",
     },
     infoCards: {
       date: "TBD",
-      location: "Kondencherry, Kerala",
+      location: "Kodancherry, Kerala",
       groupSize: "Maximum 5 participants per batch",
       skillLevel: "Beginner",
     },
@@ -251,7 +287,7 @@ His mission with National Outdoor School is to make white water kayaking accessi
       notIncluded: ["Accommodation", "Transportation", "Food & Beverages"],
       refundPolicy: [],
     },
-    galleryName: "foundation-course",
+    galleryItems: FOUNDATION_COURSE_GALLERY_ITEMS,
     thingsToCarry: {
       intro: "To ensure you have a comfortable experience during the White Water Kayaking Foundation Course, please bring the following items with you:",
       essentialItems: [
@@ -276,11 +312,12 @@ His mission with National Outdoor School is to make white water kayaking accessi
   },
   {
     slug: "shivanandi-river-lodge-rudraprayag-uttarakhand",
+    listingLocationLabel: "Rudraprayag, Uttarakhand",
     locationLabel: "Shivanandi River Lodge, Rudraprayag, Uttarakhand",
-    shortDescription: "Foundation course at Shivanandi River Lodge in the Himalayas.",
+    shortDescription: "An all inclusive course in the Alaknanda river valley with food and accommodation at our base in Shivanandi River Lodge.",
     meta: {
-      title: "White Water Kayaking Foundation Course in Rudraprayag, Uttarakhand | National Outdoor School",
-      description: "Learn white water kayaking at Shivanandi River Lodge, Rudraprayag. 4-day foundation course in the Himalayas with certified instructors.",
+      title: "White Water Kayaking Foundation Course with base at Shivanandi River Lodge, Rudraprayag, Uttarakhand | National Outdoor School",
+      description: "An all inclusive course in the Alaknanda river valley with food and accommodation at our base in Shivanandi River Lodge.",
     },
     infoCards: {
       date: "TBD",
@@ -298,7 +335,7 @@ His mission with National Outdoor School is to make white water kayaking accessi
       notIncluded: ["Accommodation", "Transportation", "Food & Beverages"],
       refundPolicy: [],
     },
-    galleryName: "foundation-course",
+    galleryItems: FOUNDATION_COURSE_GALLERY_ITEMS,
     thingsToCarry: {
       intro: "To ensure you have a comfortable experience during the White Water Kayaking Foundation Course, please bring the following items with you:",
       essentialItems: [
@@ -331,9 +368,10 @@ export function getFoundationCourseLocation(slug: string): FoundationCourseLocat
 }
 
 /** Get list of locations for overview page. */
-export function getFoundationCourseLocationList(): { slug: string; locationLabel: string; shortDescription?: string }[] {
-  return LOCATIONS.map(({ slug, locationLabel, shortDescription }) => ({
+export function getFoundationCourseLocationList(): { slug: string; listingLocationLabel: string; locationLabel: string; shortDescription?: string }[] {
+  return LOCATIONS.map(({ slug, listingLocationLabel, locationLabel, shortDescription }) => ({
     slug,
+    listingLocationLabel,
     locationLabel,
     shortDescription,
   }))
