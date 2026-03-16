@@ -14,6 +14,7 @@ import { Loader2 } from "lucide-react"
 
 interface CourseRegistrationFormProps {
   courseName: string
+  location?: string
 }
 type FormData = {
   fullName: string
@@ -21,7 +22,6 @@ type FormData = {
   phone: string
   age: string
   gender: string
-  preferredCourseDate?: string
   message: string
 }
 
@@ -36,12 +36,9 @@ const initFormData: FormData = {
     gender: "male",
     message:""
 }
-export default function CourseRegistrationForm({ courseName }: CourseRegistrationFormProps) {
+export default function CourseRegistrationForm({ courseName, location }: CourseRegistrationFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
-  if(courseName=="White Water Kayaking Foundation Course"){
-    initFormData.preferredCourseDate = "may-22-may-25"
-  }
   const [formData, setFormData] = useState<FormData>(initFormData)
 
   const [errors, setErrors] = useState<FormErrors>({})
@@ -166,6 +163,7 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
         body: JSON.stringify({
           ...formData,
           courseName,
+          ...(location && { location }),
         }),
       })
 
@@ -310,33 +308,11 @@ export default function CourseRegistrationForm({ courseName }: CourseRegistratio
               </div>
             </RadioGroup>
           </div>
-          {courseName=="White Water Kayaking Foundation Course" && 
-            <div className="space-y-2 mt-1">
-              <Label>Preferred dates (please mention exact preferred dates in message below. 4 days are recommended.)</Label>
-              <RadioGroup
-                defaultValue={formData.preferredCourseDate}
-                value={formData.preferredCourseDate}
-                onValueChange={(value) => handleChange("preferredCourseDate", value)}
-                onBlur={() => handleBlur("preferredCourseDate")}
-              >
-                <div>
-                  <div className="flex items-center space-x-1 mb-2">
-                    <RadioGroupItem value="feb-20-mar-8" id="feb-20-mar-8" />
-                    <Label htmlFor="feb-20-mar-8">Feb 20th - Mar 8th 2026</Label>
-                  </div>
-                  <div className="flex items-center space-x-1 mb-2">
-                    <RadioGroupItem value="other" id="other" />
-                    <Label htmlFor="other">Other</Label>
-                  </div>
-                </div>
-              </RadioGroup>
-            </div>
-          }
           <div className="space-y-2">
             <Label htmlFor="medical">Message (optional)</Label>
             <Textarea
               id="message"
-              placeholder="Add preferred date or any other information here."
+              placeholder="Add any additional information here like preferred dates."
               value={formData.message}
               onChange={(e) => handleChange("message", e.target.value)}
               onBlur={() => handleBlur("message")}

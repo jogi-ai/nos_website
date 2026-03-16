@@ -1,6 +1,6 @@
 import Image from "next/image"
 import CourseRegistrationForm from "@/components/course-registration-form"
-import CourseGallery from "@/components/course-gallery"
+import Gallery, { KALI_KAYAKING_TRIP_ITEMS } from "@/components/gallery"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Calendar, MapPin, Users, Award, Check, X } from "lucide-react"
@@ -133,7 +133,7 @@ export default function KaliRiverDayTrip() {
                     <p className="text-gray-700 mb-6 text-lg">
                       Get a glimpse of the exciting experiences that await you on the guided trip on the Kali River! These images showcase the beautiful river environments and the thrill of white water kayaking.
                     </p>
-                    <CourseGallery galleryName="kali-kayaking-trip" />
+                    <Gallery items={KALI_KAYAKING_TRIP_ITEMS} />
                   </div>
 
                   {/* Eligibility */}
