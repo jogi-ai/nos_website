@@ -1,12 +1,12 @@
-import CourseGallery, { type GalleryItem } from "@/components/course-gallery"
+import Gallery, { type GalleryItem } from "@/components/gallery"
 
-export interface ImageGalleryProps {
+export interface GallerySectionProps {
   items: GalleryItem[]
   title?: string
   description?: string
 }
 
-export default function ImageGallery({ items, title = "Gallery", description }: ImageGalleryProps) {
+export default function GallerySection({ items, title = "Gallery", description }: GallerySectionProps) {
   if (items.length === 0) return null
   return (
     <div className="mb-12">
@@ -14,7 +14,7 @@ export default function ImageGallery({ items, title = "Gallery", description }: 
       {description && (
         <p className="text-lg text-gray-700 mb-6">{description}</p>
       )}
-      <CourseGallery items={items} />
+      <Gallery items={items} />
     </div>
   )
 }

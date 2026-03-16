@@ -31,6 +31,7 @@ export interface FoundationCourseInfoCards {
 export interface FoundationCoursePricing {
   amount: string
   strikethroughAmount?: string
+  amountDisclaimer?: string
   included: string[]
   notIncluded: string[]
   refundPolicy: { label: string; description: string }[]
@@ -78,23 +79,24 @@ export const FOUNDATION_COURSE_SHARED = {
     paragraphs: [
       "Whitewater kayaking is a water sport where individuals navigate rivers using specialized kayaks to paddle through rapids, waves, and obstacles while maintaining control and balance.",
       "The course provides all the foundational knowledge for the student to pursue the highly exciting and rewarding journey of learning white water kayaking.",
-      "The course aims to not just cover practical skills required for kayaking but also impart theoretical knowledge through off-the-river sessions to understand river features and currents, which we believe aids in faster learning.",
+      "The course aims to not just cover practical skills required for kayaking but also impart theoretical knowledge about dealing with river features, currents and water in general. The course will cover the basics of river safety and rescue techniques.",
+      "Learning white water kayaking opens up doors to explore the world in unimaginable ways. It gives people the opportunity to reach prestine, untouched places that are only accessible by water. The sport also helps in building confidence in the outdoors, makes you more comfortable in water and helps build mental and physical resilience.",
     ],
   },
   outcomes: {
     title: "At the end of the course you will be able to:",
     items: [
       "Navigate a white water kayak in grade 2 rapids",
-      "Perform basic rescue and self-rescue techniques",
+      "Perform basic self-rescue and rescue techniques",
       "Swim and float comfortably in grade 2 rapids",
-      "Notice river features and learn to deal with them",
+      "Notice river features and learn to deal with them in a safe manner",
     ],
   },
   eligibility: {
     title: "Eligibility",
     items: [
       "Previous kayaking experience not required",
-      "Above age 15",
+      "Above age 16",
       "Must not suffer from medical issues that prevents the participant from taking part in physical intensive activities",
       "Ability to swim and float comfortably in deep water with the help of a PFD",
       "Proven physical fitness",
@@ -105,9 +107,10 @@ export const FOUNDATION_COURSE_SHARED = {
     intro: "We understand that learning kayaking is an enjoyable experience when practice is conducted in the safest environment possible among highly experienced instructors and rescue professionals. Here are some highlights about safety during the course:",
     items: [
       "Practice sessions in a highly safe and secured environment",
-      "Certified instructor with 13 years of experience in white water",
-      "Certified rescue professionals on the river during the course along with the instructor",
-      "High quality safety equipment like PFDs, throw ropes, helmet and airbags",
+      "Certified instructor with decades of experience in white water",
+      "Certified rescue professionals on the river during the course",
+      "Every instructor is a certified first aid and CPR provider",
+      "High quality safety equipment like PFDs, throw ropes and helmets",
       "Beginners will not be taken in rapids above Grade 3",
     ],
   },
@@ -117,7 +120,7 @@ export const FOUNDATION_COURSE_SHARED = {
       { heading: "White water kayaking introduction", items: ["Kayak design", "About kayaking equipment", "River safety briefing", "Seat positioning", "Kayak carrying technique"] },
       { heading: "Basic paddling skills", items: ["Forward stroke", "Back stroke", "Basic Rescue skills", "Wet exit", "Throw bag rescue", "T rescue", "White water swimming"] },
       { heading: "River features", items: ["Waves", "Holes", "Eddies", "Pour overs"] },
-      { heading: "Core skills", items: ["Eddy in", "Eddy out", "Eskimo roll", "Ferrying"] },
+      { heading: "Core skills", items: ["Eddy in", "Eddy out", "Eskimo roll", "Ferrying", "Edge control"] },
       { heading: "Down river skills", items: ["Momentum", "Moving laterally", "Leaning", "Signals"] },
     ],
   },
@@ -208,34 +211,20 @@ const KODANCHERRY_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
   },
 ]
 const SHIVANANDI_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
-  {
-    id: 12,
-    type: "image",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
-    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
-    alt: "A surreal sunset at Shivanandi",
-  },
-  {
-    id: 1,
-    type: "image",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
-    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
-    alt: "Shivanandi River Lodge Aerial View",
-  },
-  {
-    id: 9,
-    type: "image",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
-    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
-    alt: "Rainbow by the river. Surreal feeling",
-  },
-  {
-    id: 8,
-    type: "image",
-    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
-    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
-    alt: "The main lodge buildings",
-  }
+  { id: 2, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", alt: "Kayaks arranged in front of the lodge" },
+  { id: 5, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg", alt: "Pro kayaker practicing in the pool" },
+  { id: 6, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg", alt: "Pets at Shivanandi River Lodge" },
+  { id: 7, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg", alt: "Fresh healthy homely food" },
+  { id: 8, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", alt: "The main lodge buildings" },
+  { id: 9, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg", alt: "Rainbow by the river. Surreal feeling" },
+  { id: 10, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg", alt: "A room at Shivanandi River Lodge" },
+  { id: 11, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg", alt: "A room at Shivanandi River Lodge" },
+  { id: 12, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg", alt: "A surreal sunset at Shivanandi" },
+  { id: 13, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.mp4", alt: "Kayaking POV in Alaknanda River" },
+  { id: 15, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.mp4", alt: "Mornings in front of Shivanandi River Lodge" },
+  { id: 16, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.mp4", alt: "Pro kayaker practicing in the pool" },
+  { id: 17, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.mp4", alt: "Practicing eskimo roll" },
+  { id: 18, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.mp4", alt: "Walking around Shivanandi River Lodge" },
 ]
 const LOCATIONS: FoundationCourseLocationData[] = [
   {
@@ -427,22 +416,23 @@ His mission with National Outdoor School is to make white water kayaking accessi
       skillLevel: "Beginner",
     },
     schedule: [
-      {
-        value: "all-days",
-        label: "All days",
-        items: [
-          { time: "6:30am - 7:00am", title: "Exercise / Warm up / Yoga" },
-          { time: "7:00am - 7:30am", title: "Breakfast" },
-          { time: "7:45am - 8:15am", title: "Travel to training location" },
-          { time: "8:30am - 1:00pm", title: "Theory & Practical Sessions on the river (with 30 minutes break)" },
-          { time: "1:30pm - 2:30pm", title: "Lunch" },
-          { time: "2:30pm onwards", title: "Practice / Pool Sessions (optional)" },
-        ],
-      },
+      // {
+      //   value: "all-days",
+      //   label: "All days",
+      //   items: [
+      //     { time: "6:30am - 7:00am", title: "Exercise / Warm up / Yoga" },
+      //     { time: "7:00am - 7:30am", title: "Breakfast" },
+      //     { time: "7:45am - 8:15am", title: "Travel to training location" },
+      //     { time: "8:30am - 1:00pm", title: "Theory & Practical Sessions on the river (with 30 minutes break)" },
+      //     { time: "1:30pm - 2:30pm", title: "Lunch" },
+      //     { time: "2:30pm onwards", title: "Practice / Pool Sessions (optional)" },
+      //   ],
+      // },
     ],
     pricing: {
-      amount: "₹9,000 / head / day",
+      amount: "₹9,000 / head / day", 
       strikethroughAmount: "₹10,000",
+      amountDisclaimer: "*Special discount for past customers - reach out to us for more details*",
       included: [
         "Professional instruction from highly experienced and certified kayaking instructors",
         "All whitewater kayaking (kayak, paddle, spray skirt, helmet, life jacket, dry top) and safety equipment ",

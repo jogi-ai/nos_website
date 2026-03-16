@@ -5,6 +5,7 @@ export interface PricingSectionProps {
   title?: string
   amount: ReactNode
   strikethroughAmount?: string
+  amountDisclaimer?: string
   included: string[]
   notIncluded: string[]
   refundPolicy: { label: string; description: string }[]
@@ -16,6 +17,7 @@ export default function PricingSection({
   title = "Fees",
   amount,
   strikethroughAmount,
+  amountDisclaimer,
   included,
   notIncluded,
   refundPolicy,
@@ -32,6 +34,7 @@ export default function PricingSection({
         <div className="text-xl font-bold mb-6">
           {strikethroughAmount && <span className="line-through">{strikethroughAmount}</span>} {amount}
         </div>
+        {amountDisclaimer && <div className="text-sm text-gray-600 mb-6">{amountDisclaimer}</div>}
         <div className="mb-6">
           <h3 className="font-serif text-xl font-bold mb-4">What&apos;s Included</h3>
           <ul className="space-y-3">

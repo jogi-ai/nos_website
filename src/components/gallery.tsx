@@ -65,12 +65,12 @@ export const SHIVANANDI_ITEMS: GalleryItem[] = [
   { id: 8, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", alt: "The main lodge buildings" },
 ];
 
-type CourseGalleryProps = {
+type GalleryProps = {
   items: GalleryItem[];
   columns?: 2 | 4;
 };
 
-export default function CourseGallery({ items, columns = 4 }: CourseGalleryProps) {
+export default function Gallery({ items, columns = 4 }: GalleryProps) {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)

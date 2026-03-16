@@ -15,7 +15,7 @@ import ChecklistSection from "@/components/sections/checklist-section"
 import StructuredListSection from "@/components/sections/structured-list-section"
 import ScheduleTabs from "@/components/sections/schedule-tabs"
 import PricingSection from "@/components/sections/pricing-section"
-import ImageGallery from "@/components/sections/image-gallery"
+import GallerySection from "@/components/sections/gallery-section"
 import ItemListSection from "@/components/sections/item-list-section"
 import ProfileCard from "@/components/sections/profile-card"
 import { Calendar, MapPin, Users, Award } from "lucide-react"
@@ -66,7 +66,7 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
         <div className="absolute inset-0 bg-black/10 z-10 flex items-center justify-center">
           <div className="container px-4 text-center">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              White Water Kayaking Foundation Course - Level 1
+              White Water Kayaking Foundation Course
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg">
               {data.locationLabel}
@@ -141,6 +141,7 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
               <PricingSection
                 amount={data.pricing.amount}
                 strikethroughAmount={data.pricing.strikethroughAmount}
+                amountDisclaimer={data.pricing.amountDisclaimer}
                 included={data.pricing.included}
                 notIncluded={data.pricing.notIncluded}
                 refundPolicy={data.pricing.refundPolicy}
@@ -148,7 +149,7 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
                 otherCosts={data.pricing.otherCosts}
               />
 
-              <ImageGallery
+              <GallerySection
                 items={data.galleryItems}
                 title="Gallery"
                 description={data.galleryDescription}

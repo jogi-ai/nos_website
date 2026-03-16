@@ -1,6 +1,6 @@
 import Image from "next/image"
 import KidsRegistrationForm from "@/components/kids-registration-form"
-import CourseGallery, { KIDS_KAYAKING_CAMP_ITEMS, SHIVANANDI_ITEMS } from "@/components/course-gallery"
+import Gallery, { KIDS_KAYAKING_CAMP_ITEMS, SHIVANANDI_ITEMS } from "@/components/gallery"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Card, CardContent } from "@/components/ui/card"
 import { CheckCircle, Clock, Calendar, MapPin, Users, Award, Check, X } from "lucide-react"
@@ -154,7 +154,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                   Its peaceful and natural setting and make it ideal for kids their families to connect with nature and learn white water kayaking.</p>
               </div>
               <div className="mb-[2rem] mt-[2rem]">
-                <CourseGallery items={SHIVANANDI_ITEMS} columns={2} />
+                <Gallery items={SHIVANANDI_ITEMS} columns={2} />
               </div>
               
               {/* Eligibility */}
@@ -416,7 +416,7 @@ export default function KidsWhiteWaterKayakingSummerCamp() {
                 <p className="mb-6">
                   A glimpse into life at Shivanandi River Lodge.
                 </p>
-                <CourseGallery items={KIDS_KAYAKING_CAMP_ITEMS} />
+                <Gallery items={KIDS_KAYAKING_CAMP_ITEMS} />
               </div>
 
               {/* Things to Carry */}
