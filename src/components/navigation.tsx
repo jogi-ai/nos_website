@@ -203,7 +203,7 @@ export default function Navigation() {
   const handleMegaMenuLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setActiveMegaMenu(null)
-    }, 150)
+    }, 350)
   }
 
   const toggleMobileItem = (itemName: string) => {

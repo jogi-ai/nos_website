@@ -46,6 +46,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       siteName: "National Outdoor School",
       locale: "en_US",
       type: "website",
+      images: [
+        {
+          url: "https://igutafeeling.com/uploads/nos_media/shivanandi_kayaking/og_image.jpg",
+          width: 1200,
+          height: 630,
+          alt: "White water kayaking foundation couse at Shivanandi River Lodge, Rudraprayag, Uttarakhand - by National Outdoor School",
+        },
+      ],
     },
     alternates: {
       canonical: `${SITE_URL}${COURSE_BASE_PATH}/${data.slug}`,
@@ -79,8 +87,8 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
           </div>
         </div>
         <Image
-          src="/kayaking-course-bg.jpg"
-          alt="White Water Kayaking"
+          src={data.bannerImageSrc}
+          alt={data.bannerImageAlt}
           fill
           className="object-cover"
           priority

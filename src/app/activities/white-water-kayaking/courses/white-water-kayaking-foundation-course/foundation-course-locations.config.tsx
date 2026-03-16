@@ -59,6 +59,8 @@ export interface FoundationCourseLocationData {
   listingLocationLabel: string
   locationLabel: string
   shortDescription?: string
+  bannerImageSrc: string
+  bannerImageAlt: string
   meta: FoundationCourseLocationMeta
   infoCards: FoundationCourseInfoCards
   schedule: ScheduleTab[]
@@ -211,7 +213,9 @@ const KODANCHERRY_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
   },
 ]
 const SHIVANANDI_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
-  { id: 2, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", alt: "Kayaks arranged in front of the lodge" },
+  { id: 1, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/shivanandi_kayaking/alaknanda_kayaking_1.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/shivanandi_kayaking/alaknanda_kayaking_1.mp4", alt: "Kayaking POV in Alaknanda River" },
+  { id: 2, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/shivanandi_kayaking/alaknanda_kayaking_2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/shivanandi_kayaking/alaknanda_kayaking_2.mp4", alt: "Kayaking POV in Alaknanda River" },
+  { id: 3, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", alt: "Kayaks arranged in front of the lodge" },
   { id: 5, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg", alt: "Pro kayaker practicing in the pool" },
   { id: 6, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg", alt: "Pets at Shivanandi River Lodge" },
   { id: 7, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg", alt: "Fresh healthy homely food" },
@@ -232,9 +236,11 @@ const LOCATIONS: FoundationCourseLocationData[] = [
     listingLocationLabel: "Dandeli, Karnataka",
     locationLabel: "Kali River, Dandeli, Karnataka",
     shortDescription: "A perfect destination for beginners to learn white water kayaking in the serene surroundings of the Western Ghats.",
+    bannerImageSrc: "/kayaking-course-bg.jpg",
+    bannerImageAlt: "White water kayaking on the Kali River in Dandeli",
     meta: {
       title: "White Water Kayaking Foundation Course in Dandeli, Karnataka | National Outdoor School",
-      description: "Master the fundamentals of white water kayaking on the Kali River, Dandeli. 4-day foundation course with certified instructors. Learn paddling, safety, and eskimo roll.",
+      description: "Master the fundamentals of white water kayaking on the Kali River, Dandeli. 4-day foundation course with certified instructors.",
     },
     infoCards: {
       date: "Jan, Feb, Mar, Sept, Oct, Nov",
@@ -334,6 +340,8 @@ His mission with National Outdoor School is to make white water kayaking accessi
     listingLocationLabel: "Kodancherry, Kerala",
     locationLabel: "Kodancherry, Kerala",
     shortDescription: "Perfect location for beginners and intermediate paddlers to step up their kayaking skills.",
+    bannerImageSrc: "/kayaking-course-bg.jpg",
+    bannerImageAlt: "White water kayaking course in Kodancherry, Kerala",
     meta: {
       title: "White Water Kayaking Foundation Course in Kodancherry, Kerala | National Outdoor School",
       description: "Learn white water kayaking in Kodancherry, Kerala. 4-day foundation course with certified instructors. Paddling, safety, and river skills.",
@@ -405,9 +413,11 @@ His mission with National Outdoor School is to make white water kayaking accessi
     listingLocationLabel: "Rudraprayag, Uttarakhand",
     locationLabel: "Shivanandi River Lodge, Rudraprayag, Uttarakhand",
     shortDescription: "An all inclusive course in the Alaknanda river valley with food and accommodation at our base in Shivanandi River Lodge.",
+    bannerImageSrc: "https://igutafeeling.com/uploads/nos_media/shivanandi_kayaking/course_banner.jpg",
+    bannerImageAlt: "White water kayaking at Shivanandi River Lodge in Rudraprayag, Uttarakhand",
     meta: {
       title: "White Water Kayaking Foundation Course with base at Shivanandi River Lodge, Rudraprayag, Uttarakhand | National Outdoor School",
-      description: "An all inclusive course in the Alaknanda river valley with food and accommodation at our base in Shivanandi River Lodge.",
+      description: "An all inclusive white water kayaking foundation course in the Alaknanda river valley with food and accommodation at our base in Shivanandi River Lodge.",
     },
     infoCards: {
       date: "Apr, May, Oct, Nov",
