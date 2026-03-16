@@ -6,6 +6,7 @@ import {
   getFoundationCourseLocationSlugs,
   FOUNDATION_COURSE_SHARED,
 } from "../foundation-course-locations.config"
+import Gallery, { SHIVANANDI_ITEMS } from "@/components/gallery"
 import CourseRegistrationForm from "@/components/course-registration-form"
 import RegisterButton from "@/components/register-button"
 import InfoCard from "@/components/sections/info-card"
@@ -127,6 +128,21 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
                   value={data.infoCards.skillLevel}
                 />
               </div>
+
+              {slug === "shivanandi-river-lodge-rudraprayag-uttarakhand" && (
+                <>
+                  <RichTextSection
+                    title="About Shivanandi River Lodge"
+                    paragraphs={[
+                      "Shivanandi River Lodge is built by one of the most experienced and renowned white water kayakers in India, Shalabh Gahalaut. Shalabh is a pioneer in the sport and is a well known personality in the white water kayaking community worldwide.",
+                      "Shivanandi River Lodge is a popular destination among adventure and outdoors enthusiasts and especially among kayakers from across the world. The lodge offers a family-friendly base with comfortable accommodation, meals, a natural swimming pool and direct access to the river Alaknanda and other classic Himalayan rivers in the region. Its peaceful and natural setting make it ideal for individuals and families to connect with nature and learn white water kayaking.",
+                    ]}
+                  />
+                  <div className="mb-12 mt-8">
+                    <Gallery items={SHIVANANDI_ITEMS} columns={2} />
+                  </div>
+                </>
+              )}
 
               <ChecklistSection title={shared.outcomes.title} items={[...shared.outcomes.items]} />
               <ChecklistSection title={shared.eligibility.title} items={[...shared.eligibility.items]} />
