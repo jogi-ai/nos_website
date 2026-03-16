@@ -44,10 +44,10 @@ export default function WhiteWaterKayakingFoundationCourseOverview() {
         <div className="absolute inset-0 bg-black/10 z-10 flex items-center justify-center">
           <div className="container px-4 text-center">
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
-              White Water Kayaking Foundation Course - Level 1
+              White Water Kayaking Foundation Course
             </h1>
             <p className="text-xl md:text-2xl text-white font-medium drop-shadow-lg">
-              4 day intro course into the fascinating world of white water kayaking
+              An introductory course to introduce you to the fascinating world of white water kayaking
             </p>
           </div>
         </div>
@@ -75,19 +75,19 @@ export default function WhiteWaterKayakingFoundationCourseOverview() {
             </p>
           </div>
 
-          <h2 className="font-serif text-3xl font-bold mb-8 text-center">Where we run this course</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <h2 className="font-serif text-3xl font-bold mb-8 text-center">Select location to view details</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {locations.map((loc) => (
               <Link key={loc.slug} href={`${COURSE_BASE_PATH}/${loc.slug}`}>
                 <Card className="h-full overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
-                    <h3 className="font-serif text-xl font-bold text-gray-800 mb-2">{loc.locationLabel}</h3>
+                    <h3 className="font-serif text-xl font-bold text-gray-800 mb-2">{loc.listingLocationLabel}</h3>
                     {loc.shortDescription && (
                       <p className="text-gray-600">{loc.shortDescription}</p>
                     )}
                   </CardContent>
                   <CardFooter>
-                    <Button className="w-full btnPrimary text-white">View details & dates</Button>
+                    <Button className="w-full btnPrimary text-white">View details</Button>
                   </CardFooter>
                 </Card>
               </Link>

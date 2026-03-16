@@ -65,7 +65,10 @@ export interface FoundationCourseLocationData {
   galleryItems: FoundationCourseGalleryItem[]
   galleryDescription?: string
   thingsToCarry: FoundationCourseThingsToCarry
-  instructor: FoundationCourseInstructor
+  /** Single instructor (legacy). Ignored when `instructors` is provided. */
+  instructor?: FoundationCourseInstructor
+  /** Multiple instructor profiles (e.g. for location pages with several instructors). */
+  instructors?: FoundationCourseInstructor[]
 }
 
 // Shared content (same for all locations)
@@ -146,7 +149,94 @@ const FOUNDATION_COURSE_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
   { id: 26, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-2.mov", alt: "White water swimming" },
   { id: 27, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/white-water-swimming-practice-3.mov", alt: "White water swimming" },
 ]
-
+const KODANCHERRY_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
+  {
+    id: 1,
+    type: "image",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
+    fullSize: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
+    alt: "View of river from the bridge",
+  },
+  {
+    id: 2,
+    type: "image",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/kodancherry_top_view.jpg",
+    fullSize: "https://igutafeeling.com/uploads/nos_media/kodancherry_top_view.jpg",
+    alt: "Kodancherry ariel view",
+  },
+  {  
+    id: 3,
+    type: "video",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/game_of_thorns_thumb.jpg",
+    videoSrc: "https://igutafeeling.com/uploads/nos_media/game_of_thorns.mp4", 
+    alt: "Game of thorns rapid",
+  },
+  {  
+    id: 4,
+    type: "video",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/pool_roll_thumb.jpg",
+    videoSrc: "https://igutafeeling.com/uploads/nos_media/pool_roll.mp4", 
+    alt: "Pool roll practice",
+  },
+  {  
+    id: 5,
+    type: "video",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/river_roll_thumb.jpg",
+    videoSrc: "https://igutafeeling.com/uploads/nos_media/river_roll.mp4", 
+    alt: "Student rolling in the river",
+  },
+  {  
+    id: 6,
+    type: "video",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/river_run_thumb.jpg",
+    videoSrc: "https://igutafeeling.com/uploads/nos_media/river_run.mp4", 
+    alt: "Students running rapids",
+  },
+  {  
+    id: 7,
+    type: "video",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/bracing_thumb.jpg",
+    videoSrc: "https://igutafeeling.com/uploads/nos_media/bracing.mp4", 
+    alt: "Bracing technique practice",
+  },
+  {  
+    id: 7,
+    type: "video",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/white_water_swimming_thumb.jpg",
+    videoSrc: "https://igutafeeling.com/uploads/nos_media/white_water_swimming.mp4", 
+    alt: "White water swimming practice",
+  },
+]
+const SHIVANANDI_GALLERY_ITEMS: FoundationCourseGalleryItem[] = [
+  {
+    id: 12,
+    type: "image",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
+    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
+    alt: "A surreal sunset at Shivanandi",
+  },
+  {
+    id: 1,
+    type: "image",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
+    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
+    alt: "Shivanandi River Lodge Aerial View",
+  },
+  {
+    id: 9,
+    type: "image",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
+    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
+    alt: "Rainbow by the river. Surreal feeling",
+  },
+  {
+    id: 8,
+    type: "image",
+    thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
+    fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
+    alt: "The main lodge buildings",
+  }
+]
 const LOCATIONS: FoundationCourseLocationData[] = [
   {
     slug: "kali-river-dandeli-karnataka",
@@ -166,8 +256,8 @@ const LOCATIONS: FoundationCourseLocationData[] = [
     },
     schedule: [
       {
-        value: "weekday",
-        label: "Thursday - Saturday",
+        value: "all-days",
+        label: "All days",
         items: [
           { time: "6:30am - 7:00am", title: "Exercise / Warm up / Yoga" },
           { time: "7:00am - 7:30am", title: "Breakfast" },
@@ -176,23 +266,11 @@ const LOCATIONS: FoundationCourseLocationData[] = [
           { time: "1:30pm - 2:30pm", title: "Lunch" },
           { time: "2:30pm onwards", title: "Practice / Pool Sessions (optional)" },
         ],
-      },
-      {
-        value: "weekend",
-        label: "Sunday",
-        items: [
-          { time: "6:30am - 7:00am", title: "Exercise / Warm up / Yoga" },
-          { time: "7:00am - 7:30am", title: "Breakfast" },
-          { time: "7:45am - 8:15am", title: "Travel to training location" },
-          { time: "8:30am - 1:00pm", title: "Theory & Practical Sessions on the river (with 30 minutes break)" },
-          { time: "1:30pm - 2:30pm", title: "Lunch" },
-          { time: "3:00pm - 4:30pm", title: "River run" },
-        ],
-      },
+      }
     ],
     pricing: {
-      amount: "₹18,000/- per head (Rs. 4,500 per day)",
-      strikethroughAmount: "₹22,000",
+      amount: "₹4,500 / head / day",
+      strikethroughAmount: "₹5000",
       included: [
         "Professional instruction from certified kayaking instructors",
         "All kayaking equipment (kayak, paddle, spray skirt, helmet, life jacket)",
@@ -269,25 +347,46 @@ His mission with National Outdoor School is to make white water kayaking accessi
     shortDescription: "Perfect location for beginners and intermediate paddlers to step up their kayaking skills.",
     meta: {
       title: "White Water Kayaking Foundation Course in Kodancherry, Kerala | National Outdoor School",
-      description: "Learn white water kayaking in Kondencherry, Kerala. 4-day foundation course with certified instructors. Paddling, safety, and river skills.",
+      description: "Learn white water kayaking in Kodancherry, Kerala. 4-day foundation course with certified instructors. Paddling, safety, and river skills.",
     },
     infoCards: {
-      date: "TBD",
+      date: "Jun, Jul, Aug, Sept",
       location: "Kodancherry, Kerala",
       groupSize: "Maximum 5 participants per batch",
       skillLevel: "Beginner",
     },
     schedule: [
-      { value: "weekday", label: "Thursday - Saturday", items: [] },
-      { value: "weekend", label: "Sunday", items: [] },
+      {
+        value: "all-days",
+        label: "All days",
+        items: [
+          { time: "6:30am - 7:00am", title: "Exercise / Warm up / Yoga" },
+          { time: "7:00am - 7:30am", title: "Breakfast" },
+          { time: "7:45am - 8:15am", title: "Travel to training location" },
+          { time: "8:30am - 1:00pm", title: "Theory & Practical Sessions on the river (with 30 minutes break)" },
+          { time: "1:30pm - 2:30pm", title: "Lunch" },
+          { time: "2:30pm onwards", title: "Practice / Pool Sessions (optional)" },
+        ],
+      },
     ],
     pricing: {
-      amount: "TBD",
-      included: [],
-      notIncluded: ["Accommodation", "Transportation", "Food & Beverages"],
-      refundPolicy: [],
+      amount: "₹4,500 / head / day",
+      strikethroughAmount: "₹5000",
+      included: [
+        "Professional instruction from certified kayaking instructors",
+        "All kayaking equipment (kayak, paddle, spray skirt, helmet, life jacket)",
+        "Safety equipment and first aid",
+        "Course completion certificate",
+      ],
+      notIncluded: ["Accommodation", "Transportation to course location", "Food & Beverages"],
+      refundPolicy: [
+        { label: "100% refund:", description: "If cancelled 20+ days before course start date" },
+        { label: "50% refund:", description: "If cancelled 15-19 days before course start date" },
+        { label: "30% refund:", description: "If cancelled 7-14 days before course start date" },
+        { label: "No refund:", description: "If cancelled less than 7 days before course start date" },
+      ]
     },
-    galleryItems: FOUNDATION_COURSE_GALLERY_ITEMS,
+    galleryItems: KODANCHERRY_GALLERY_ITEMS,
     thingsToCarry: {
       intro: "To ensure you have a comfortable experience during the White Water Kayaking Foundation Course, please bring the following items with you:",
       essentialItems: [
@@ -307,7 +406,9 @@ His mission with National Outdoor School is to make white water kayaking accessi
       imageSrc: "/jogi-instructor-dp.jpg",
       imageAlt: "Jogi Nayak",
       title: "Instructor Profile",
-      bio: "Certified instructor with 13+ years of experience. Details TBD for this location.",
+      bio: `Jogi is a passionate kayaker and an advocate for the sport. His passion for the sport has made him explore more than 20+ rivers across India, Nepal and USA. He believes that kayaking is not just a sport, but a way of life that connects people with nature and helps them discover their true potential. He is committed to sharing his knowledge and experience with others, and helping them develop their skills and confidence on the water.
+He is certified as a White Water Rescue Technician from Rescue 3 international, Swift Water Rescue Technician from ITRA and river guide from US National White Water Center. He has previously trained over 100 students at General Thimayya National Academy of Adventure and various other kayaking schools in India.
+His mission with National Outdoor School is to make white water kayaking accessible to all, create a community of kayakers who are passionate about the sport and the environment, and produce athletes in India that reach the world stage.`,
     },
   },
   {
@@ -320,22 +421,46 @@ His mission with National Outdoor School is to make white water kayaking accessi
       description: "An all inclusive course in the Alaknanda river valley with food and accommodation at our base in Shivanandi River Lodge.",
     },
     infoCards: {
-      date: "TBD",
+      date: "Apr, May, Oct, Nov",
       location: "Shivanandi River Lodge, Rudraprayag, Uttarakhand",
       groupSize: "Maximum 5 participants per batch",
       skillLevel: "Beginner",
     },
     schedule: [
-      { value: "weekday", label: "Thursday - Saturday", items: [] },
-      { value: "weekend", label: "Sunday", items: [] },
+      {
+        value: "all-days",
+        label: "All days",
+        items: [
+          { time: "6:30am - 7:00am", title: "Exercise / Warm up / Yoga" },
+          { time: "7:00am - 7:30am", title: "Breakfast" },
+          { time: "7:45am - 8:15am", title: "Travel to training location" },
+          { time: "8:30am - 1:00pm", title: "Theory & Practical Sessions on the river (with 30 minutes break)" },
+          { time: "1:30pm - 2:30pm", title: "Lunch" },
+          { time: "2:30pm onwards", title: "Practice / Pool Sessions (optional)" },
+        ],
+      },
     ],
     pricing: {
-      amount: "TBD",
-      included: [],
-      notIncluded: ["Accommodation", "Transportation", "Food & Beverages"],
-      refundPolicy: [],
+      amount: "₹9,000 / head / day",
+      strikethroughAmount: "₹10,000",
+      included: [
+        "Professional instruction from highly experienced and certified kayaking instructors",
+        "All whitewater kayaking (kayak, paddle, spray skirt, helmet, life jacket, dry top) and safety equipment ",
+        "Safety kayakers on river trips",
+        "Accommodation in a room at Shivanandi River Lodge",
+        "Breakfast, Lunch, Dinner and Evening Chai",
+        "Transportation for River Trips on the Alaknanda River",
+        "Course completion certificate from National Outdoor School"
+      ],
+      notIncluded: [ "Transportation to course location", "Beverages"],
+      refundPolicy: [
+        { label: "100% refund:", description: "If cancelled 20+ days before course start date" },
+        { label: "50% refund:", description: "If cancelled 15-19 days before course start date" },
+        { label: "30% refund:", description: "If cancelled 7-14 days before course start date" },
+        { label: "No refund:", description: "If cancelled less than 7 days before course start date" },
+      ]
     },
-    galleryItems: FOUNDATION_COURSE_GALLERY_ITEMS,
+    galleryItems: SHIVANANDI_GALLERY_ITEMS,
     thingsToCarry: {
       intro: "To ensure you have a comfortable experience during the White Water Kayaking Foundation Course, please bring the following items with you:",
       essentialItems: [
@@ -350,13 +475,46 @@ His mission with National Outdoor School is to make white water kayaking accessi
       additionalItems: ["Sunglasses", "Hat or cap", "Lightweight rain jacket", "Dry bag", "Insect repellent", "Personal medications", "Camera (waterproof)", "Snacks", "Small first aid kit"],
       note: "All specialized kayaking equipment will be provided by National Outdoor School.",
     },
-    instructor: {
-      name: "Jogi Nayak",
-      imageSrc: "/jogi-instructor-dp.jpg",
-      imageAlt: "Jogi Nayak",
-      title: "Instructor Profile",
-      bio: "Certified instructor with 13+ years of experience. Details TBD for this location.",
-    },
+    instructors: [
+      {
+        name: "Shalabh Gahlaut",
+        imageSrc: "https://igutafeeling.com/uploads/nos_media/shalabh.jpg",
+        imageAlt: "Shalabh Gahlaut",
+        bio: `Shalabh is a pioneer of white water kayaking in India with decades of experience in the sport and is the first to kayak a number of rivers in the Indian sub-continent.
+
+Shalabh has vast experience in teaching children. He is a father of 2 daughters and has helped his children to become passionate kayakers and environmentally conscious individuals with a deep love for nature and the outdoors.
+
+His family built Shivanandi River Lodge together wishing it to be a place of relaxation, a place close to the mountains and rivers, and a home for the family. The family home evolved into a lodge and a popular destination among adventure and outdoors enthusiasts, especially among kayakers from across the world.`,
+      },
+      {
+        name: "Arjun Sagoi",
+        imageSrc: "https://igutafeeling.com/uploads/nos_media/arjun.jpg",
+        imageAlt: "Arjun Sagoi",
+        bio: `Arjun is a highly accomplished white water kayaker in India. He is the founder along with Shalabh Gahlaut of Alakananda Whitewater, a leading white water kayaking and rafting company in India. Arjun has vast experience working as a river guide and rescue professional in reputed white water kayaking and rafting companies in India and Iceland.
+
+Arjun wishes to share his vast knowledge about kayaking, rivers and mountains with children and help them to become better individuals.`,
+      },
+      {
+        name: "Jogi Nayak",
+        imageSrc: "/jogi-instructor-dp.jpg",
+        imageAlt: "Jogi Nayak",
+        bio: `Jogi is a passionate kayaker and an advocate for the sport. His passion for white water kayaking has made him explore more than 25+ rivers across various countries.
+
+He is certified as a White Water Rescue Technician from Rescue 3 international, Level 2 Swift Water Rescue Professional from ITRA and a certified river guide from US National White Water Center, which is the training ground for olympic level athletes.
+
+He believes that white water kayaking is not just a sport, but a way of life that connects people with nature and helps them discover their true potential. He is committed to sharing his knowledge and experience with others, and helping them develop their skills and confidence on the water and outdoors.
+
+Jogi's mission with National Outdoor School is to make quality outdoor education accessible to all and build a community of nature lovers, outdoor sports enthusiasts and world class athletes.`,
+      },
+      {
+        name: "Daman Singh",
+        imageSrc: "/Daman-Dp.jpg",
+        imageAlt: "Daman Singh",
+        bio: `Daman Singh is a highly accomplished white water kayaker in India. He has won accolades in International competitions and has vast experience across rivers in India, Nepal and Iceland. He loves sharing his knowledge and experience with others, guiding them into becoming better paddlers. He is among top white water kayakers in the country.
+
+Daman is also a certified white water rescue professional. He has vast experience working as a river guide in reputed companies like Alakananda Whitewater, India and Arctic Rafting, Iceland.`,
+      },
+    ],
   },
 ]
 

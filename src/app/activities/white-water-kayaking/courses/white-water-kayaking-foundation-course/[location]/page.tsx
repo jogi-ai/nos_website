@@ -162,13 +162,31 @@ export default async function FoundationCourseLocationPage({ params }: PageProps
                 note={data.thingsToCarry.note}
               />
 
-              <ProfileCard
-                name={data.instructor.name}
-                bio={data.instructor.bio}
-                imageSrc={data.instructor.imageSrc}
-                imageAlt={data.instructor.imageAlt}
-                title={data.instructor.title}
-              />
+              {data.instructors && data.instructors.length > 0 ? (
+                <>
+                  <h2 className="font-serif text-3xl font-bold mb-6" id="instructor-profile">
+                    Instructor Profiles
+                  </h2>
+                  {data.instructors.map((instructor) => (
+                    <ProfileCard
+                      key={instructor.name}
+                      name={instructor.name}
+                      bio={instructor.bio}
+                      imageSrc={instructor.imageSrc}
+                      imageAlt={instructor.imageAlt}
+                      title={instructor.title}
+                    />
+                  ))}
+                </>
+              ) : data.instructor ? (
+                <ProfileCard
+                  name={data.instructor.name}
+                  bio={data.instructor.bio}
+                  imageSrc={data.instructor.imageSrc}
+                  imageAlt={data.instructor.imageAlt}
+                  title={data.instructor.title}
+                />
+              ) : null}
             </div>
 
             <div className="lg:w-1/3 course-registration-form">

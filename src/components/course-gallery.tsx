@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 import { ChevronLeft, ChevronRight, X } from "lucide-react"
 import { useSwipeable } from "react-swipeable"
 
-// Gallery item type – can also be supplied via items prop (e.g. from location config)
+// Gallery item type – supplied via items prop (e.g. from location config or shared constants below)
 export type GalleryItem = {
   id: number;
   type: "image" | "video";
@@ -17,341 +17,63 @@ export type GalleryItem = {
   videoSrc?: string;
 };
 
-export type GalleryName = "kali-kayaking-trip" | "kids-kayaking-camp" | "shivanandi";
+/** Shared gallery data for Kali River kayaking trip page. */
+export const KALI_KAYAKING_TRIP_ITEMS: GalleryItem[] = [
+  { id: 6, type: "image", thumbnail: "/kali-river-ariel-view.jpg", fullSize: "/kali-river-ariel-view.jpg", alt: "Aerial view of the Kali River" },
+  { id: 7, type: "image", thumbnail: "/first-rapid.jpg", fullSize: "/first-rapid.jpg", alt: "First rapid ariel view" },
+  { id: 2, type: "image", thumbnail: "/navigating-a-rapid-in-a-kayak.jpg", fullSize: "/navigating-a-rapid-in-a-kayak.jpg", alt: "Navigating the Kali River in a kayak" },
+  { id: 4, type: "video", thumbnail: "/rapid-run.png", videoSrc: "/kali-rapid-run.mp4", alt: "Rapid run" },
+  { id: 5, type: "image", thumbnail: "/rapid-run-2.jpg", fullSize: "/rapid-run-2.jpg", alt: "Running the first rapid" },
+  { id: 16, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.mp4", alt: "Rapid run" },
+  { id: 17, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.mp4", alt: "River run" },
+  { id: 18, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.mp4", alt: "River run" },
+  { id: 19, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.mp4", alt: "River run" },
+  { id: 21, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.mp4", alt: "River run" },
+  { id: 22, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.mp4", alt: "River run" },
+  { id: 23, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-1.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-1.mp4", alt: "River run" },
+  { id: 24, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-2.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-2.mp4", alt: "River run" },
+  { id: 25, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.mp4", alt: "River run" },
+];
 
-const galleryItems: Record<GalleryName, GalleryItem[]> = {
-  "kali-kayaking-trip":[
-    {
-      id: 6,
-      type: "image",
-      thumbnail: "/kali-river-ariel-view.jpg",
-      fullSize: "/kali-river-ariel-view.jpg",
-      alt: "Aerial view of the Kali River",
-    },
-    {
-      id: 7,
-      type: "image",
-      thumbnail: "/first-rapid.jpg",
-      fullSize: "/first-rapid.jpg",
-      alt: "First rapid ariel view",
-    },
-    {
-      id: 2,
-      type: "image",
-      thumbnail: "/navigating-a-rapid-in-a-kayak.jpg",
-      fullSize: "/navigating-a-rapid-in-a-kayak.jpg",
-      alt: "Navigating the Kali River in a kayak",
-    },
-    {
-      id: 4,
-      type: "video",
-      thumbnail: "/rapid-run.png",
-      videoSrc: "/kali-rapid-run.mp4", 
-      alt: "Rapid run",
-    },
-    {
-      id: 5,
-      type: "image",
-      thumbnail: "/rapid-run-2.jpg",
-      fullSize: "/rapid-run-2.jpg",
-      alt: "Running the first rapid",
-    },
-    {
-      id: 16,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-1.mp4",
-      alt: "Rapid run",
-    },
-    {
-      id: 17,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-2.mp4",
-      alt: "River run",
-    },
-    {
-      id: 18,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-3.mp4",
-      alt: "River run",
-    },
-    {
-      id: 19,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-4.mp4",
-      alt: "River run",
-    },
-    {
-      id: 21,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run-6.mp4",
-      alt: "River run",
-    },
-    {
-      id: 22,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/course/rapid-run.mp4",
-      alt: "River run",
-    },
-    {
-      id: 23,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-1.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-1.mp4",
-      alt: "River run",
-    },
-    {
-      id: 24,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-2.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-2.mp4",
-      alt: "River run",
-    },
-    {
-      id: 25,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kali_kayaking/vid-3.mp4",
-      alt: "River run",
-    }
-  ],
-  "kids-kayaking-camp": [
-    {
-      id: 1,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/family_shivanandi.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/family_shivanandi.jpg",
-      alt: "Family enjoying their time at Shivanandi River Lodge",
-    },
-    {
-      id: 2,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg",
-      alt: "Kayaks arranged in front of the lodge",
-    },
-    {
-      id: 3,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_rafting.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_rafting.jpg",
-      alt: "Kids enjoyingrafting on Alaknanda River",
-    },
-    {
-      id: 4,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_kayak_session.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_kayak_session.jpg",
-      alt: "Kids enjoying a pool kayak session",
-    },
-    {
-      id: 5,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg",
-      alt: "Pro kayaker practicing in the pool",
-    },
-    {
-      id: 6,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg",
-      alt: "Pets at Shivanandi River Lodge",
-    },
-    {
-      id: 7,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg",
-      alt: "Fresh healthy homely food",
-    },
-    {
-      id: 8,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
-      alt: "The main lodge buildings",
-    },
-    {
-      id: 9,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
-      alt: "Rainbow by the river. Surreal feeling",
-    },
-    {
-      id: 10,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg",
-      alt: "A room at Shivanandi River Lodge",
-    },
-    {
-      id: 11,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg",
-      alt: "A room at Shivanandi River Lodge",
-    },
-    {
-      id: 12,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
-      alt: "A surreal sunset at Shivanandi",
-    },
-    {
-      id: 13,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.mp4",
-      alt: "Kayaking POV in Alaknanda River",
-    },
-    {
-      id: 14,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/eddy_practice.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/eddy_practice.mp4",
-      alt: "Eddy practice",
-    },
-    {
-      id: 15,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.mp4",
-      alt: "Mornings in front of Shivanandi River Lodge",
-    },
-    {
-      id: 16,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.mp4",
-      alt: "Kayaking practice in the pool",
-    },
-    {
-      id: 17,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.mp4",
-      alt: "Practicing eskimo roll",
-    },
-    {
-      id: 18,
-      type: "video",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.jpg",
-      videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.mp4",
-      alt: "Walking around Shivanandi River Lodge",
-    }
-  ],
-  "shivanandi": [
-    {
-      id: 12,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg",
-      alt: "A surreal sunset at Shivanandi",
-    },
-    {
-      id: 1,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg",
-      alt: "Shivanandi River Lodge Aerial View",
-    },
-    {
-      id: 9,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg",
-      alt: "Rainbow by the river. Surreal feeling",
-    },
-    {
-      id: 8,
-      type: "image",
-      thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
-      fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg",
-      alt: "The main lodge buildings",
-    }
-  ]
-}
-// const galleryItems = [
-//   {
-//     id: 1,
-//     type: "image",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
-//     fullSize: "https://igutafeeling.com/uploads/nos_media/river_view.jpg",
-//     alt: "View of river from the bridge",
-//   },
-//   {
-//     id: 2,
-//     type: "image",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
-//     fullSize: "https://igutafeeling.com/uploads/nos_media/kodencherry_top_view.jpg",
-//     alt: "Kodencherry ariel view",
-//   },
-//   {  
-//     id: 3,
-//     type: "video",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/game_of_thorns_thumb.jpg",
-//     videoSrc: "https://igutafeeling.com/uploads/nos_media/game_of_thorns.mp4", 
-//     alt: "Game of thorns rapid",
-//   },
-//   {  
-//     id: 4,
-//     type: "video",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/pool_roll_thumb.jpg",
-//     videoSrc: "https://igutafeeling.com/uploads/nos_media/pool_roll.mp4", 
-//     alt: "Pool roll practice",
-//   },
-//   {  
-//     id: 5,
-//     type: "video",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/river_roll_thumb.jpg",
-//     videoSrc: "https://igutafeeling.com/uploads/nos_media/river_roll.mp4", 
-//     alt: "Student rolling in the river",
-//   },
-//   {  
-//     id: 6,
-//     type: "video",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/river_run_thumb.jpg",
-//     videoSrc: "https://igutafeeling.com/uploads/nos_media/river_run.mp4", 
-//     alt: "Students running rapids",
-//   },
-//   {  
-//     id: 7,
-//     type: "video",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/bracing_thumb.jpg",
-//     videoSrc: "https://igutafeeling.com/uploads/nos_media/bracing.mp4", 
-//     alt: "Bracing technique practice",
-//   },
-//   {  
-//     id: 7,
-//     type: "video",
-//     thumbnail: "https://igutafeeling.com/uploads/nos_media/white_water_swimming_thumb.jpg",
-//     videoSrc: "https://igutafeeling.com/uploads/nos_media/white_water_swimming.mp4", 
-//     alt: "White water swimming practice",
-//   },
-// ]
+/** Shared gallery data for kids kayaking camp page. */
+export const KIDS_KAYAKING_CAMP_ITEMS: GalleryItem[] = [
+  { id: 1, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/family_shivanandi.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/family_shivanandi.jpg", alt: "Family enjoying their time at Shivanandi River Lodge" },
+  { id: 2, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kayaks_arranged.jpg", alt: "Kayaks arranged in front of the lodge" },
+  { id: 3, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_rafting.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/kids_rafting.jpg", alt: "Kids enjoyingrafting on Alaknanda River" },
+  { id: 4, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_kayak_session.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_kayak_session.jpg", alt: "Kids enjoying a pool kayak session" },
+  { id: 5, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/pool_view_msr.jpg", alt: "Pro kayaker practicing in the pool" },
+  { id: 6, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_dogs.jpg", alt: "Pets at Shivanandi River Lodge" },
+  { id: 7, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_food.jpg", alt: "Fresh healthy homely food" },
+  { id: 8, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", alt: "The main lodge buildings" },
+  { id: 9, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg", alt: "Rainbow by the river. Surreal feeling" },
+  { id: 10, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_1.jpg", alt: "A room at Shivanandi River Lodge" },
+  { id: 11, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_room_2.jpg", alt: "A room at Shivanandi River Lodge" },
+  { id: 12, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg", alt: "A surreal sunset at Shivanandi" },
+  { id: 13, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/alaknanda_kayaking.mp4", alt: "Kayaking POV in Alaknanda River" },
+  { id: 14, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/eddy_practice.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/eddy_practice.mp4", alt: "Eddy practice" },
+  { id: 15, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/mornings_in_front_of_shivanandi.mp4", alt: "Mornings in front of Shivanandi River Lodge" },
+  { id: 16, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_kayak_msr.mp4", alt: "Kayaking practice in the pool" },
+  { id: 17, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/pool_roll_practice.mp4", alt: "Practicing eskimo roll" },
+  { id: 18, type: "video", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.jpg", videoSrc: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/videos/shivanandi_walk.mp4", alt: "Walking around Shivanandi River Lodge" },
+];
+
+/** Shared gallery data for Shivanandi (compact view). */
+export const SHIVANANDI_ITEMS: GalleryItem[] = [
+  { id: 12, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_sunset.jpg", alt: "A surreal sunset at Shivanandi" },
+  { id: 1, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_aerial_view.jpg", alt: "Shivanandi River Lodge Aerial View" },
+  { id: 9, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_rainbow.jpg", alt: "Rainbow by the river. Surreal feeling" },
+  { id: 8, type: "image", thumbnail: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", fullSize: "https://igutafeeling.com/uploads/nos_media/kids_kayaking/shivanandi_main_buildings.jpg", alt: "The main lodge buildings" },
+];
 
 type CourseGalleryProps = {
-  /** When provided, use these items instead of galleryName lookup (e.g. from location config). */
-  items?: GalleryItem[];
-  /** Gallery key when items are not provided (used by other course pages). */
-  galleryName?: GalleryName;
+  items: GalleryItem[];
   columns?: 2 | 4;
 };
 
-export default function CourseGallery({ items: itemsProp, galleryName, columns = 4 }: CourseGalleryProps) {
+export default function CourseGallery({ items, columns = 4 }: CourseGalleryProps) {
   const [open, setOpen] = useState(false)
   const [currentIndex, setCurrentIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
-
-  const items = itemsProp ?? (galleryName ? galleryItems[galleryName] : [])
 
   const gridClass = columns === 2
     ? "grid grid-cols-2 gap-4"
